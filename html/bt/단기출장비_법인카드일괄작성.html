@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>단기출장비(법인카드 일괄작성) | PWC</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link rel="shortcut icon" href="../../resource/images/favicon/apple_touch_icon.ico">
+<link rel="apple-touch-icon" href="../../resource/images/favicon/apple_touch_icon.png">
+<link href="../../resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="../../resource/css/contents.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<p class="skip"><a href="#container">본문 바로가기</a></p>
+
+<section id="wrapper" class="wrapper">
+	<header>
+		<div class="header__inner header-case--v2">
+			<h1 class="title-depth5">단기출장비(법인카드 일괄작성)</h1>
+      <button type="button" class="btn--page-close">닫기</button>
+		</div>
+	</header>
+  
+	<div id="container" class="container">
+		<div class="content">
+      <div class="content-head in-slide border-type-1">
+        <h2 class="hidden">출장 상세정보</h2>
+        <div class="use-info info-type-2">
+          <p class="use-info__trip"><span class="period">2023-08-01 ~ 2023-08-05 (10일)</span><span class="location">서울</span></p>
+          <span class="use-info__date">기표일자 2023-12-31</span>
+        </div>
+        <div class="slideDown">
+          <div class="slideDown-cont">
+            <ul class="period-info">
+              <li class="period-info__item">
+                <strong class="title">현금(정액)사용</strong>
+                <span class="data"><span>80,200</span> 원</span>
+              </li>
+              <li class="period-info__item">
+                <strong class="title">법인신용카드</strong>
+                <span class="data"><span>39,200</span> 원</span>
+              </li>
+              <li class="period-info__item">
+                <strong class="title">출장목적/방문장소</strong>
+                <span class="data">교육 출장</span>
+              </li>
+              <li class="period-info__item lodge">
+                <strong class="title">숙박정보</strong>
+                <span class="data">본인 법인카드 결제</span>
+              </li>
+              <li class="period-info__item">
+                <strong class="title">출장자</strong>
+                <span class="data">김삼일(A), 이삼일(SA), 박삼일(SA), 박삼일(SA)</span>
+              </li>
+              <li class="period-info__item">
+                <strong class="title">프로젝트(팀)</strong>
+                <span class="data">코칭 / Workday Coaching-김삼일</span>
+              </li>
+              <li class="period-info__item etc">
+                <strong class="title">출장기간 외 식대 청구</strong>
+                <span class="data">가나다라 마바사 아자차카타파하 가다나라 마바사</span>
+              </li>
+            </ul>
+          </div>
+          <button type="button" class="slideDown-btn" aria-expanded="false"><span data-text='{"text":"open|close", "show":1}'>open</span></button>
+        </div>
+      </div><!-- //content-head -->
+      <div class="content-body no-line">
+        <h2 class="font-weight--m margin-top--16">선택하신 항목들을 아래와 같이 일괄 작성합니다.</h2>
+        <h2 class="hidden">작성 영역</h2>
+        <div class="input-form-field margin-top--32">
+          <ul class="input-form-field__list">
+            <!-- 출장경비 case : 상시 노출 -->
+            <li class="input-field search-field">
+              <h3 class="title-depth6">출장경비</h3>
+              <div class="search-wrap__btn-type">
+                <button aria-haspopup="dialog" data-popup-id="tripExpensesPop" class="btn--search">출장경비 팝업</button>
+                <input type="text" class="input-text search" readonly>
+              </div>
+            </li>
+            <!-- 구분 case : 출장경비 팝업 > 교통비 선택 시에만 노출 -->
+            <li class="input-field search-field">
+              <h3 class="title-depth6">구분</h3>
+              <div class="select-wrap line-type">
+                <button aria-haspopup="dialog" data-popup-id="transportationTypePop" class="btn--select"><span class="hidden">교통수단 구분 팝업</span>택시</button><!-- (dev) {팝업선택값} 영역은 default는 비어있고 팝업에서 값 선택하는 경우 출력 -->
+              </div>
+            </li>
+            <!-- 상세입력 case : 출장경비 팝업 > 숙박비 선택 / 교통비 팝업 > 항공,철도,주유(렌터카) 선택 시에만 노출 -->
+            <li class="input-field">
+              <h3 class="title-depth6">상세입력</h3>
+              <div class="search-wrap__btn-type">
+                <button aria-haspopup="dialog" data-popup-id="각 구분값에 맞는 팝업 id" class="btn--search">교통비 팝업</button>
+                <input type="text" class="input-text search" readonly>
+              </div>
+            </li>
+            <!-- 상세내용 case : 상시 노출 -->
+            <li class="input-field">
+              <h3 class="title-depth6">상세내용</h3>
+              <span class="text-field-wrap">
+                <input type="text" class="input-text">
+                <button type="button" class="btn--del">삭제</button>
+              </span>
+            </li>
+            <!-- 출장기간 외 식대 청구 사유 case : 출장경비 팝업 > 식대 선택 후 출장기간 외 식대 청구했을 경우 조건 충족 시 노출 -->
+            <li class="input-field">
+              <h3 class="title-depth6">출장기간 외 식대 청구 사유</h3>
+              <span class="text-field-wrap">
+               <input type="text" class="input-text">
+               <button type="button" class="btn--del">삭제</button>
+             </span>
+            </li>
+            <!-- 금액 case : 상시 노출 이지만 비활성화 처리 -->
+            <li class="input-field">
+              <h3 class="title-depth6">금액</h3>
+              <span class="text-field-wrap">
+                <input type="text" class="input-text" value="{금액자동노출}" disabled>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="bulk-history">
+          <h3 class="title-depth6">선택한 내역 (<span>5</span>)</h3>
+          <div class="scroll-wrap">
+            <ul class="bulk-history__list">
+              <!-- 반복 영역 -->
+              <li class="bulk-history__item">
+                <span class="date">2023-08-09 10:00</span>
+                <span class="title">대한항공</span>
+                <span class="price">1,420,000</span>
+              </li>
+              <!-- 반복 영역 -->
+              <li class="bulk-history__item">
+                <span class="date">2023-08-09 10:00</span>
+                <span class="title">대한항공</span>
+                <span class="price">999,999,999</span>
+              </li>
+              <li class="bulk-history__item">
+                <span class="date">2023-08-09 10:00</span>
+                <span class="title">대한항공</span>
+                <span class="price">999,999,999</span>
+              </li>
+              <li class="bulk-history__item">
+                <span class="date">2023-08-09 10:00</span>
+                <span class="title">대한항공</span>
+                <span class="price">999,999,999</span>
+              </li>
+              <li class="bulk-history__item">
+                <span class="date">2023-08-09 10:00</span>
+                <span class="title">대한항공</span>
+                <span class="price">999,999,999</span>
+              </li>
+              <li class="bulk-history__item">
+                <span class="date">2023-08-09 10:00</span>
+                <span class="title">대한항공</span>
+                <span class="price">999,999,999</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div><!-- //content-body -->
+		</div><!-- //content -->
+		<div class="floating-btn">
+			<div class="floating-btn__inner">
+        <div class="btn-wrap">
+          <button type="button" class="btn">저장</button>
+        </div>
+			</div>
+		</div><!-- //floating btn -->
+	</div><!-- //container -->
+</section><!-- //wrapper -->
+
+
+<!-- layer popup : full page -->
+
+<!-- //layer popup : full page -->
+
+<!-- layer popup : bottom sheet -->
+
+<!-- //layer popup : bottom sheet -->
+
+<!-- layer popup : alert -->
+
+<!-- //layer popup : alert -->
+
+<div class="dimmed"></div>
+
+<script type="text/javascript" src="../../resource/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../resource/dist/library.js"></script>
+<script type="text/javascript" src="../../resource/dist/commonJs.js"></script>
+
+</body>
+</html>

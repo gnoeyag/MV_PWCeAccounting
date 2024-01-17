@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>카드사용이력관리 | PWC</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link rel="shortcut icon" href="../../resource/images/favicon/apple_touch_icon.ico">
+<link rel="apple-touch-icon" href="../../resource/images/favicon/apple_touch_icon.png">
+<link href="../../resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="../../resource/css/contents.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<p class="skip"><a href="#container">본문 바로가기</a></p>
+
+<section id="wrapper" class="wrapper">
+	<header>
+		<div class="header__inner header-case--v2">
+			<h1 class="title-depth5">카드 사용이력 관리</h1>
+			<button type="button" class="btn--page-close">닫기</button>
+		</div>
+	</header>
+
+	<div id="container" class="container">
+		<div class="content">
+			<div class="content-head">
+				<h2 class="hidden">사용기간 조회</h2>
+				<div class="period-box">
+					<div class="calendar-wrap--period box-type">
+						<div class="calendar-wrap">
+							<input type="date" class="input-text calendar" data-placeholder="yyyy-mm-dd" required>
+						</div>
+						<span class="dash">-</span>
+						<div class="calendar-wrap">
+							<input type="date" class="input-text calendar" data-placeholder="yyyy-mm-dd" required>
+						</div>
+					</div>
+					<button type="button" class="btn btn--size-s">조회</button>
+				</div>
+			</div><!-- //content-head -->
+			<div class="content-body">
+				<h2 class="hidden">조회 결과</h2>
+				<div class="card-result">
+					<h3 class="hidden">상태 선택</h3>
+					<div class="scroll-menu">
+						<ul role="menu">
+							<li role="presentation" class="is-active"><a href="#" role="menuitem">전체</a></li>
+							<li role="presentation"><a href="#" role="menuitem">미발의</a></li>
+							<li role="presentation"><a href="#" role="menuitem">개인사용</a></li>
+							<li role="presentation"><a href="#" role="menuitem">F-Link</a></li>
+							<li role="presentation"><a href="#" role="menuitem">작성완료</a></li>
+						</ul>
+					</div>
+					<!-- case - 상태 별 안내문구 : F-Link -->
+					<p class="guide-text-box">카드 사용일 후 1개월 경과 ~ 6개월 이내의 내역으로<br><em>F-Link 시스템(PC)에서만 작성 가능</em>합니다.</p><!-- 11.27 문구수정 -->
+					<!-- case - 상태 별 안내문구 : 미발의 -->
+					<p class="guide-text-box">카드 사용일 후 1개월 이내의 내역으로<br><em>e-Accounting에서 전표 작성이 가능</em>합니다.</p>
+					<!-- case - 상태 별 안내문구 : 개인사용 -->
+					<p class="guide-text-box">사용내역 중 <em>[개인사용 처리]로 적용한 내역</em>입니다.</p>
+					<!-- case - 상태 별 안내문구 : 작성완료 -->
+					<p class="guide-text-box"><em>e-Accounting 또는 F-Link에서 작성완료한 내역</em>입니다.</p>
+					<!-- 법인카드내역 -->
+					<h3 class="hidden">선택한 탭 사용 이력</h3>
+					<!-- case : 조회 결과 없는 경우 -->
+					<p class="no-data">조회된 정보가 없습니다.</p><!-- 10.13 문구수정 -->
+					<!-- case : 조회 결과 있는 경우 -->
+					<ul class="use-detail check-list flag-type"><!-- 10.27 flag-type class 추가 -->
+						<!-- case : F-Link -->
+						<li class="use-detail__item">
+							<div class="detail-box">
+								<span class="detail-box__date"><span class="date">2023-08-03</span><em class="cate">교통</em></span>
+								<strong class="detail-box__title">타다(TADA)</strong>
+								<strong class="detail-box__price"><em>21,700</em>원</strong>
+								<!-- (dev) 상태 별 flag
+										전체, 미발의 : 없음
+										F-Link : <em class="badge badge--text bg-color-1">F-Link</em>
+										개인사용 : <em class="badge badge--text">개인사용</em>
+										e-accounting 작성완료 : <em class="badge badge--text bg-color-2">작성완료</em>
+										F-Link 작성완료(f) : <em class="badge badge--text bg-color-2">작성완료(f)</em>
+								-->
+								<em class="badge badge--text bg-color-1">F-Link</em>
+							</div>
+							<span class="input-checkbox">
+								<input type="checkbox" id="check01" name="check01Group">
+								<label for="check01">선택</label>
+							</span>
+						</li>
+						<!-- case : 미발의 -->
+						<li class="use-detail__item">
+							<div class="detail-box">
+								<span class="detail-box__date"><span class="date">2023-08-03</span><em class="cate">교통</em></span>
+								<strong class="detail-box__title">상호명이 길면 말줄임 처리 합니다. 상호명이 길면 말줄임 처리 합니다.</strong>
+								<strong class="detail-box__price"><em>999,999,999</em>원</strong>
+							</div>
+							<span class="input-checkbox">
+								<input type="checkbox" id="check02" name="check01Group">
+								<label for="check02">선택</label>
+							</span>
+						</li>
+						<!-- case : 개인사용 -->
+						<li class="use-detail__item disabled"><!-- (dev) 비활성화 상태 : .disabled class 추가 -->
+							<div class="detail-box">
+								<span class="detail-box__date"><span class="date">2023-12-12</span><em class="cate">교통</em></span>
+								<strong class="detail-box__title">카카오페이(택시)</strong>
+								<strong class="detail-box__price"><em>30,454</em>원</strong>
+								<em class="badge badge--text">개인사용</em>
+							</div>
+							<span class="input-checkbox">
+								<input type="checkbox" id="check03" name="check01Group" disabled><!-- (dev) 비활성화 상태 : disabled 속성 추가 -->
+								<label for="check03">선택</label>
+							</span>
+						</li>
+						<!-- case : e-accounting 작성완료 -->
+						<li class="use-detail__item disabled">
+							<div class="detail-box">
+								<span class="detail-box__date"><span class="date">2023-08-03</span><em class="cate">음식</em></span>
+								<strong class="detail-box__title">용리단 설렁탕</strong>
+								<strong class="detail-box__price"><em>46,500</em>원</strong>
+								<em class="badge badge--text bg-color-2">작성완료</em>
+							</div>
+							<span class="input-checkbox">
+								<input type="checkbox" id="check04" name="check01Group" disabled>
+								<label for="check04">선택</label>
+							</span>
+						</li>
+						<!-- case : F-Link 작성완료(F) -->
+						<li class="use-detail__item disabled">
+							<div class="detail-box">
+								<span class="detail-box__date"><span class="date">2023-08-03</span><em class="cate">미용</em></span>
+								<strong class="detail-box__title">아모레퍼시픽</strong>
+								<strong class="detail-box__price"><em>192,000</em>원</strong>
+								<em class="badge badge--text bg-color-2">작성완료(F)</em>
+							</div>
+							<span class="input-checkbox">
+								<input type="checkbox" id="check04" name="check01Group" disabled>
+								<label for="check04">선택</label>
+							</span>
+						</li>
+						<li class="use-detail__item disabled">
+							<div class="detail-box">
+								<span class="detail-box__date"><span class="date">2023-08-03</span><em class="cate">미용</em></span>
+								<strong class="detail-box__title">타다</strong>
+								<strong class="detail-box__price"><em>192,000</em>원</strong>
+								<em class="badge badge--text bg-color-2">작성완료(F)</em>
+							</div>
+							<span class="input-checkbox">
+								<input type="checkbox" id="check05" name="check01Group" disabled>
+								<label for="check05">선택</label>
+							</span>
+						</li>
+						<li class="use-detail__item disabled">
+							<div class="detail-box">
+								<span class="detail-box__date"><span class="date">2023-08-03</span><em class="cate">교통</em></span>
+								<strong class="detail-box__title">타다(TADA)</strong>
+								<strong class="detail-box__price"><em>21,700</em>원</strong>
+								<em class="badge badge--text bg-color-1">F-Link</em>
+							</div>
+							<span class="input-checkbox">
+								<input type="checkbox" id="check06" name="check01Group" disabled>
+								<label for="check06">선택</label>
+							</span>
+						</li>
+						<li class="use-detail__item disabled">
+							<div class="detail-box">
+								<span class="detail-box__date"><span class="date">2023-08-03</span><em class="cate">미용</em></span>
+								<strong class="detail-box__title">아모레퍼시픽</strong>
+								<strong class="detail-box__price"><em>192,000</em>원</strong>
+								<em class="badge badge--text bg-color-2">작성완료(F)</em>
+							</div>
+							<span class="input-checkbox">
+								<input type="checkbox" id="check07" name="check01Group" disabled>
+								<label for="check07">선택</label>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div><!-- //content-body -->
+		</div><!-- //content -->
+		<div class="floating-btn">
+			<div class="floating-btn__inner">
+				<div class="btn-wrap">
+					<!-- (dev) 팝업 연결 data-popup-id="" / 팝업 id 값과 팝업 여는 버튼의 data-popup-id 값만 일치하면 원하는 id 설정 가능
+						체크항목 있을 경우 : cardUseListPop2
+						체크항목 없을 경우 : cardUseListPop1
+					-->
+					<button aria-haspopup="dialog" data-popup-id="" class="btn">개인사용 처리</button><!-- (dev) 비활성화 : disabled 속성 추가 -->
+				</div>
+			</div>
+		</div><!-- //floating btn -->
+	</div><!-- //container -->
+</section><!-- //wrapper -->
+
+<!-- layer popup : alert -->
+
+<!-- //layer popup : alert -->
+
+<div class="dimmed"></div>
+
+<script type="text/javascript" src="../../resource/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../resource/dist/library.js"></script>
+<script type="text/javascript" src="../../resource/dist/commonJs.js"></script>
+
+</body>
+</html>

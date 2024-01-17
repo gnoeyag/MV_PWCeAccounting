@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ko">
+<head>
+
+<meta charset="utf-8">
+<title>PWC e-Accounting Mobile - HTML Guide</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link rel="shortcut icon" href="../resource/images/favicon/apple_touch_icon.ico">
+<link rel="apple-touch-icon" href="../resource/images/favicon/apple_touch_icon.png">
+<link href="../resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="guide.css" rel="stylesheet" type="text/css">
+<style>
+  
+</style>
+</head>
+<body>
+  <div id="guideWrap">
+		<section id="guideHead">
+			<strong class="pageTitle">PWC e-Accounting Mobile HTML Guide</strong>
+			<div class="guideGnb">
+				<a href="guide.html" class="on">Guide</a>
+				<a href="pattern.html">HTML Pattern</a>
+				<a href="filelist.html">Filelist</a>
+			</div>
+		</section>
+		<section id="guideContents">
+			<h2 class="guideTit2">기본 규칙</h2>
+		
+			<h3 class="guideTit3">프로젝트 목적</h3>
+			<ul class="guideTxt">
+				<li>기존 PC버전 e-Accounting 시스템의 화면/기능을 Mobile 환경에 맞게 확장</li>
+			</ul>
+			
+			<h3 class="guideTit3">모바일 기준</h3>
+			<ul class="guideTxt">
+				<li>해상도 375 기준 / 360 사이즈는 틀어지지 않는 정도</li>
+				<li>태블릿 사이즈 750~1280 에서는 max-width:750px center로 고정</li>
+			</ul>			
+			
+			<h3 class="guideTit3">HTML 문서 작성 기본 규칙</h3>
+			<ul class="guideTxt">
+				<li><strong>DTD</strong> : HTML5</li>
+				<li><strong>인코딩</strong> : utf-8</li>
+			</ul>
+						
+			<h3 class="guideTit3">Naming 규칙</h3>
+			<ul class="guideTxt">
+				<li>
+					<strong>CSS</strong><br>
+					Class명은 BEM 방법론을 따른다 (<a href="http://getbem.com/naming/" target="_blank" class="guideLink">http://getbem.com/naming/)</a><br>
+					기본정의 : block요소name--Modifier(변형자 or 상태)__Element(자식요소. key와 value는 하이픈(-)사용)<br>
+					.부모명__자식 , .부모명__자식--확장 , .부모명__자식명구분-자식명구분, .부모명__자식명 .확장타입—타입속성<br>
+					Ex).product__list, product__list—disabled, .product__list-item, .product__list.text-align--left
+				</li>
+				<li>
+					<strong>image</strong><br>
+					이미지타입_메뉴관련네이밍_확장숫자.확장자<br>
+					ex)ico_product_item_01.png
+				</li>
+			</ul>
+						
+			<h3 class="guideTit3">css 작업 방법</h3>
+			<ul class="guideTxt">
+				<li>scss 작업 후 vscode의 llive sass compiler 설치 후 Watch Sass 실행하여 compile 된 css를 html에 연결<br>
+				<li>resource > scss 내의 파일이 빌드되어 css > common.css 파일로 최종 빌드됨</li>
+				<li>※ 개발단에 css 공유 시 scss compile 후 css 파일 가장 하단의 /*# sourceMappingURL=.....map */ 삭제하여 전달해야 개발단에서 여러번 불러오지 않음</li>
+				<li>운영시에는 scss가 아닌 css 파일을 직접 수정하는 방향으로 산출물에 scss 제외하여 전달</li>
+			</ul>
+
+			<h3 class="guideTit3">디렉토리 구조</h3>
+			<table cellpadding="0" cellspacing="0" class="guideTbl">
+				<colgroup><col style="width:15%"/><col style="width:auto" span="3"><col style="width:25%"/></colgroup>
+				<thead>
+					<tr>
+						<th scope="col">구분</th>
+						<th scope="col">폴더1</th>
+						<th scope="col">폴더2</th>
+						<th scope="col">폴더3 / 확장자</th>
+						<th scope="col">비고</th>
+					</tr>
+				</thead>
+				<tbody>            
+					<tr>
+						<th rowspan="2">html 가이드</th>
+						<td rowspan="2">guide</td>
+						<td></td>
+						<td>.html</td>
+						<td>Html guide, file list, 요소 pattern</td>
+					</tr>
+					<tr>
+						<td>/layout</td>
+						<td>.html</td>
+						<td>페이지,팝업,header 기본 layout</td>
+					</tr>
+					<tr>
+						<th rowspan="5">공통</th>
+						<td rowspan="5">/resource</td>
+						<td rowspan="2">/css</td>
+						<td>/scss/.scss</td>
+						<td>Compile 전 scss 작업</td>
+					</tr>					
+					<tr>
+						<td>.css</td>
+						<td>Compile 후 css</td>
+					</tr>
+					<tr>
+						<td>/fonts</td>
+						<td>.ttf, .woff</td>
+						<td>webfont 파일</td>
+					</tr>
+					<tr>
+						<td>/images</td>
+						<td>.svg, .png</td>
+						<td>이미지 파일</td>
+					</tr>
+					<tr>
+						<td>/dist</td>
+						<td>.js</td>
+						<td>jQuery 파일</td>
+					</tr>
+					<tr>
+						<th rowspan="5">html</th>
+						<td rowspan="5">/html</td>
+						<td>/common</td>
+						<td>.html</td>
+						<td>공통</td>
+					</tr>
+					<tr>
+						<td>/main</td>
+						<td>.html</td>
+						<td>메인</td>
+					</tr>
+					<tr>
+						<td>/cc</td>
+						<td>.html</td>
+						<td>법인신용카드</td>
+					</tr>
+					<tr>
+						<td>/ts</td>
+						<td>.html</td>
+						<td>시내교통비</td>
+					</tr>
+					<tr>
+						<td>/bt</td>
+						<td>.html</td>
+						<td>단기출장비</td>
+					</tr>
+					<tr>
+				</tbody>
+			</table>
+    </section>
+  </div>
+</body>
+</html>

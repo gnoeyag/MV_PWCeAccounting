@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>시내교통비 | PWC</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link rel="shortcut icon" href="../../resource/images/favicon/apple_touch_icon.ico">
+<link rel="apple-touch-icon" href="../../resource/images/favicon/apple_touch_icon.png">
+<link href="../../resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="../../resource/css/contents.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<p class="skip"><a href="#container">본문 바로가기</a></p>
+
+<section id="wrapper" class="wrapper">
+	<header>
+    <div class="header__inner">
+      <button type="button" class="btn--page-prev">이전</button>
+      <h1 class="title-depth5">시내교통비</h1>
+      <button type="button" class="btn--menu">
+        <strong class="hidden">메뉴 보기</strong>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <!-- 메뉴 -->
+			<nav>
+
+			</nav>
+    </div>
+	</header>
+
+	<div id="container" class="container">
+		<div class="content">
+      <div class="fixed-top">
+        <div class="content-head fixed-top__inner">
+          <h2 class="hidden">월 별 사용내역 정보</h2>
+          <div class="use-info info-type-2">
+            <div class="select-wrap text-size--l">
+              <button aria-haspopup="dialog" data-popup-id="monthSelect" class="btn--select text-type"><span class="hidden">월 선택 팝업</span>2023년 8월</button>
+            </div>
+            <span class="use-info__date">기표일자 2023-12-31</span>
+            <button aria-haspopup="dialog" data-popup-id="prevApplied" class="btn--s-round color-type">기신청 특근내역</button>
+          </div>
+        </div><!-- //content-head -->
+			</div>
+      <!-- 사용내역 case : 최초 진입 시 / 시내교통비.html 참고 -->
+      <!-- 사용내역 case : 특근내역 조회 후  -->
+      <!-- 특근내역 조회 결과 case : 조회 결과 없는 경우 -->
+      <p class="no-data">조회된 정보가 없습니다.</p>
+      <!-- 특근내역 조회 결과 case : 조회 결과 있는 경우 -->
+			<div class="content-body border-type-2">
+        <h2 class="hidden">선택한 월 사용내역</h2>
+        <div class="check-list--head head-type-1">
+          <span class="input-checkbox text-label">
+            <input type="checkbox" id="checkAll" name="tsUseInfoChkGroup">
+            <label for="checkAll">전체선택</label>
+          </span>
+        </div>
+        <div class="card-result">
+          <h3 class="hidden">사용 내역</h3>
+          <ul class="use-detail check-list">
+            <li class="use-detail__item">
+              <div class="detail-box">
+                <span class="detail-box__date non-pad-style"><span class="date non-style">2023-08-03</span></span>
+                <strong class="detail-box__title">야근 식대</strong>
+                <strong class="detail-box__price"><em>20,000</em>원</strong>
+              </div>
+              <span class="input-checkbox">
+                <input type="checkbox" id="tsUseInfoChk01" name="tsUseInfoChkGroup">
+                <label for="tsUseInfoChk01">선택</label>
+              </span>
+            </li>
+            <li class="use-detail__item">
+              <div class="detail-box">
+                <span class="detail-box__date non-pad-style"><span class="date non-style">2023-08-03</span></span>
+                <strong class="detail-box__title">야근 식대</strong>
+                <strong class="detail-box__price"><em>20,000</em>원</strong>
+              </div>
+              <span class="input-checkbox">
+                <input type="checkbox" id="tsUseInfoChk02" name="tsUseInfoChkGroup">
+                <label for="tsUseInfoChk02">선택</label>
+              </span>
+            </li>
+            <li class="use-detail__item">
+              <div class="detail-box">
+                <span class="detail-box__date non-pad-style"><span class="date non-style">2023-08-03</span></span>
+                <strong class="detail-box__title">야근 식대</strong>
+                <strong class="detail-box__price"><em>20,000</em>원</strong>
+              </div>
+              <span class="input-checkbox">
+                <input type="checkbox" id="tsUseInfoChk03" name="tsUseInfoChkGroup">
+                <label for="tsUseInfoChk03">선택</label>
+              </span>
+            </li>
+            <li class="use-detail__item">
+              <div class="detail-box">
+                <span class="detail-box__date non-pad-style"><span class="date non-style">2023-08-03</span></span>
+                <strong class="detail-box__title">야근 식대</strong>
+                <strong class="detail-box__price"><em>20,000</em>원</strong>
+              </div>
+              <span class="input-checkbox">
+                <input type="checkbox" id="tsUseInfoChk04" name="tsUseInfoChkGroup">
+                <label for="tsUseInfoChk04">선택</label>
+              </span>
+            </li>
+            <!-- 11.27 : 비활성화 case 추가 -->
+            <!-- OT 로 발의된 건의 경우 신청내역 존재의 건 case -->
+            <li class="use-detail__item disabled"><!-- (dev) 비활성화 상태 : .disabled class 추가 -->
+              <div class="detail-box">
+                <span class="detail-box__date non-pad-style"><span class="date non-style">2023-08-03</span></span>
+                <strong class="detail-box__title">야근 식대</strong>
+                <strong class="detail-box__price"><em>20,000</em>원</strong>
+              </div>
+              <span class="input-checkbox">
+                <input type="checkbox" id="tsUseInfoChk05" name="tsUseInfoChkGroup" disabled><!-- (dev) 비활성화 상태 : disabled 속성 추가 -->
+                <label for="tsUseInfoChk05">선택</label>
+              </span>
+            </li>
+          </ul>
+        </div>
+			</div><!-- //content-body -->
+       <!-- //사용내역 case : 특근내역 조회 후 -->
+		</div><!-- //content -->
+
+    <!-- (dev) 특근내역 조회 후 버튼영역 생성 -->
+		<div class="floating-btn">
+			<div class="floating-btn__inner">
+        <div class="slideDown reverse">
+          <button type="button" class="slideDown-btn wide" aria-expanded="true"><span data-text='{"text":"open|close", "show":2}'>close</span></button>
+          <div class="slideDown-cont">
+            <div class="text-align--c">
+              <button type="button" class="btn--s-round import-type">특근내역</button>
+              <a href="#" class="btn--s-round add-type-v2">교통비</a>
+              <a href="#" class="btn--s-round add-type-v2">무선전화</a>
+            </div>
+          </div>
+        </div>
+        <div class="floating-content content-type-1">
+          <h3>선택금액</h3>
+          <strong class="price"><em>100,000</em>원</strong>
+        </div>
+				<div class="btn-wrap">
+					<button type="button" class="btn">상세내역 작성</button><!-- 11.15 버튼명 변경 -->
+				</div>
+			</div>
+		</div><!-- //floating btn -->
+    
+	</div><!-- //container -->
+</section><!-- //wrapper -->
+
+<!-- layer popup : full popup -->
+
+<!-- //layer popup : full popup -->
+
+<!-- layer popup : bottom sheet -->
+
+<!-- //layer popup : bottom sheet -->
+
+<!-- layer popup : alert -->
+
+<!-- //layer popup : alert -->
+
+<div class="dimmed"></div>
+
+<script type="text/javascript" src="../../resource/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../resource/dist/library.js"></script>
+<script type="text/javascript" src="../../resource/dist/commonJs.js"></script>
+
+</body>
+</html>

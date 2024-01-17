@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title> | PWC</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link rel="shortcut icon" href="../../resource/images/favicon/apple_touch_icon.ico">
+<link rel="apple-touch-icon" href="../../resource/images/favicon/apple_touch_icon.png">
+<link href="../../resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="../../resource/css/contents_test.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<p class="skip"><a href="#container">본문 바로가기</a></p>
+
+<section id="wrapper" class="wrapper">
+	<header>
+		<div class="header__inner header-case--v2">
+			<h1 class="header-logo"><span class="logo">pwc</span><span class="text">e-Accounting</span></h1>
+			<button type="button" class="btn--menu">
+				<strong class="hidden">메뉴 보기</strong>
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<!-- 메뉴 -->
+			<nav>
+			</nav>
+		</div>
+	</header>
+
+	<div id="container" class="container">
+		<!-- 메인 내용 -->
+		<div class="main-wrap">
+			<div class="header-user-info">
+				<h2 class="user-name"><strong class="name">김삼일</strong> 님</h2>
+				<p class="user-date">최근접속 <span class="num">2023-08-02 18:31</span></p>
+				<a href="#" class="notice-link">
+					<span class="notice-icon">공지사항 보기</span>
+					<div class="new"><span class="hidden">새로운 글</span></div><!-- (dev) 새 글이 있을 경우 해당 영역 생성/없을 경우 삭제 -->
+				</a>
+			</div>
+			<div class="main__corporate-card">
+				<div class="corporate-card">
+					<h2 class="corporate-card__title">법인카드 미발의
+						<span class="tooltip">
+							<button type="button" class="tooltip-btn" aria-describedby="tooltip-id02">Tooltip</button>
+							<span class="tooltip-txt" id="tooltip-id02" role="tooltip">
+								법인카드 사용일 후 1개월 내에 <br>전표를 작성해 주세요.
+								<button type="button" class="tooltip-close">Close</button>
+							</span>
+						</span>
+					</h2>
+					<p class="corporate-card__case"><a href="#" class="corporate-card__case-link"><strong class="num">31</strong>건</a></p>
+				</div>
+				<div class="corporate-card__deadline">
+					<p class="deadline-text"><em>7</em>일 이내 마감 <strong class="num"><span>10</span>건</strong></p>
+					<a href="#" class="use-card-link">카드 사용이력</a>
+				</div>
+			</div>
+			<div class="main__sublink">
+				<ul class="sublink-link-list">
+					<li><a href="#" class="sublink"><strong class="title">법인신용카드</strong></a></li><!-- 10.12 문구 수정 -->
+					<li><a href="#" class="sublink"><strong class="title">시내교통비</strong><span class="text">정액 식대,<br>무선 전화 포함</span></a></li>
+					<li><a href="#" class="sublink"><strong class="title">단기출장비</strong><span class="text">숙박을 동반한<br>국내 출장</span></a></li>
+				</ul>
+			</div>
+			<div class="main__slip-progress">
+				<h2 class="slip-progress__title">전표 진행 현황
+					<span class="tooltip color-g">
+						<button type="button" class="tooltip-btn" aria-describedby="tooltip-id02">Tooltip</button>
+						<span class="tooltip-txt" id="tooltip-id02" role="tooltip">
+							작성한 전표의 진행현황을 <br>확인할 수 있습니다.
+							<button type="button" class="tooltip-close">Close</button>
+						</span>
+					</span>
+				</h2>
+				<div class="slip-progress__list">
+					<ul>
+						<li><strong class="num">0</strong><span class="text">작성중</span></li>
+						<li><strong class="num">2</strong><span class="text">결재중</span></li>
+						<li><strong class="num">0</strong><span class="text">반려/회송</span></li>
+						<li><strong class="num">10</strong><span class="text">결재완료</span></li>
+					</ul>
+					<a href="#" class="slip-progress__link">내 전표 현황 이동</a>
+				</div>
+			</div>
+		</div>
+		<!-- //메인 내용 -->
+
+		<!-- 입금 내역 action sheet -->
+		<section class="action-sheet main-sheet">
+			<button type="button" class="btn-action-sheet"><span class="hidden">펼치기/접기</span></button>
+			<div class="action-sheet__inner">
+				<div class="action-sheet__head">
+					<h2 class="main-sheet__title">
+						입금 내역
+						<span class="tooltip color-g posi-right">
+							<button type="button" class="tooltip-btn" aria-describedby="tooltip-id02">Tooltip</button>
+							<span class="tooltip-txt" id="tooltip-id02" role="tooltip">
+								결재 완료된 전표의 입금내역을<br>확인할 수 있습니다.
+								<button type="button" class="tooltip-close">Close</button>
+							</span>
+						</span>
+					</h2>
+					<em class="badge badge--text-main">입금 예정 <span>1</span>건</em>
+					<ul class="main-sheet__info">
+						<li>
+							<span class="title">입금예정</span>
+							<strong class="price"><em><span>9,999,999</span></em>원</strong>
+						</li>
+						<li>
+							<span class="title">입금완료 <span class="sub-title">(최근 1개월)</span></span>
+							<strong class="price"><em><span>999,999</span></em>원</strong>
+						</li>
+					</ul>
+				</div>
+				<div class="action-sheet__body">
+					<div class="main-sheet__tab tab__list tab__small tab-default">
+						<button class="tab__btn is-active" role="tab">전체</button>
+						<button class="tab__btn" role="tab">입금예정</button>
+						<button class="tab__btn" role="tab">입금완료</button>
+					</div>
+					<!-- 탭 선택에 따른 입금내역 영역 -->
+					<div class="main-sheet__tabpanel" role="tabpanel">
+						<!-- case : 조회 결과 없는 경우 -->
+						<p class="no-data">조회된 정보가 없습니다.</p><!-- 10.13 문구수정 -->
+						<!-- case : 조회 결과 있는 경우 -->
+						<ul class="use-detail">
+							<!-- (dev) li.use-detail__item" 묶음으로 생성 -->
+							<li class="use-detail__item">
+								<div class="detail-box">
+									<span class="detail-box__date"><span class="date">2023-08-03</span><em class="flag flag--color-1">입금예정</em></span>
+									<!-- (dev) 입금 지급 여부에 따른 flag 타입
+											입금예정 : <em class="flag flag--color-1">입금예정</em>
+											입금완료 : <em class="flag flag--color-2">입금완료</em>
+									-->
+									<span class="detail-box__sliptype">시내교통비</span>
+									<a href="#" class="detail-box__title">시내교통비 최대 한 줄로 내용이 길면 말줄임 처리 함 내용이 길면 말줄임 처리 해요해요</a>
+									<strong class="detail-box__price"><em>9,999,999</em>원</strong>
+								</div>
+							</li>
+							<li class="use-detail__item">
+								<div class="detail-box">
+									<span class="detail-box__date"><span class="date">2023-08-03</span><em class="flag flag--color-2">입금완료</em></span>
+									<span class="detail-box__sliptype">법인신용카드</span>
+									<a href="#" class="detail-box__title">EPB Clients 운영 배포 및 테스트</a>
+									<strong class="detail-box__price"><em>12,300</em>원</strong>
+								</div>
+							</li>
+							<li class="use-detail__item">
+								<div class="detail-box">
+									<span class="detail-box__date"><span class="date">2023-08-03</span><em class="flag flag--color-2">입금완료</em></span>
+									<span class="detail-box__sliptype">단기출장비</span>
+									<a href="#" class="detail-box__title">소소한식당 용산점</a>
+									<strong class="detail-box__price"><em>12,300</em>원</strong>
+								</div>
+							</li>
+							<li class="use-detail__item">
+								<div class="detail-box">
+									<span class="detail-box__date"><span class="date">2023-08-03</span><em class="flag flag--color-1">입금예정</em></span>
+									<span class="detail-box__sliptype">시내교통비</span>
+									<a href="#" class="detail-box__title">출장잡비WEB</a>
+									<strong class="detail-box__price"><em>12,300</em>원</strong>
+								</div>
+							</li>
+							<li class="use-detail__item">
+								<div class="detail-box">
+									<span class="detail-box__date"><span class="date">2023-08-03</span><em class="flag flag--color-2">입금완료</em></span>
+									<span class="detail-box__sliptype">법인신용카드</span>
+									<a href="#" class="detail-box__title">소소한식당 용산점</a>
+									<strong class="detail-box__price"><em>12,300</em>원</strong>
+								</div>
+							</li>
+							<li class="use-detail__item">
+								<div class="detail-box">
+									<span class="detail-box__date"><span class="date">2023-08-03</span><em class="flag flag--color-1">입금예정</em></span>
+									<span class="detail-box__sliptype">법인신용카드</span>
+									<a href="#" class="detail-box__title">소소한식당 용산점</a>
+									<strong class="detail-box__price"><em>97,200</em>원</strong>
+								</div>
+							</li>
+							<li class="use-detail__item">
+								<div class="detail-box">
+									<span class="detail-box__date"><span class="date">2023-08-03</span><em class="flag flag--color-2">입금완료</em></span>
+									<span class="detail-box__sliptype">시내교통비</span>
+									<a href="#" class="detail-box__title">소소한식당 용산점</a>
+									<strong class="detail-box__price"><em>12,300</em>원</strong>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- //탭 선택에 따른 입금내역 영역 -->
+				</div>
+			</div>
+		</section>
+		<!-- //입금 내역 action sheet -->
+	</div><!-- //container -->
+</section><!-- //wrapper -->
+
+<div class="dimmed"></div>
+
+<script type="text/javascript" src="../../resource/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../resource/dist/library.js"></script>
+<script type="text/javascript" src="../../resource/dist/commonJs.js"></script>
+
+</script>
+</body>
+</html>

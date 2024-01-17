@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>상세내역(정액식대) | PWC</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link rel="shortcut icon" href="../../resource/images/favicon/apple_touch_icon.ico">
+<link rel="apple-touch-icon" href="../../resource/images/favicon/apple_touch_icon.png">
+<link href="../../resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="../../resource/css/contents.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<p class="skip"><a href="#container">본문 바로가기</a></p>
+
+<section id="wrapper" class="wrapper">
+	<header>
+		<div class="header__inner header-case--v2">
+			<h1 class="title-depth5">상세내역(정액식대)</h1>
+      <button type="button" class="btn--page-close">닫기</button>
+		</div>
+	</header>
+
+	<div id="container" class="container">
+		<div class="content">
+			<h2 class="hidden">내역 작성</h2>
+        <div class="input-form-field">
+          <ul class="input-form-field__list">
+            <li class="input-field">
+              <label for="inpDivision">구분</label>
+              <input type="text" id="inpDivision" class="input-text" placeholder="정액(OT)식대" disabled>
+            </li>
+            <li class="input-field">
+              <label for="inpBriefs">적요</label>
+              <span class="text-field-wrap">
+                <input type="text" id="inpBriefs" class="input-text">
+                <button type="button" class="btn--del">삭제</button>
+              </span>
+            </li>
+            <li class="input-field search-field--ckeck">
+              <label for="inpProCode">프로젝트 코드</label>
+              <div class="search-wrap__btn-type">
+                <button aria-haspopup="dialog" data-popup-id="projuctCodePop" class="btn--search">검색 팝업</button>
+                <input type="text" id="inpProCode" class="input-text search" readonly>
+              </div>
+            </li>
+            <li class="input-field search-field--ckeck">
+              <label for="inpTeamCode">팀 코드</label>
+              <div class="search-wrap__btn-type">
+                <button aria-haspopup="dialog" data-popup-id="teamCodePop" class="btn--search">검색 팝업</button>
+                <input type="text" id="inpTeamCode" class="input-text search" readonly>
+              </div>
+            </li>
+          </ul>
+          <!-- 선택한 내역 -->
+          <div class="use-detail-box">
+            <h3 class="title-depth6">선택한 내역</h3>
+            <ul class="text--dot use-detail-box__items">
+              <li class="use-detail-box__item"><!-- (dev) button.btn--detail-item-del 클릭 시 해당 li.use-detail-box__item 삭제 -->
+                <span class="date">2023-08-08</span>
+                <strong class="price">999,999</strong>
+                <button type="button" class="btn--detail-item-del">삭제</button><!-- 하나 남은 경우 삭제 버튼 클릭 시 alert 생성 -->
+              </li>
+              <li class="use-detail-box__item">
+                <span class="date">2023-08-08</span>
+                <strong class="price">999,999</strong>
+                <button type="button" class="btn--detail-item-del">삭제</button>
+              </li>
+              <li class="use-detail-box__item">
+                <span class="date">2023-08-08</span>
+                <strong class="price">999,999</strong>
+                <button type="button" class="btn--detail-item-del">삭제</button>
+              </li>
+            </ul>
+          </div>
+          <!-- //선택한 내역 -->
+        </div>
+		</div><!-- //content -->
+		<div class="floating-btn">
+			<div class="floating-btn__inner">
+        <div class="slideDown reverse">
+          <button type="button" class="slideDown-btn wide" aria-expanded="true"><span data-text='{"text":"open|close", "show":2}'>close</span></button>
+          <div class="slideDown-cont">
+            <div class="text-align--c">
+              <a href="#" class="btn--s-round add-type-v2">교통비</a>
+              <a href="#" class="btn--s-round add-type-v2">무선전화</a>
+            </div>
+          </div>
+        </div>
+        <div class="floating-content content-type-1">
+          <h3 class="title-depth7 color-black">합계</h3>
+          <strong class="price"><em>999,999,999</em>원</strong>
+        </div>
+				<div class="btn-wrap">
+					<button type="button" class="btn">저장</button>
+				</div>
+			</div>
+		</div><!-- //floating btn -->
+	</div><!-- //container -->
+</section><!-- //wrapper -->
+
+
+<!-- layer popup : full page -->
+
+<!-- //layer popup : full page -->
+
+<!-- layer popup : bottom sheet -->
+
+<!-- //layer popup : bottom sheet -->
+
+<!-- layer popup : alert -->
+
+<!-- //layer popup : alert -->
+
+<div class="dimmed"></div>
+
+<script type="text/javascript" src="../../resource/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../resource/dist/library.js"></script>
+<script type="text/javascript" src="../../resource/dist/commonJs.js"></script>
+
+</body>
+</html>

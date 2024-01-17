@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>전표 layout | PWC</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link rel="shortcut icon" href="../../resource/images/favicon/apple_touch_icon.ico">
+<link rel="apple-touch-icon" href="../../resource/images/favicon/apple_touch_icon.png">
+<link href="../../resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="../../resource/css/contents.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<p class="skip"><a href="#container">본문 바로가기</a></p>
+
+<section id="wrapper" class="wrapper">
+	<header>
+    <div class="header__inner">
+      <button type="button" class="btn--page-prev">이전</button>
+      <h1 class="title-depth5">메뉴명</h1>
+    </div>
+	</header>
+
+	<div id="container" class="container">
+		<div class="content">
+      <div class="content-head">
+        <h2 class="hidden">전표 정보</h2>
+        <div class="chit-info">
+          <!-- 금액 폰트 사이즈 30px 사용 시  .font-size--m-price class 추가 -->
+          <strong class="chit-info__price"><em>00,000,000</em>원</strong>
+          <span class="chit-info__date">기표일자 0000-00-00</span>
+          <strong class="chit-info__num">전표번호 <span class="point-color">00<span></strong>
+          <p class="guide-text-box">결재 받으신 파트너분의 PD코드를 <br><em>프로젝트 코드란에 키인</em>하여 발의 부탁드립니다.<br>(업무추진비/복리후생비 등 PD코드 해당)</p>
+        </div>
+      </div><!-- //content-head -->
+			<div class="content-body border-type-3">
+        <h3 class="hidden">사용 목록</h3>
+        <!-- 전표 카드 타입 리스트 기본 형태 -->
+        <div class="chit--wrap">
+          <!-- 반복 항목 영역 -->
+          <div class="chit__item"> <!-- 기본 형태와 다른 style 적용 시 더블 class 추가하여 사용 -->
+            <h4 class="chit__item-title">카드 항목 노출 영역</h4>
+            <ul class="chit__item-info row-field"> <!-- 타이틀 감추고 값만 노출 시 첫 줄 2개, 두번째 줄 1개 구조 사용 할 경우 row-field 더블 class 사용 -->
+              <li>
+                <span class="title">사용일자</span> <!-- 타이틀 css로 감춰진 상태 -->
+                <span class="text">0000-00-00</span>
+              </li>
+              <li>
+                <span class="title">적요</span>
+                <span class="text">적요 노출 영역</span>
+              </li>
+              <li>
+                <span class="title">프로젝트(팀)</span>
+                <span class="text">프로젝트 노출 영역</span>
+              </li>
+              <div class="chit__item-info-total">
+                <span class="title">총 금액</span>
+                <span class="text">000,000</span>
+              </div>
+            <button type="button" class="chit__item-del">삭제</button>
+          </div>
+          <!-- //반복 항목 영역 -->
+        </div>
+         <!-- //전표 카드 타입 리스트 기본 형태 -->
+			</div><!-- //content-body -->
+		</div><!-- //content -->
+    <!-- case 결재중&결재완료 : 하단 버튼 필요 없는 경우 div.floating-btn 영역 삭제 -->
+		<div class="floating-btn radius-non-type">
+			<div class="floating-btn__inner">
+				<div class="btn-wrap">
+					<button type="button" class="btn btn--outline">작성 취소</button>
+					<button type="button" class="btn">전표생성</button>
+				</div>
+			</div>
+		</div><!-- //floating btn -->
+	</div><!-- //container -->
+</section><!-- //wrapper -->
+
+<!-- layer popup : full popup -->
+
+<!-- //layer popup : full popup -->
+
+<!-- layer popup : bottom sheet -->
+
+<!-- //layer popup : bottom sheet -->
+
+<!-- layer popup : alert -->
+
+<!-- //layer popup : alert -->
+
+<div class="dimmed"></div>
+
+<script type="text/javascript" src="../../resource/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../resource/dist/library.js"></script>
+<script type="text/javascript" src="../../resource/dist/commonJs.js"></script>
+
+</body>
+</html>

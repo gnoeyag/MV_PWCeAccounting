@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>단기출장비(법인카드) 상세내역 | PWC</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link rel="shortcut icon" href="../../resource/images/favicon/apple_touch_icon.ico">
+<link rel="apple-touch-icon" href="../../resource/images/favicon/apple_touch_icon.png">
+<link href="../../resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="../../resource/css/contents.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<p class="skip"><a href="#container">본문 바로가기</a></p>
+
+<section id="wrapper" class="wrapper">
+	<header>
+		<div class="header__inner header-case--v2">
+			<h1 class="title-depth5">단기출장비(법인카드)</h1>
+      <button type="button" class="btn--page-close">닫기</button>
+		</div>
+	</header>
+
+	<div id="container" class="container">
+		<div class="content">
+      <div class="content-head in-slide">
+        <h2 class="hidden">출장 상세정보</h2>
+        <div class="use-info info-type-2">
+          <p class="use-info__trip"><span class="period">2023-08-01 ~ 2023-08-05</span><span class="location">서울</span></p>
+          <span class="use-info__date">기표일자 2023-12-31</span>
+        </div>
+        <div class="slideDown">
+          <div class="slideDown-cont">
+            <ul class="period-info">
+              <li class="period-info__item">
+                <strong class="title">현금(정액)사용</strong>
+                <span class="data"><span>80,200</span>원</span>
+              </li>
+              <li class="period-info__item">
+                <strong class="title">법인신용카드</strong>
+                <span class="data"><span>39,200</span>원</span>
+              </li>
+              <li class="period-info__item">
+                <strong class="title">출장기간</strong>
+                <span class="data">2023-07-14 ~ 2023-08-05</span>
+              </li>
+              <li class="period-info__item">
+                <strong class="title">출장목적/방문장소</strong>
+                <span class="data">교육 출장</span>
+              </li>
+              <li class="period-info__item">
+                <strong class="title">숙박정보</strong>
+                <span class="data">본인 법인카드 결제</span>
+              </li>
+              <li class="period-info__item">
+                <strong class="title">출장자</strong>
+                <span class="data">정현석(A)</span>
+              </li>
+              <li class="period-info__item">
+                <strong class="title">프로젝트(팀)</strong>
+                <span class="data">코칭 / Workday Coaching-이명섭</span>
+              </li>
+              <li class="period-info__item">
+                <strong class="title">지역</strong>
+                <span class="data">서울</span>
+              </li>
+            </ul>
+          </div>
+          <button type="button" class="slideDown-btn" aria-expanded="false"><span data-text='{"text":"open|close", "show":1}'>open</span></button>
+        </div>
+      </div><!-- //content-head -->
+      <div class="content-body border-type-1">
+        <div class="input-form-field">
+          <ul class="input-form-field__list">
+            <li class="input-field search-field">
+              <h3 class="title-depth6">출장경비</h3>
+              <div class="search-wrap__btn-type">
+                <button aria-haspopup="dialog" data-popup-id="tripExpensesPop" class="btn--search">출장경비 팝업</button>
+                <input type="text" class="input-text search" readonly>
+              </div>
+            </li>
+            <li class="input-field search-field">
+              <h3 class="title-depth6">구분</h3>
+              <div class="select-wrap line-type">
+                <button aria-haspopup="dialog" data-popup-id="transportationTypePop" class="btn--select"><span class="hidden">교통수단 구분 팝업</span>{팝업선택값}</button><!-- (dev) {팝업선택값} 영역은 default는 비어있고 팝업에서 값 선택하는 경우 출력 -->
+              </div>
+            </li>
+            <li class="input-field search-field">
+              <h3 class="title-depth6">상세입력</h3>
+              <!-- (dev) 구분 항목 case) 버스/택시/주차료 선택 시 필드 비활성화. button,input 태그에 비활성화 disabled 속성 추가 -->
+              <div class="search-wrap__btn-type">
+                <button aria-haspopup="dialog" data-popup-id="" class="btn--search" disabled></button>
+                <input type="text" class="input-text search" disabled>
+              </div>
+              <!-- (dev) 구분항목 case) 항공/철도/주유(렌터카) 선택 시 필드 활성화
+                <div class="search-wrap__btn-type">
+                <button aria-haspopup="dialog" data-popup-id="연결되는 팝업 id" class="btn--search">{연결되는 팝업 이름} 팝업</button>
+                <input type="text" class="input-text search" readonly>
+              </div>
+              -->
+            </li>
+            <li class="input-field search-field">
+              <h3 class="title-depth6">상세내용</h3>
+              <span class="text-field-wrap">
+                <input type="text" value="{카드사 상호명}" class="input-text"><!-- (dev) value="{default: 카드사 상호명}" -->
+                <button type="button" class="btn--del">삭제</button>
+              </span>
+            </li>
+            <li class="input-field">
+              <h3 class="title-depth6">금액</h3>
+              <input type="text" class="input-text" value="20,200" disabled>
+            </li>
+            <li class="input-field">
+              <h3 class="title-depth6">금액 구분</h3>
+              <input type="text" class="input-text" value="신용카드" disabled>
+            </li>
+          </ul>
+        </div>
+      </div><!-- //content-body -->
+		</div><!-- //content -->
+		<div class="floating-btn radius-non-type">
+			<div class="floating-btn__inner">
+        <div class="btn-wrap--padding-type">
+          <button type="button" class="btn btn--outline">방금 쓴 내역 붙여넣기 [1/10]</button><!-- (dev) 비활성화 시 disabled 속성 추가-->
+        </div>
+        <!-- (dev) 상세내역 마지막 페이지에서만 노출 -->
+        <div class="chit-info__btn-wrap">
+          <a href="#" class="chit-info__btn" title="법인카드 사용내역 페이지 이동">법인카드</a>
+          <button aria-haspopup="dialog" data-popup-id="transportationExpenses" class="chit-info__btn">교통비</button>
+          <button aria-haspopup="dialog" data-popup-id="bizTripExpenses" class="chit-info__btn">출장잡비</button>
+        </div>
+        <!-- //상세내역 마지막 페이지에서만 노출 -->
+        <div class="btn-wrap">
+          <button type="button" class="btn btn--outline">이전</button>
+          <button type="button" class="btn">다음</button><!-- (dev) 비활성화 시 disabled 속성 추가 -->
+        </div>
+			</div>
+		</div><!-- //floating btn -->
+	</div><!-- //container -->
+</section><!-- //wrapper -->
+
+
+<!-- layer popup : full page -->
+
+<!-- //layer popup : full page -->
+
+<!-- layer popup : bottom sheet -->
+
+<!-- //layer popup : bottom sheet -->
+
+<!-- layer popup : alert -->
+
+<!-- //layer popup : alert -->
+
+<div class="dimmed"></div>
+
+<script type="text/javascript" src="../../resource/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../resource/dist/library.js"></script>
+<script type="text/javascript" src="../../resource/dist/commonJs.js"></script>
+
+</body>
+</html>

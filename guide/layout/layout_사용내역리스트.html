@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>사용내역 리스트 layout | PWC</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link rel="shortcut icon" href="../../resource/images/favicon/apple_touch_icon.ico">
+<link rel="apple-touch-icon" href="../../resource/images/favicon/apple_touch_icon.png">
+<link href="../../resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="../../resource/css/contents.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<p class="skip"><a href="#container">본문 바로가기</a></p>
+
+<section id="wrapper" class="wrapper">
+	<header>
+    <div class="header__inner">
+      <button type="button" class="btn--page-prev">이전</button>
+      <h1 class="title-depth5">메뉴명</h1>
+    </div>
+	</header>
+
+	<div id="container" class="container">
+		<div class="content">
+      <div class="fixed-top">
+        <div class="content-head fixed-top__inner">
+          <h2 class="hidden">월 별 사용내역 정보</h2>
+          <div class="use-info info-type-2">
+            <div class="select-wrap text-size--l">
+              <button aria-haspopup="dialog" data-popup-id="monthSelect" class="btn--select text-type"><span class="hidden">월 선택 팝업</span>2023년 8월</button>
+            </div>
+            <span class="use-info__date">기표일자 0000-00-00</span>
+            <button aria-haspopup="dialog" data-popup-id="prevApplied" class="btn--s-round color-type">기신청 특근내역</button>
+          </div>
+        </div><!-- //content-head -->
+      </div>
+			<div class="content-body border-type-2">
+        <h3 class="hidden">사용 목록</h3>
+        <!-- case : 조회 결과 없는 경우 -->
+        <p class="no-data">조회된 정보가 없습니다.</p>
+        <!-- case : 조회 결과 있는 경우 -->
+        <div class="check-list--head head-type-1">
+          <span class="input-checkbox text-label">
+            <input type="checkbox" id="checkAll" name="check01Group">
+            <label for="checkAll">전체선택 (<span class="hidden">선택 개수</span>2/<span class="hidden">전체 개수</span>20)</label>
+          </span>
+          <button aria-haspopup="dialog" data-popup-id="sortItemSelect" class="btn--ico btn--sort-v2">과거 날짜순</button>
+        </div>
+        <div class="card-result">
+          <h3 class="hidden">사용 내역</h3>
+          <ul class="use-detail check-list">
+            <li class="use-detail__item">
+              <div class="detail-box">
+                <!-- 
+                  ● 기본적으로 우측 badge 용 여백이 적용되어있는 상태(padding-right:70px)
+                  ● 우측에 badge 들어가지 않는 경우는 .non-pad-style 더블 class 사용
+                -->
+                <span class="detail-box__date non-pad-style">
+                  <span class="date">2023-12-09</span>
+                  <span class="time">23:59</span>
+                  <em class="cate">업종명 노출 영역 업종명 노출 영역 업종명 노출 영역</em>
+                </span>
+                <strong class="detail-box__title">상호명 노출 영역 상호명 노출 영역 상호명 노출 영역 상호명 노출 영역</strong>
+                <strong class="detail-box__price"><em>999,999,999</em>원</strong>
+              </div>
+              <span class="input-checkbox">
+                <input type="checkbox" id="check01" name="check01Group">
+                <label for="check01">선택</label>
+              </span>
+            </li>
+            <li class="use-detail__item">
+              <!-- [내 전표 현황] 페이지 처럼 flag 를 우측정렬 하고싶은 경우 sort-type-1 class 추가 -->
+              <div class="detail-box sort-type-1">
+                <span class="detail-box__date">
+                  <span class="date">0000-00-00</span>
+                  <span class="chit-num">99</span>
+                  <em class="flag flag--color-4">미상신</em>
+                </span>
+                <strong class="detail-box__title">상호명</strong>
+                <strong class="detail-box__price"><em>00,000</em>원</strong>
+              </div>
+              <span class="input-checkbox">
+                <input type="checkbox" id="check02" name="check01Group">
+                <label for="check02">선택</label>
+              </span>
+            </li>
+            <li class="use-detail__item">
+              <div class="detail-box sort-type-1">
+                <span class="detail-box__date">
+                  <span class="date">0000-00-00</span>
+                  <em class="flag flag--color-5">회송</em>
+                </span>
+                <strong class="detail-box__title">상호명</strong>
+                <strong class="detail-box__price"><em>000,000</em>원</strong>
+              </div>
+              <span class="input-checkbox">
+                <input type="checkbox" id="check03" name="check01Group">
+                <label for="check03">선택</label>
+              </span>
+            </li>
+            <li class="use-detail__item">
+              <div class="detail-box">
+                <span class="detail-box__date">
+                  <span class="date">0000-00-00</span>
+                  <em class="flag flag--color-2">입금완료</em>
+                </span>
+                <strong class="detail-box__title">상호명</strong>
+                <strong class="detail-box__price"><em>000,000</em>원</strong>
+              </div>
+              <span class="input-checkbox">
+                <input type="checkbox" id="check04" name="check01Group">
+                <label for="check04">선택</label>
+              </span>
+            </li>
+            <li class="use-detail__item">
+              <div class="detail-box">
+                <span class="detail-box__date">
+                  <span class="date">0000-00-00</span>
+                  <em class="flag flag--color-1">입금예정</em>
+                </span>
+                <strong class="detail-box__title">상호명</strong>
+                <strong class="detail-box__price"><em>000,000</em>원</strong>
+              </div>
+              <span class="input-checkbox">
+                <input type="checkbox" id="check05" name="check01Group">
+                <label for="check05">선택</label>
+              </span>
+            </li>
+            <li class="use-detail__item">
+              <div class="detail-box">
+                <span class="detail-box__date">
+                  <span class="date">0000-00-00</span>
+                  <em class="cate">교통</em>
+                  <em class="badge badge--text bg-color-1">F-Link</em>
+                </span>
+                <strong class="detail-box__title">상호명</strong>
+                <strong class="detail-box__price"><em>000,000</em>원</strong>
+              </div>
+              <span class="input-checkbox">
+                <input type="checkbox" id="check06" name="check01Group">
+                <label for="check06">선택</label>
+              </span>
+            </li>
+            <!-- 비활성화 case -->
+            <li class="use-detail__item disabled"><!-- 비활성화 시 .disabled class 추가 -->
+              <div class="detail-box">
+                <span class="detail-box__date">
+                  <span class="date">0000-00-00</span>
+                  <em class="badge badge--text bg-color-2">작성완료</em>
+                </span>
+                <strong class="detail-box__title">상호명</strong>
+                <strong class="detail-box__price"><em>000,000</em>원</strong>
+              </div>
+              <span class="input-checkbox">
+                <input type="checkbox" id="check07" name="check01Group" disabled><!-- 비활성화 시 disabled 속성 추가 -->
+                <label for="check07">선택</label>
+              </span>
+            </li>
+            <!-- //비활성화 case -->
+          </ul>
+        </div><!-- //card-result -->
+			</div><!-- //content-body -->
+		</div><!-- //content -->
+		<div class="floating-btn">
+			<div class="floating-btn__inner">
+				<div class="btn-wrap">
+					<button type="button" class="btn">작성하기</button>
+				</div>
+			</div>
+		</div><!-- //floating btn -->
+	</div><!-- //container -->
+</section><!-- //wrapper -->
+
+<!-- layer popup : full popup -->
+
+<!-- //layer popup : full popup -->
+
+<!-- layer popup : bottom sheet -->
+
+<!-- //layer popup : bottom sheet -->
+
+<!-- layer popup : alert -->
+
+<!-- //layer popup : alert -->
+
+<div class="dimmed"></div>
+
+<script type="text/javascript" src="../../resource/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../resource/dist/library.js"></script>
+<script type="text/javascript" src="../../resource/dist/commonJs.js"></script>
+
+</body>
+</html>

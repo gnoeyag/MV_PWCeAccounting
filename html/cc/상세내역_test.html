@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>상세내역 | PWC</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link rel="shortcut icon" href="../../resource/images/favicon/apple_touch_icon.ico">
+<link rel="apple-touch-icon" href="../../resource/images/favicon/apple_touch_icon.png">
+<link href="../../resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="../../resource/css/contents.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<p class="skip"><a href="#container">본문 바로가기</a></p>
+
+<section id="wrapper" class="wrapper">
+	<header>
+		<div class="header__inner header-case--v2">
+			<h1 class="title-depth5">상세내역</h1>
+      <!-- <button type="button" class="btn--page-close">닫기</button> --><!-- (dev) 팝업 닫기 -->
+			<button aria-haspopup="dialog" data-popup-id="detailWritelPop12" class="btn--page-close">닫기</button><!-- (dev) alert 팝업 호출 시 -->
+		</div>
+	</header>
+
+	<div id="container" class="container">
+    <div class="loading-wrap">
+      <span class="loader"><!-- loading bar design --></span>
+      <span class="loader"><!-- loading bar design --></span>
+      <span class="loader"><!-- loading bar design --></span>
+    </div>
+    
+		<div class="content">
+      <div class="content-head">
+        <h2 class="hidden">상세내역 정보</h2>
+        <div class="use-info info-type-1">
+          <span class="use-info__date"><span class="hidden">카드 사용일자</span>2023-12-31</span>
+          <strong class="use-info__title"><span class="hidden">상호</span>카카오 택시 카카오T</strong>
+          <strong class="use-info__price"><span class="hidden">금액</span><em>9,999,999</em>원</strong>
+          <button aria-haspopup="dialog" data-popup-id="detailHistoryPop" class="btn--ico btn--summary">상세내역 요약보기</button>
+        </div>
+      </div><!-- //content-head -->
+			<div class="content-body">
+        <h2 class="hidden">내역 작성</h2>
+        <div class="input-form-field">
+          <ul class="input-form-field__list">
+            <li class="input-field search-field">
+              <label for="inpName">계정과목</label>
+              <div class="search-wrap__btn-type">
+                <button aria-haspopup="dialog" data-popup-id="selectAttendeesPop" class="btn--search">조회 팝업</button>
+                <input type="text" id="inpName" class="input-text search" readonly>
+              </div>
+            </li>
+            <li class="input-field search-field">
+              <label for="inpManage">관리항목</label>
+              <div class="search-wrap__btn-type">
+                <button aria-haspopup="dialog" data-popup-id="managementCarRepairPop" class="btn--search">조회 팝업</button>
+                <input type="text" id="inpManage" class="input-text search" readonly>
+              </div>
+            </li>
+            <li class="input-field">
+              <label for="inpBriefs">적요</label>
+              <span class="text-field-wrap">
+                <input type="text" id="inpBriefs" class="input-text">
+                <button type="button" class="btn--del">삭제</button>
+              </span>
+            </li>
+            <li class="input-field search-field--ckeck">
+              <label for="inpProCode">프로젝트 코드</label>
+              <span class="input-checkbox check-size-m text-label"><input type="checkbox" id="checkProCode"><label for="checkProCode">직접입력</label></span>
+              <!-- case : 직접입력 선택 전 -->
+              <div class="search-wrap__btn-type">
+                <button aria-haspopup="dialog" data-popup-id="projuctCodePop" class="btn--search">검색 팝업</button>
+                <input type="text" id="inpProCode" class="input-text search" readonly>
+              </div>
+              <!-- //case : 직접입력 선택 전 -->
+              <!-- case : 직접입력 선택 후 -->
+              <div class="multi-field project-code">
+                <span class="text-field-wrap">
+                  <input type="tel" id="inpProCode" class="input-text" maxlength="5" placeholder="12345" title="프로젝트 코드 앞 5자리">
+                  <button type="button" class="btn--del">삭제</button>
+                </span>
+                <span class="text-field-wrap">
+                  <input type="tel" class="input-text" maxlength="2" placeholder="12" title="프로젝트 코드 중간 2자리">
+                  <button type="button" class="btn--del">삭제</button>
+                </span>
+                <span class="text-field-wrap">
+                  <input type="tel" class="input-text" maxlength="3" placeholder="123" title="프로젝트 코드 마지막 3자리">
+                  <button type="button" class="btn--del">삭제</button>
+                </span>
+              </span>
+              </div>
+              <!-- //case : 직접입력 선택 후 -->
+              <!-- case : 직접입력 선택 후 유효성 검사 true -->
+              <input type="text" id="inpProCode" class="input-text" readonly>
+              <!-- // case : 직접입력 선택 후 유효성 검사 true -->
+            </li>
+            <li class="input-field search-field--ckeck">
+              <label for="inpTeamCode">팀 코드</label>
+              <span class="input-checkbox check-size-m text-label"><input type="checkbox" id="checkTeamCode"><label for="checkTeamCode">직접입력</label></span>
+              <!-- case : 직접입력 선택 전 -->
+              <div class="search-wrap__btn-type">
+                <button aria-haspopup="dialog" data-popup-id="teamCodePop" class="btn--search">검색 팝업</button>
+                <input type="text" id="inpTeamCode" class="input-text search" readonly>
+              </div>
+              <!-- //case : 직접입력 선택 전 -->
+              <!-- case : 직접입력 선택 후 -->
+              <span class="text-field-wrap">
+                <input type="tel" id="inpTeamCode" class="input-text" placeholder="코드 3자리">
+                <button type="button" class="btn--del">삭제</button>
+              </span>
+              <!-- //case : 직접입력 선택 후 -->              
+              <!-- case : 직접입력 선택 후 유효성 검사 true -->
+              <input type="tel" id="inpTeamCode" class="input-text" readonly>
+              <!-- // case : 직접입력 선택 후 유효성 검사 true -->
+            </li>
+          </ul>
+        </div>
+        <div class="btn-wrap">
+          <a href="#" class="btn--s-round add-type">사용내역 추가</a><!-- (dev) 비활성화 시 disabled 속성 추가 -->
+        </div>
+			</div><!-- //content-body -->
+		</div><!-- //content -->
+		<div class="floating-btn radius-non-type">
+			<div class="floating-btn__inner">
+        <div class="btn-wrap">
+          <button type="button" class="btn btn--outline">이전</button>
+          <button type="button" class="btn">다음</button><!-- (dev) 비활성화 시 disabled 속성 추가 -->
+        </div>
+			</div>
+		</div><!-- //floating btn -->
+	</div><!-- //container -->
+</section><!-- //wrapper -->
+
+
+
+
+
+
+
+<!-- ******* 팝업 test 중 ****** -->
+<!-- 참석자 선택 -->
+<section id="selectAttendeesPop" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--full">
+	<h2 class="layer-title">참석자 선택</h2>
+	<div class="popup-wrap">
+		<div class="layer-content">
+      <div class="fixed-top">
+        <div class="content-head fixed-top__inner select-attendees--head">
+          <!-- 검색 -->
+          <div class="search-wrap">
+            <span class="text-field-wrap">
+              <input type="text" class="input-text search" title="팀 코드,사번,이름 입력">
+              <button type="button" class="btn--del">삭제</button>
+            </span>
+            <button type="button" class="btn--search" data-popup-id="detailWritelPop1">검색</button>
+          </div>
+          <!-- //검색 -->
+          <!-- 선택된 항목 리스트 -->
+          <!-- (dev) 
+            1. 참석자 검색 목록에서 선택 시 해당영역 생성 
+            2. button.btn--chip__close 선택 시 span.btn--chip 삭제 
+          -->
+          <div class="chips-wrap">
+            <span class="btn--chip">김삼일/123123<button type="button">삭제</button></span>
+            <span class="btn--chip">김삼일/123123<button type="button">삭제</button></span>
+            <span class="btn--chip">김삼일/123123<button type="button">삭제</button></span>
+            <span class="btn--chip">김삼일/123123<button type="button">삭제</button></span>
+            <span class="btn--chip">김삼일/123123<button type="button">삭제</button></span>
+            <span class="btn--chip">김삼일/123123<button type="button">삭제</button></span>
+            <span class="btn--chip">김삼일/123123<button type="button">삭제</button></span>
+            <span class="btn--chip">김삼일/123123<button type="button">삭제</button></span>
+            <span class="btn--chip">김삼일/123123<button type="button">삭제</button></span>
+          </div>
+          <!-- //선택된 항목 리스트 -->
+        </div><!-- //content-head -->
+			</div><!-- //fixed-top -->
+      <!-- 검색 결과 -->
+      <div class="select-attendees--list">
+        <ul class="checkbox-selector--wrap">
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-01" name="selectAttendeesGroup"><label for="selectAttendees-01">박삼일 / Senior Manager / DTI / 345345</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-02" name="selectAttendeesGroup"><label for="selectAttendees-02">정삼일 / Senior-Associate 2 / DTI / 456456</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-03" name="selectAttendeesGroup"><label for="selectAttendees-03">박삼일 / Senior Manager / DTI / 345345</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-04" name="selectAttendeesGroup"><label for="selectAttendees-04">정삼일 / Senior-Associate 2 / DTI / 456456</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-05" name="selectAttendeesGroup"><label for="selectAttendees-05">주삼일 / Associate / DTI / 789789</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-06" name="selectAttendeesGroup"><label for="selectAttendees-06">김삼일 / Partner / DTI / 123123</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-07" name="selectAttendeesGroup"><label for="selectAttendees-07">고삼일 / Manager 1 / DTI / 678678</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-08" name="selectAttendeesGroup"><label for="selectAttendees-08">이삼일 / Director / DTI / 234234</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-08" name="selectAttendeesGroup"><label for="selectAttendees-08">이삼일 / Director / DTI / 234234</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-08" name="selectAttendeesGroup"><label for="selectAttendees-08">이삼일 / Director / DTI / 234234</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-08" name="selectAttendeesGroup"><label for="selectAttendees-08">이삼일 / Director / DTI / 234234</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-08" name="selectAttendeesGroup"><label for="selectAttendees-08">이삼일 / Director / DTI / 234234</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-08" name="selectAttendeesGroup"><label for="selectAttendees-08">이삼일 / Director / DTI / 234234</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-08" name="selectAttendeesGroup"><label for="selectAttendees-08">이삼일 / Director / DTI / 234234</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-08" name="selectAttendeesGroup"><label for="selectAttendees-08">이삼일 / Director / DTI / 234234</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-08" name="selectAttendeesGroup"><label for="selectAttendees-08">이삼일 / Director / DTI / 234234</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-08" name="selectAttendeesGroup"><label for="selectAttendees-08">이삼일 / Director / DTI / 234234</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-09" name="selectAttendeesGroup"><label for="selectAttendees-09">김삼일 / Partner / DTI / 123123</label></span></li>
+        </ul>
+      </div>
+		</div><!-- //layer-content -->
+    <div class="floating-btn">
+			<div class="floating-btn__inner">
+				<div class="btn-wrap">
+					<button type="button" class="btn popup-close">확인</button>
+				</div>
+			</div>
+		</div>
+		<!-- //floating-btn -->
+	</div><!-- //popup-wrap -->
+	<button type="button" class="btn--close popup-close">팝업 닫기</button>
+</section>
+<!-- // 참석자 선택 -->
+
+<!-- 관리항목 입력(차량수리비) -->
+<section id="managementCarRepairPop" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--full">
+	<h2 class="layer-title">관리항목 입력(차량수리비)</h2>
+	<div class="popup-wrap">
+		<div class="layer-content padding-bottom--btn-wrap">
+      <div class="content-head">
+        <h3 class="title-depth7">계정코드</h3>
+				<p class="margin-top--8">5123 / 차량수리비 Vehicle Repairing Expense</p>
+      </div>
+      <div class="content-body">
+				<h2 class="hidden">관리항목 입력</h2>
+        <ul class="input-form-field__list">
+					<li class="input-field search-field">
+						<label for="inpCorOwner">법인차량소유자</label>
+						<div class="search-wrap__btn-type">
+							<button aria-haspopup="dialog" data-popup-id="employeeCodePop" class="btn--search">직원 조회 팝업</button>
+							<input type="text" id="inpCorOwner" class="input-text search" readonly>
+						</div>
+					</li>
+					<li class="input-field">
+						<label for="inpCorNum">법인차량번호</label>
+            <div class="search-wrap__btn-type">
+							<button aria-haspopup="dialog" data-popup-id="corVehicleNumberPop" class="btn--search">법인차량번호 팝업</button>
+							<input type="text" id="inpCorNum" class="input-text search" readonly>
+						</div>
+					</li>
+				</ul>
+      </div>
+      <div class="btn-wrap btn-wrap--bottom">
+				<button type="button" class="btn">확인</button><!-- (dev) 비활성화 시 .disabled class 추가 -->
+			</div>
+		</div><!-- //layer-content -->
+	</div><!-- //popup-wrap -->
+	<button type="button" class="btn--close popup-close">팝업 닫기</button>
+</section>
+<!-- // 관리항목 입력(차량수리비) -->
+
+<!-- 직원 조회 -->
+<section id="employeeCodePop" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--full" style="z-index:101"  data-infiniteScroll>
+	<h2 class="layer-title">직원 조회</h2>
+	<div class="popup-wrap">
+		<div class="layer-content">
+      <!-- 검색 -->
+      <div class="search-wrap">
+        <span class="text-field-wrap">
+          <input type="text" class="input-text search" placeholder="팀코드 또는 사번 또는 이름을 입력하세요." title="팀 코드,사번,이름 입력">
+          <button type="button" class="btn--del">삭제</button>
+        </span>
+        <button type="button" class="btn--search">검색</button>
+      </div>
+      <!-- //검색 -->
+      <!-- 검색 결과 -->
+      <!-- case : 조회 결과 없는 경우 -->
+      <p class="no-data">조회된 정보가 없습니다.</p><!-- 10.13 문구수정 -->
+      <!-- case : 조회 결과 있는 경우 -->
+      <div class="select-btn--wrap select-btn--active">
+        <button type="button" class="btn btn--sel btn--sel-left">김삼일 / Partner / DTI / 123123</button>
+        <button type="button" class="btn btn--sel btn--sel-left">이삼일 / Director / DTI / 234234</button>
+        <button type="button" class="btn btn--sel btn--sel-left">박삼일 / Senior Manager / DTI / 345345</button>
+        <button type="button" class="btn btn--sel btn--sel-left">정삼일 / Senior-Associate 2 / DTI / 456456</button>
+        <button type="button" class="btn btn--sel btn--sel-left">김삼일 / Partner / DTI / 123123</button>
+        <button type="button" class="btn btn--sel btn--sel-left">이삼일 / Director / DTI / 234234</button>
+        <button type="button" class="btn btn--sel btn--sel-left">박삼일 / Senior Manager / DTI / 345345</button>
+        <button type="button" class="btn btn--sel btn--sel-left">정삼일 / Senior-Associate 2 / DTI / 456456</button>
+        <button type="button" class="btn btn--sel btn--sel-left">김삼일 / Partner / DTI / 123123</button>
+        <button type="button" class="btn btn--sel btn--sel-left">이삼일 / Director / DTI / 234234</button>
+        <button type="button" class="btn btn--sel btn--sel-left">박삼일 / Senior Manager / DTI / 345345</button>
+        <button type="button" class="btn btn--sel btn--sel-left">정삼일 / Senior-Associate 2 / DTI / 456456</button>
+        <button type="button" class="btn btn--sel btn--sel-left">김삼일 / Partner / DTI / 123123</button>
+        <button type="button" class="btn btn--sel btn--sel-left">이삼일 / Director / DTI / 234234</button>
+        <button type="button" class="btn btn--sel btn--sel-left">박삼일 / Senior Manager / DTI / 345345</button>
+        <button type="button" class="btn btn--sel btn--sel-left">정삼일 / Senior-Associate 2 / DTI / 456456</button>
+        <button type="button" class="btn btn--sel btn--sel-left">김삼일 / Partner / DTI / 123123</button>
+        <button type="button" class="btn btn--sel btn--sel-left">이삼일 / Director / DTI / 234234</button>
+        <button type="button" class="btn btn--sel btn--sel-left">박삼일 / Senior Manager / DTI / 345345</button>
+        <button type="button" class="btn btn--sel btn--sel-left">정삼일 / Senior-Associate 2 / DTI / 456456</button>
+        <button type="button" class="btn btn--sel btn--sel-left">이삼일 / Director / DTI / 234234</button>
+        <button type="button" class="btn btn--sel btn--sel-left">박삼일 / Senior Manager / DTI / 345345</button>
+        <button type="button" class="btn btn--sel btn--sel-left">정삼일 / Senior-Associate 2 / DTI / 456456</button>
+      </div>
+		</div><!-- //layer-content -->
+	</div><!-- //popup-wrap -->
+	<button type="button" class="btn--close popup-close">팝업 닫기</button>
+</section>
+<!-- // 직원 조회 -->
+
+
+<!-- 참석자 선택 -->
+<section id="selectAttendeesPop" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--full">
+	<h2 class="layer-title">참석자 선택</h2>
+	<div class="popup-wrap">
+		<div class="layer-content">
+      <div class="fixed-top">
+        <div class="content-head fixed-top__inner select-attendees--head">
+          <!-- 검색 -->
+          <div class="search-wrap">
+            <span class="text-field-wrap">
+              <input type="text" class="input-text search" title="팀 코드,사번,이름 입력">
+              <button type="button" class="btn--del">삭제</button>
+            </span>
+            <button type="button" class="btn--search">검색</button>
+          </div>
+          <!-- //검색 -->
+          <!-- 선택된 항목 리스트 -->
+          <!-- (dev) 
+            1. 참석자 검색 목록에서 선택 시 해당영역 생성 
+            2. button.btn--chip__close 선택 시 span.btn--chip 삭제 
+          -->
+          <div class="chips-wrap">
+            <span class="btn--chip">김삼일/123123<button type="button">삭제</button></span>
+            <span class="btn--chip">김삼일/123123<button type="button">삭제</button></span>
+            <span class="btn--chip">김삼일/123123<button type="button">삭제</button></span>
+            <span class="btn--chip">김삼일/123123<button type="button">삭제</button></span>
+            <span class="btn--chip">김삼일/123123<button type="button">삭제</button></span>
+            <span class="btn--chip">김삼일/123123<button type="button">삭제</button></span>
+            <span class="btn--chip">김삼일/123123<button type="button">삭제</button></span>
+            <span class="btn--chip">김삼일/123123<button type="button">삭제</button></span>
+            <span class="btn--chip">김삼일/123123<button type="button">삭제</button></span>
+          </div>
+          <!-- //선택된 항목 리스트 -->
+        </div><!-- //content-head -->
+			</div><!-- //fixed-top -->
+      <!-- 검색 결과 -->
+      <div class="select-attendees--list">
+        <ul class="checkbox-selector--wrap">
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-01" name="selectAttendeesGroup"><label for="selectAttendees-01">박삼일 / Senior Manager / DTI / 345345</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-02" name="selectAttendeesGroup"><label for="selectAttendees-02">정삼일 / Senior-Associate 2 / DTI / 456456</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-03" name="selectAttendeesGroup"><label for="selectAttendees-03">박삼일 / Senior Manager / DTI / 345345</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-04" name="selectAttendeesGroup"><label for="selectAttendees-04">정삼일 / Senior-Associate 2 / DTI / 456456</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-05" name="selectAttendeesGroup"><label for="selectAttendees-05">주삼일 / Associate / DTI / 789789</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-06" name="selectAttendeesGroup"><label for="selectAttendees-06">김삼일 / Partner / DTI / 123123</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-07" name="selectAttendeesGroup"><label for="selectAttendees-07">고삼일 / Manager 1 / DTI / 678678</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-08" name="selectAttendeesGroup"><label for="selectAttendees-08">이삼일 / Director / DTI / 234234</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-08" name="selectAttendeesGroup"><label for="selectAttendees-08">이삼일 / Director / DTI / 234234</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-08" name="selectAttendeesGroup"><label for="selectAttendees-08">이삼일 / Director / DTI / 234234</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-08" name="selectAttendeesGroup"><label for="selectAttendees-08">이삼일 / Director / DTI / 234234</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-08" name="selectAttendeesGroup"><label for="selectAttendees-08">이삼일 / Director / DTI / 234234</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-08" name="selectAttendeesGroup"><label for="selectAttendees-08">이삼일 / Director / DTI / 234234</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-08" name="selectAttendeesGroup"><label for="selectAttendees-08">이삼일 / Director / DTI / 234234</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-08" name="selectAttendeesGroup"><label for="selectAttendees-08">이삼일 / Director / DTI / 234234</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-08" name="selectAttendeesGroup"><label for="selectAttendees-08">이삼일 / Director / DTI / 234234</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-08" name="selectAttendeesGroup"><label for="selectAttendees-08">이삼일 / Director / DTI / 234234</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="selectAttendees-09" name="selectAttendeesGroup"><label for="selectAttendees-09">김삼일 / Partner / DTI / 123123</label></span></li>
+        </ul>
+      </div>
+		</div><!-- //layer-content -->
+    <div class="floating-btn">
+			<div class="floating-btn__inner">
+				<div class="btn-wrap">
+					<button type="button" class="btn popup-close">확인</button>
+				</div>
+			</div>
+		</div>
+		<!-- //floating-btn -->
+	</div><!-- //popup-wrap -->
+	<button type="button" class="btn--close popup-close">팝업 닫기</button>
+</section>
+<!-- // 참석자 선택 -->
+
+
+<!-- //layer popup : full page -->
+
+
+<!-- 법인차량번호 -->
+<section id="corVehicleNumberPop" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--bottom">
+	<div class="popup-wrap">
+		<h2 class="layer-title">법인차량번호</h2>
+		<div class="layer-content">
+			<!-- 검색 -->
+      <div class="search-wrap">
+        <span class="text-field-wrap">
+          <input type="text" class="input-text search" placeholder="사번을 입력해 주세요" title="사번 입력">
+          <button type="button" class="btn--del">삭제</button>
+        </span>
+        <button type="button" class="btn--search">검색</button>
+      </div>
+      <!-- //검색 -->
+      <!-- 검색결과 -->
+      <!-- (dev) 검색 전엔 영역 비노출 -->
+      <ul class="text--dot vehicle-number">
+        <li>
+          <span class="title">코드</span>
+          <strong class="text">141하5625</strong>
+        </li>
+        <li>
+          <span class="title">코드명</span>
+          <strong class="text">141하5625</strong>
+        </li>
+        <li>
+          <span class="title">비고</span>
+          <strong class="text">G08 2.5T</strong>
+        </li>
+      </ul>
+      <!-- //검색결과 -->
+		</div><!-- //layer-content -->
+		<button type="button" class="btn--close popup-close">팝업 닫기</button>
+	</div><!-- //popup-wrap-->
+</section>
+<!-- // 법인차량번호 -->
+
+<!-- 상세내역 작성 종료 -->
+<section id="detailWritelPop1" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--alert">
+	<div class="popup-wrap">
+		<div class="layer-content">
+			<h2 class="layer-title">상세내역 작성 종료</h2>
+			<p class="layer-text">현재까지 작성한 내역이 사라집니다. <br>종료하시겠습니까?</p>
+		</div><!-- //layer-content -->
+		<div class="btn-wrap">
+			<button type="button" class="btn btn--outline popup-close">취소</button>
+			<button type="button" class="btn popup-close">확인</button>
+		</div>
+	</div><!-- //popup-wrap -->
+</section>
+<!-- // 상세내역 작성 종료 -->
+<!-- //******* 팝업 test 중 ****** -->
+
+
+
+
+
+<!-- layer popup : full page -->
+
+<!-- //layer popup : full page -->
+
+<!-- layer popup : bottom sheet -->
+
+<!-- //layer popup : bottom sheet -->
+
+<!-- layer popup : alert -->
+
+<!-- //layer popup : alert -->
+
+<div class="dimmed"></div>
+
+<script type="text/javascript" src="../../resource/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../resource/dist/library.js"></script>
+<script type="text/javascript" src="../../resource/dist/commonJs.js"></script>
+
+</body>
+</html>

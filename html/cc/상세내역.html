@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>상세내역 | PWC</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link rel="shortcut icon" href="../../resource/images/favicon/apple_touch_icon.ico">
+<link rel="apple-touch-icon" href="../../resource/images/favicon/apple_touch_icon.png">
+<link href="../../resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="../../resource/css/contents.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<p class="skip"><a href="#container">본문 바로가기</a></p>
+
+<section id="wrapper" class="wrapper">
+	<header>
+		<div class="header__inner header-case--v2">
+			<h1 class="title-depth5">상세내역</h1>
+      <!-- <button type="button" class="btn--page-close">닫기</button> --><!-- (dev) 팝업 닫기 -->
+			<button aria-haspopup="dialog" data-popup-id="detailWritelPop1" class="btn--page-close">닫기</button><!-- (dev) alert 팝업 호출 시 -->
+		</div>
+	</header>
+
+	<div id="container" class="container">
+		<div class="content">
+      <div class="content-head">
+        <h2 class="hidden">상세내역 정보</h2>
+        <div class="use-info info-type-1">
+          <span class="use-info__date"><span class="hidden">카드 사용일자</span>2023-12-31</span>
+          <strong class="use-info__title"><span class="hidden">상호</span>카카오 택시 카카오T</strong>
+          <strong class="use-info__price"><span class="hidden">금액</span><em>1,000,000</em>원</strong>
+          <button aria-haspopup="dialog" data-popup-id="detailHistoryPop" class="btn--ico btn--summary">상세내역 요약보기</button>
+          <div class="paging-text"><!-- 10.20 페이징 표시 영역 추가 -->
+            <span class="current">1</span><span>/</span><span class="total">10</span>
+          </div>
+        </div>
+      </div><!-- //content-head -->
+			<div class="content-body border-type-3"><!-- 10.26 border-type-3 class 추가 -->
+        <h2 class="hidden">내역 작성</h2>
+        <div class="input-form-field">
+          <ul class="input-form-field__list">
+            <li class="input-field search-field">
+              <label for="inpName">계정과목</label>
+              <div class="search-wrap__btn-type">
+                <button aria-haspopup="dialog" data-popup-id="accountSubjectPop" class="btn--search">조회 팝업</button>
+                <input type="text" id="inpName" class="input-text search" readonly>
+              </div>
+            </li>
+            <li class="input-field search-field">
+              <label for="inpManage">관리항목</label>
+              <div class="search-wrap__btn-type">
+                <button aria-haspopup="dialog" data-popup-id="managementPop" class="btn--search">조회 팝업</button>
+                <input type="text" id="inpManage" class="input-text search" readonly>
+              </div>
+            </li>
+            <li class="input-field">
+              <label for="inpBriefs">적요</label>
+              <span class="text-field-wrap">
+                <input type="text" id="inpBriefs" class="input-text">
+                <button type="button" class="btn--del">삭제</button>
+              </span>
+            </li>
+            <li class="input-field search-field--ckeck">
+              <label for="inpProCode">프로젝트 코드</label>
+              <span class="input-checkbox check-size-m text-label"><input type="checkbox" id="checkProCode"><label for="checkProCode">직접입력</label></span>
+              <!-- case : 직접입력 선택 전 -->
+              <div class="search-wrap__btn-type">
+                <button aria-haspopup="dialog" data-popup-id="projuctCodePop" class="btn--search">검색 팝업</button>
+                <input type="text" id="inpProCode" class="input-text search" readonly>
+              </div>
+              <!-- //case : 직접입력 선택 전 -->
+              <!-- case : 직접입력 선택 후 -->
+              <div class="multi-field project-code">
+                <span class="text-field-wrap">
+                  <input type="tel" id="inpProCode" class="input-text" maxlength="5" placeholder="12345" title="프로젝트 코드 앞 5자리">
+                  <button type="button" class="btn--del">삭제</button>
+                </span>
+                <span class="text-field-wrap">
+                  <input type="tel" class="input-text" maxlength="2" placeholder="12" title="프로젝트 코드 중간 2자리">
+                  <button type="button" class="btn--del">삭제</button>
+                </span>
+                <span class="text-field-wrap">
+                  <input type="tel" class="input-text" maxlength="3" placeholder="123" title="프로젝트 코드 마지막 3자리">
+                  <button type="button" class="btn--del">삭제</button>
+                </span>
+              </span>
+              </div>
+              <!-- //case : 직접입력 선택 후 -->
+              <!-- case : 직접입력 선택 후 유효성 검사 true -->
+              <input type="text" id="inpProCode" class="input-text" readonly>
+              <!-- // case : 직접입력 선택 후 유효성 검사 true -->
+            </li>
+            <li class="input-field search-field--ckeck">
+              <label for="inpTeamCode">팀 코드</label>
+              <span class="input-checkbox check-size-m text-label"><input type="checkbox" id="checkTeamCode"><label for="checkTeamCode">직접입력</label></span>
+              <!-- case : 직접입력 선택 전 -->
+              <div class="search-wrap__btn-type">
+                <button aria-haspopup="dialog" data-popup-id="teamCodePop" class="btn--search">검색 팝업</button>
+                <input type="text" id="inpTeamCode" class="input-text search" readonly>
+              </div>
+              <!-- //case : 직접입력 선택 전 -->
+              <!-- case : 직접입력 선택 후 -->
+              <span class="text-field-wrap">
+                <input type="tel" id="inpTeamCode" class="input-text" maxlength="3" placeholder="코드 3자리">
+                <button type="button" class="btn--del">삭제</button>
+              </span>
+              <!-- //case : 직접입력 선택 후 -->              
+              <!-- case : 직접입력 선택 후 유효성 검사 true -->
+              <input type="tel" id="inpTeamCode" class="input-text" readonly>
+              <!-- // case : 직접입력 선택 후 유효성 검사 true -->
+            </li>
+          </ul>
+        </div>
+        <!-- case : 상품권 --><!-- 10.23 상품권 case 삭제 -->
+        <!-- <p class="guide-text-box emphasis">해당 건은 <em>상품권 사용 내역</em>입니다. <br><em>PC</em>에서 작성해 주세요.</p>
+        <div class="input-form-field">
+          <ul class="input-form-field__list">
+            <li class="input-field search-field disabled">
+              <label for="inpName">계정과목</label>
+              <div class="search-wrap__btn-type">
+                <button class="btn--search" disabled>조회 팝업</button>
+                <input type="text" id="inpName" class="input-text search" disabled>
+              </div>
+            </li>
+            <li class="input-field search-field disabled">
+              <label for="inpManage">관리항목</label>
+              <div class="search-wrap__btn-type">
+                <button class="btn--search" disabled>조회 팝업</button>
+                <input type="text" id="inpManage" class="input-text search" disabled>
+              </div>
+            </li>
+            <li class="input-field">
+              <label for="inpBriefs">적요</label>
+              <input type="text" id="inpBriefs" class="input-text" disabled>
+            </li>
+            <li class="input-field search-field disabled">
+              <label for="inpProCode">프로젝트 코드</label>
+              <div class="search-wrap__btn-type">
+                <button class="btn--search" disabled>조회 팝업</button>
+                <input type="text" id="inpProCode" class="input-text search" disabled>
+              </div>
+            </li>
+            <li class="input-field search-field disabled">
+              <label for="inpTeamCode">팀 코드</label>
+              <div class="search-wrap__btn-type">
+                <button class="btn--search" disabled>조회 팝업</button>
+                <input type="text" id="inpTeamCode" class="input-text search" disabled>
+              </div>
+            </li>
+          </ul>
+        </div> -->
+        <!-- //case : 상품권 -->
+        <!-- 10.26 수정
+          1. 추가작성 위치 변경 : floating-btn 안쪽 > div.input-form-field 아래
+          2. 버튼 감싸는 div.btn-wrap 추가
+          3. 추가작성 버튼명 변경 : 사용내역 추가
+          4. button 태그 a태그로 변경
+          5. button class명 변경 : btn--s-round add-type
+        -->
+        <div class="btn-wrap">
+          <a href="#" class="btn--s-round add-type">사용내역 추가</a><!-- (dev) 비활성화 시 disabled 속성 추가 -->
+        </div>
+			</div><!-- //content-body -->
+		</div><!-- //content -->
+		<div class="floating-btn radius-non-type">
+			<div class="floating-btn__inner">
+        <!-- 10.26 버튼 위치 변경으로 div.btn-wrap--padding-type 삭제 
+        <div class="btn-wrap--padding-type">
+          <!- - 10.20 수정
+            1. 방금 쓴 내역 붙여넣기 버튼 삭제
+            2. 추가 버튼 명 추가작성 수정
+          - ->
+        </div>-->
+        <div class="btn-wrap">
+          <button type="button" class="btn btn--outline">이전</button>
+          <button type="button" class="btn">다음</button><!-- (dev) 비활성화 시 disabled 속성 추가 -->
+        </div>
+			</div>
+		</div><!-- //floating btn -->
+	</div><!-- //container -->
+</section><!-- //wrapper -->
+
+
+<!-- layer popup : full page -->
+
+<!-- //layer popup : full page -->
+
+<!-- layer popup : bottom sheet -->
+
+<!-- //layer popup : bottom sheet -->
+
+<!-- layer popup : alert -->
+
+<!-- //layer popup : alert -->
+
+<div class="dimmed"></div>
+
+<script type="text/javascript" src="../../resource/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../resource/dist/library.js"></script>
+<script type="text/javascript" src="../../resource/dist/commonJs.js"></script>
+
+</body>
+</html>

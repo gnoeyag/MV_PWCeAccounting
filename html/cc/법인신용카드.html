@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>법인신용카드 | PWC</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link rel="shortcut icon" href="../../resource/images/favicon/apple_touch_icon.ico">
+<link rel="apple-touch-icon" href="../../resource/images/favicon/apple_touch_icon.png">
+<link href="../../resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="../../resource/css/contents.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<p class="skip"><a href="#container">본문 바로가기</a></p>
+
+<section id="wrapper" class="wrapper">
+	<header>
+    <div class="header__inner">
+      <button type="button" class="btn--page-prev">이전</button>
+      <h1 class="title-depth5">법인신용카드</h1>
+      <button type="button" class="btn--menu">
+        <strong class="hidden">메뉴 보기</strong>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <!-- 메뉴 -->
+			<nav>
+
+			</nav>
+    </div>
+	</header>
+
+	<div id="container" class="container">
+		<div class="content">
+      <div class="fixed-top">
+        <div class="content-head fixed-top__inner">
+          <h2 class="hidden">월 별 사용내역 정보</h2>
+          <div class="use-info">
+            <div class="select-wrap text-size--l">
+              <button aria-haspopup="dialog" data-popup-id="monthSelect" class="btn--select text-type"><span class="hidden">월 선택 팝업</span>2023년 8월</button><!-- 10.19 월 영역 수정 (년도 월 따로 가져올 경우 각 span으로 감싸서 처리해도 무방) -->
+            </div>
+            <span class="use-info__date">기표일자 2023-12-31</span>
+          </div>
+          <p class="guide-text-box padding-type-2">작성하신 전표를 <em>이어서 추가작성 중</em>입니다.</p><!-- 11.24 추가 -->
+        </div><!-- //content-head -->
+			</div>
+			<div class="content-body border-type-2">
+        <h2 class="hidden">선택한 월 사용내역</h2>
+        <!-- case : 조회 결과 없는 경우 -->
+        <p class="no-data">조회된 정보가 없습니다.</p><!-- 10.13 문구수정 -->
+        <!-- case : 조회 결과 있는 경우 -->
+        <div class="check-list--head head-type-1">
+          <span class="input-checkbox text-label">
+            <input type="checkbox" id="checkAll" name="check01Group">
+            <label for="checkAll">전체선택 (<span class="hidden">선택 개수</span>2/<span class="hidden">전체 개수</span>20)</label>
+          </span>
+          <button aria-haspopup="dialog" data-popup-id="sortItemSelect" class="btn--ico btn--sort-v2">과거 날짜순</button>
+        </div>
+        <div class="card-result">
+          <h3 class="hidden">사용 내역</h3>
+          <ul class="use-detail check-list">
+            <li class="use-detail__item">
+              <div class="detail-box">
+                <!-- 10.27 해당 위치 공통 : 
+                  1. span.detail-box__date 에 non-pad-style class 추가
+                  2. span.time 시간 항목 추가 
+                -->
+                <span class="detail-box__date non-pad-style"><span class="date">2023-08-03</span><span class="time">10:00</span><em class="cate">업종명이긴경우말줄임줄임처리가줄임처리가처리가됩니다.(말줄임처리가됩니다)</em></span>
+                <strong class="detail-box__title">상호명이 길면 말줄임 처리 합니다. 상호명이 길면 말줄임 처리 합니다.</strong>
+                <strong class="detail-box__price"><em>1,420,000</em>원</strong>
+              </div>
+              <span class="input-checkbox">
+                <input type="checkbox" id="check01" name="check01Group">
+                <label for="check01">선택</label>
+              </span>
+            </li>
+            <li class="use-detail__item">
+              <div class="detail-box">
+                <span class="detail-box__date non-pad-style"><span class="date">2023-08-03</span><span class="time">10:00</span><em class="cate">교통</em></span>
+                <strong class="detail-box__title">타다(TADA)</strong>
+                <strong class="detail-box__price"><em>21,700</em>원</strong>
+              </div>
+              <span class="input-checkbox">
+                <input type="checkbox" id="check02" name="check01Group">
+                <label for="check02">선택</label>
+              </span>
+            </li>
+            <li class="use-detail__item">
+              <div class="detail-box">
+                <span class="detail-box__date non-pad-style"><span class="date">2023-12-12</span><span class="time">10:00</span><em class="cate">교통</em></span>
+                <strong class="detail-box__title">카카오페이(택시)</strong>
+                <strong class="detail-box__price"><em>30,454</em>원</strong>
+              </div>
+              <span class="input-checkbox">
+                <input type="checkbox" id="check03" name="check01Group">
+                <label for="check03">선택</label>
+              </span>
+            </li>
+            <li class="use-detail__item">
+              <div class="detail-box">
+                <span class="detail-box__date non-pad-style"><span class="date">2023-08-03</span><span class="time">10:00</span><em class="cate">음식</em></span>
+                <strong class="detail-box__title">용리단 설렁탕</strong>
+                <strong class="detail-box__price"><em>46,500</em>원</strong>
+              </div>
+              <span class="input-checkbox">
+                <input type="checkbox" id="check04" name="check01Group">
+                <label for="check04">선택</label>
+              </span>
+            </li>
+            <li class="use-detail__item">
+              <div class="detail-box">
+                <span class="detail-box__date non-pad-style"><span class="date">2023-08-03</span><span class="time">10:00</span><em class="cate">기타</em></span>
+                <strong class="detail-box__title">용리단 설렁탕</strong>
+                <strong class="detail-box__price"><em>46,500</em>원</strong>
+              </div>
+              <span class="input-checkbox">
+                <input type="checkbox" id="check05" name="check01Group">
+                <label for="check05">선택</label>
+              </span>
+            </li>
+          </ul>
+        </div>
+			</div><!-- //content-body -->
+		</div><!-- //content -->
+		<div class="floating-btn">
+			<div class="floating-btn__inner">
+        <div class="floating-content content-type-1">
+          <h3>선택한 내역 <span class="counting"><span class="hidden">체크된 항목 수</span>(<span>2</span>/<span>20</span>)</span></h3><!-- 10.26 텍스트 수정, 선택된 항목 수 표기 추가 -->
+          <strong class="price"><em>1,420,000</em>원</strong>
+        </div>
+        <!-- 10.19 버튼 영역 수정 -->
+				<div class="btn-wrap row-group--v2">
+          <button type="button" class="btn btn--outline">일괄 작성</button><!-- (dev) 비활성화 : disabled 속성 추가 -->
+          <!-- 10.26 선택된 항목 수 삭제 -->
+					<button type="button" class="btn" disabled>건별 작성</button><!-- (dev) 비활성화 : disabled 속성 추가 -->
+				</div>
+			</div>
+		</div><!-- //floating btn -->
+	</div><!-- //container -->
+</section><!-- //wrapper -->
+
+<!-- layer popup : full popup -->
+
+<!-- //layer popup : full popup -->
+
+<!-- layer popup : bottom sheet -->
+
+<!-- //layer popup : bottom sheet -->
+
+<!-- layer popup : alert -->
+
+<!-- //layer popup : alert -->
+
+<div class="dimmed"></div>
+
+<script type="text/javascript" src="../../resource/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../resource/dist/library.js"></script>
+<script type="text/javascript" src="../../resource/dist/commonJs.js"></script>
+
+</body>
+</html>

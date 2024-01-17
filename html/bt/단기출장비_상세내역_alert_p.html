@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>단기출장비상세내역 alert popup | PWC</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link rel="shortcut icon" href="../../resource/images/favicon/apple_touch_icon.ico">
+<link rel="apple-touch-icon" href="../../resource/images/favicon/apple_touch_icon.png">
+<link href="../../guide/guide.css" rel="stylesheet" type="text/css"><!-- 가이드 영역 디자인용/페이지랑 관계없음 -->
+<link href="../../resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="../../resource/css/contents.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<p class="skip"><a href="#container">본문 바로가기</a></p>
+
+<section id="wrapper" class="wrapper">
+	<header>
+		<div class="header__inner">
+			<img src="../../resource/images/dummy/@header.gif" alt="">
+		</div>
+	</header>
+
+	<div id="container" class="container">
+
+		<div class="guideContainer">
+			<ul class="text--dot" style="margin-bottom:30px">
+				<li><strong>[팝업 사용 시 참고]</strong></li>
+				<li>&lt;!-- layer popup : alert --&gt; 주석 내 팝업 소스 사용</li>
+				<li>팝업이 열리는 버튼의 data-popup-id 속성 값과, 팝업의 id값이 일치할 경우 팝업 열림</li>
+				<li>팝업 닫히는 class : popup-close / 상황에 따라 필요없는 기능일 경우 해당 class 삭제하여 사용</li>
+				<li>※ 팝업 닫기 기능 별도로 필요한 경우 mvJs.fn.popup.close() 해당 함수에 팝업 id값 넣어서 호출하여 사용</li>
+				<li>※ 팝업 열기 기능 별도로 필요한 경우 mvJs.fn.popup.open() 해당 함수에 팝업 id값 넣어서 호출하여 사용</li>
+			</ul>
+			<div class="guideBtn">
+				<div class="guideBtn-wrap">
+					<button aria-haspopup="dialog" data-popup-id="btDetailAlertPop0" class="btn btn--outline">출장 상세 작성 case 1_출장2개이상</button>
+					<button aria-haspopup="dialog" data-popup-id="btDetailAlertPop1" class="btn btn--outline">출장 상세 작성 case 2_출장1개</button>
+					<button aria-haspopup="dialog" data-popup-id="btDetailAlertPop2" class="btn btn--outline">출장 상세 작성_전표 삭제</button>
+					<button aria-haspopup="dialog" data-popup-id="btDetailAlertPop3" class="btn btn--outline">출장 상세 미작성_상세내역 작성</button>
+				</div>
+				<div class="guideBtn-wrap">
+					<button aria-haspopup="dialog" data-popup-id="btDetailAlertPop4" class="btn btn--outline">출장 정보_작성종료</button>
+					<button aria-haspopup="dialog" data-popup-id="btDetailAlertPop5" class="btn btn--outline">프로젝트/팀 코드 유효하지 않을 때</button>
+				</div>
+				<div class="guideBtn-wrap">
+					<button aria-haspopup="dialog" data-popup-id="btDetailAlertPop6" class="btn btn--outline">참석자선택팝업_5명초과선택시</button>
+				</div>
+				<div class="guideBtn-wrap">
+					<button aria-haspopup="dialog" data-popup-id="btDetailAlertPop7" class="btn btn--outline">출장 상세 정보_항목 2개 이상</button>
+					<button aria-haspopup="dialog" data-popup-id="btDetailAlertPop8" class="btn btn--outline">출장 상세 정보_항목 1개</button>
+				</div>
+				<div class="guideBtn-wrap">
+					<button aria-haspopup="dialog" data-popup-id="btDetailAlertPop9" class="btn btn--outline">단기출장비(법인카드) case 상세내용 미입력시</button>
+					<button aria-haspopup="dialog" data-popup-id="btDetailAlertPop10" class="btn btn--outline">단기출장비(법인카드) case 작성 미완료 상태에서 버튼선택 시</button>
+					<button aria-haspopup="dialog" data-popup-id="btDetailAlertPop11" class="btn btn--outline">단기출장비(법인카드)_출장기간 외 식대 청구 사유 설명</button>
+				</div>
+				<div class="guideBtn-wrap">
+					<button aria-haspopup="dialog" data-popup-id="btDetailAlertPop12" class="btn btn--outline">출장잡비_작성취소</button>
+					<button aria-haspopup="dialog" data-popup-id="btDetailAlertPop13" class="btn btn--outline">교통비_작성취소</button>
+				</div>
+			</div>
+		</div>
+		
+  </div><!-- //container -->
+</section><!-- //wrapper -->
+
+
+<!-- layer popup : alert -->
+
+<!-- 출장 상세 작성 case 1 : 출장이 2개이상 있는 상태에서 닫기 버튼 눌렀을 때 -->
+<section id="btDetailAlertPop0" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--alert">
+	<div class="popup-wrap">
+		<div class="layer-content">
+			<h2 class="layer-title">출장 삭제</h2>
+			<p class="layer-text">출장을 삭제 하시겠습니까?</p>
+		</div><!-- //layer-content -->
+		<div class="btn-wrap">
+			<button type="button" class="btn btn--outline popup-close">취소</button>
+			<button type="button" class="btn">확인</button>
+		</div>
+	</div><!-- //popup-wrap -->
+</section>
+<!-- // 출장 상세 작성 case 1 : 출장이 2개이상 있는 상태에서 닫기 버튼 눌렀을 때 -->
+
+<!-- 출장 상세 작성 case 2 : 출장이 1개밖에 없는 상태에서 닫기 버튼 눌렀을 때 -->
+<section id="btDetailAlertPop1" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--alert">
+	<div class="popup-wrap">
+		<div class="layer-content">
+			<h2 class="layer-title">출장 삭제</h2>
+			<p class="layer-text">해당 출장을 삭제하시면 전표도 함께 삭제됩니다. 정말 삭제하시겠습니까?</p>
+		</div><!-- //layer-content -->
+		<div class="btn-wrap">
+			<button type="button" class="btn btn--outline popup-close">취소</button>
+			<button type="button" class="btn">확인</button>
+		</div>
+	</div><!-- //popup-wrap -->
+</section>
+<!-- // 출장 상세 작성 case 2 : 출장이 1개밖에 없는 상태에서 닫기 버튼 눌렀을 때 -->
+
+<!-- 출장 상세 작성_전표 삭제 -->
+<section id="btDetailAlertPop2" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--alert">
+	<div class="popup-wrap">
+		<div class="layer-content">
+      <h2 class="layer-title">전표 삭제</h2>
+			<p class="layer-text">전표를 삭제 하시겠습니까?</p>
+		</div><!-- //layer-content -->
+		<div class="btn-wrap">
+			<button type="button" class="btn btn--outline popup-close">취소</button>
+			<button type="button" class="btn">확인</button>
+		</div>
+	</div><!-- //popup-wrap -->
+</section>
+<!-- // 출장 상세 작성_전표 삭제 -->
+
+<!-- 출장 상세 미작성_상세내역 작성 -->
+<section id="btDetailAlertPop3" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--alert">
+	<div class="popup-wrap">
+		<div class="layer-content">
+      <h2 class="layer-title">상세내역 작성</h2>
+			<p class="layer-text">상세내역이 작성되지 않은 출장 항목이 있습니다. <br>상세내역을 작성하여 주세요.</p>
+		</div><!-- //layer-content -->
+		<div class="btn-wrap">
+			<button type="button" class="btn popup-close">확인</button>
+		</div>
+	</div><!-- //popup-wrap -->
+</section>
+<!-- // 출장 상세 미작성_상세내역 작성 -->
+
+<!-- 단기출장비 출장 정보_출장 정보 작성 종료 -->
+<section id="btDetailAlertPop4" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--alert">
+	<div class="popup-wrap">
+		<div class="layer-content">
+      <h2 class="layer-title">출장 정보 작성 종료</h2>
+			<p class="layer-text">작성 중인 내용이 저장되지 않고 사라집니다. <br>작성을 계속 하시려면 취소 버튼을 눌러주세요.</p>
+		</div><!-- //layer-content -->
+		<div class="btn-wrap">
+      <button type="button" class="btn btn--outline popup-close">취소</button>
+			<button type="button" class="btn">확인</button>
+		</div>
+	</div><!-- //popup-wrap -->
+</section>
+<!-- // 단기출장비 출장 정보_출장 정보 작성 종료 -->
+
+<!-- 프로젝트코드/팀코드 유효하지 않을 때 -->
+<section id="btDetailAlertPop5" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--alert">
+	<div class="popup-wrap">
+		<div class="layer-content">
+      <h2 class="layer-title">안내</h2>
+			<p class="layer-text">유효한 코드가 아닙니다.</p>
+		</div><!-- //layer-content -->
+		<div class="btn-wrap">
+			<button type="button" class="btn popup-close">확인</button>
+		</div>
+	</div><!-- //popup-wrap -->
+</section>
+<!-- // 프로젝트코드/팀코드 유효하지 않을 때 -->
+
+<!-- 참석자선택 Popup_5명 초과 선택 후 확인 버튼 누를 시 -->
+<section id="btDetailAlertPop6" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--alert">
+	<div class="popup-wrap">
+		<div class="layer-content">
+			<p class="layer-text">출장 인원은 5명 이내로 선택하세요.</p>
+		</div><!-- //layer-content -->
+		<div class="btn-wrap">
+			<button type="button" class="btn popup-close">확인</button>
+		</div>
+	</div><!-- //popup-wrap -->
+</section>
+<!-- // 참석자선택 Popup_5명 초과 선택 후 확인 버튼 누를 시 -->
+
+<!-- 단기출장비 출장 상세 정보_ 항목이 2개 이상 있는 경우 -->
+<section id="btDetailAlertPop7" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--alert">
+	<div class="popup-wrap">
+		<div class="layer-content">
+			<h2 class="layer-title">항목 제외</h2>
+			<p class="layer-text">해당 항목을 제외 하시겠습니까?</p>
+		</div><!-- //layer-content -->
+		<div class="btn-wrap">
+			<button type="button" class="btn btn--outline popup-close">취소</button>
+			<button type="button" class="btn">확인</button>
+		</div>
+	</div><!-- //popup-wrap -->
+</section>
+<!-- // 단기출장비 출장 상세 정보_ 항목이 2개 이상 있는 경우 -->
+
+<!-- 단기출장비 출장 상세 정보_ 항목이 1개밖에 없는 경우 -->
+<section id="btDetailAlertPop8" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--alert">
+	<div class="popup-wrap">
+		<div class="layer-content">
+			<h2 class="layer-title">항목 제외</h2>
+			<p class="layer-text">해당 항목을 제외하면 출장이 삭제됩니다. <br>정말 삭제하시겠습니까?</p>
+		</div><!-- //layer-content -->
+		<div class="btn-wrap">
+			<button type="button" class="btn btn--outline popup-close">취소</button>
+			<button type="button" class="btn">확인</button>
+		</div>
+	</div><!-- //popup-wrap -->
+</section>
+<!-- // 단기출장비 출장 상세 정보_ 항목이 1개밖에 없는 경우 -->
+
+<!-- 단기출장비 상세내역(법인카드) 상세내용 미 입력 시 -->
+<section id="btDetailAlertPop9" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--alert">
+	<div class="popup-wrap">
+		<div class="layer-content">
+			<h2 class="layer-title">안내</h2>
+			<p class="layer-text">상호명을 입력해 주세요.</p>
+		</div><!-- //layer-content -->
+		<div class="btn-wrap">
+			<button type="button" class="btn popup-close">확인</button>
+		</div>
+	</div><!-- //popup-wrap -->
+</section>
+<!-- // 단기출장비 상세내역(법인카드) 상세내용 미 입력 시 -->
+
+<!-- 단기출장비 상세내역(법인카드) case : 내역작성 미완료 상태에서 법인카드/출장잡비/교통비 버튼 선택 시 -->
+<section id="btDetailAlertPop10" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--alert">
+	<div class="popup-wrap">
+		<div class="layer-content">
+			<h2 class="layer-title">항목 제외</h2>
+			<p class="layer-text">내역작성을 완료하지 않으실 경우 자동저장이 되지 않습니다. <br>내역 작성을 중단 하시겠습니까?</p>
+		</div><!-- //layer-content -->
+		<div class="btn-wrap">
+			<button type="button" class="btn btn--outline popup-close">취소</button>
+			<button type="button" class="btn">확인</button>
+		</div>
+	</div><!-- //popup-wrap -->
+</section>
+<!-- // 단기출장비 상세내역(법인카드) case : 내역작성 미완료 상태에서 법인카드/출장잡비/교통비 버튼 선택 시 -->
+
+<!-- 단기출장비 상세내역(법인카드)_출장기간 외 식대 청구 사유 설명 -->
+<section id="btDetailAlertPop11" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--alert">
+	<div class="popup-wrap">
+		<div class="layer-content">
+			<h2 class="layer-title">안내</h2>
+			<p class="layer-text">출장 기간 외 식대 청구 사유 작성 화면으로 이동합니다.</p>
+		</div><!-- //layer-content -->
+		<div class="btn-wrap">
+			<button type="button" class="btn popup-close">확인</button>
+		</div>
+	</div><!-- //popup-wrap -->
+</section>
+<!-- // 단기출장비 상세내역(법인카드)_출장기간 외 식대 청구 사유 설명 -->
+
+<!-- 출장잡비_출장잡비 작성 취소 -->
+<section id="btDetailAlertPop12" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--alert">
+	<div class="popup-wrap">
+		<div class="layer-content">
+			<h2 class="layer-title">출장잡비 작성 취소</h2>
+			<p class="layer-text">작성 중인 내용이 저장되지 않고 사라집니다. <br>출장잡비 작성을 취소하시겠습니까?</p>
+		</div><!-- //layer-content -->
+		<div class="btn-wrap">
+			<button type="button" class="btn btn--outline">작성 취소</button>
+			<button type="button" class="btn popup-close">작성 계속하기</button>
+		</div>
+	</div><!-- //popup-wrap -->
+</section>
+<!-- // 출장잡비_출장잡비 작성 취소 -->
+
+<!-- 교통비_교통비 작성 취소 -->
+<section id="btDetailAlertPop13" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--alert">
+	<div class="popup-wrap">
+		<div class="layer-content">
+			<h2 class="layer-title">교통비 작성 취소</h2>
+			<p class="layer-text">작성 중인 내용이 저장되지 않고 사라집니다. <br>교통비 작성을 취소하시겠습니까?</p>
+		</div><!-- //layer-content -->
+		<div class="btn-wrap">
+			<button type="button" class="btn btn--outline">작성 취소</button>
+			<button type="button" class="btn popup-close">작성 계속하기</button>
+		</div>
+	</div><!-- //popup-wrap -->
+</section>
+<!-- // 교통비_교통비 작성 취소 -->
+
+<!-- //layer popup : alert -->
+
+<div class="dimmed"></div>
+
+<script type="text/javascript" src="../../resource/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../resource/dist/library.js"></script>
+<script type="text/javascript" src="../../resource/dist/commonJs.js"></script>
+
+</body>
+</html>

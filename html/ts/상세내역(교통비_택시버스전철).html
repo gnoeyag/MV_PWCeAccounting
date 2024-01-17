@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>상세내역(교통비) | PWC</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link rel="shortcut icon" href="../../resource/images/favicon/apple_touch_icon.ico">
+<link rel="apple-touch-icon" href="../../resource/images/favicon/apple_touch_icon.png">
+<link href="../../resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="../../resource/css/contents.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<p class="skip"><a href="#container">본문 바로가기</a></p>
+
+<section id="wrapper" class="wrapper">
+	<header>
+		<div class="header__inner header-case--v2">
+			<h1 class="title-depth5">상세내역(교통비)</h1>
+      <button type="button" class="btn--page-close">닫기</button>
+		</div>
+	</header>
+
+	<div id="container" class="container">
+		<div class="content">
+			<h2 class="hidden">내역 작성</h2>
+        <div class="input-form-field">
+          <ul class="input-form-field__list">
+            <li class="input-field">
+              <h3 class="title-depth6">구분</h3>
+              <div class="select-wrap line-type">
+                <button aria-haspopup="dialog" data-popup-id="transportationSelect" class="btn--select"><span class="hidden">교통수단 구분 팝업</span>{택시 버스 전철}</button><!-- (dev) {팝업선택값} 영역은 default는 비어있고 팝업에서 값 선택하는 경우 출력 -->
+              </div>
+            </li>
+            <li class="input-field">
+              <h3 class="title-depth6">적요</h3>
+              <!-- 적요 case : 택시,버스/전철 -->
+              <div class="row-field route">
+                <span class="text-field-wrap">
+                  <input type="text" class="input-text" placeholder="출발지" title="출발지">
+                  <button type="button" class="btn--del">삭제</button>
+                </span>
+                <span class="text-field-wrap">
+                  <input type="text" class="input-text" placeholder="도착지" title="도착지">
+                  <button type="button" class="btn--del">삭제</button>
+                </span>
+              </div>
+              <!-- //적요 case : 택시,버스/전철 -->
+            </li>
+            <li class="input-field search-field--ckeck">
+              <h3 class="title-depth6">프로젝트 코드</h3>
+              <span class="input-checkbox check-size-m text-label"><input type="checkbox" id="checkProCode"><label for="checkProCode">직접입력</label></span>
+              <!-- 프로젝트 코드 case : 직접입력 선택 전 -->
+              <div class="case-box">
+                <div class="search-wrap__btn-type">
+                  <button aria-haspopup="dialog" data-popup-id="projuctCodePop" class="btn--search">검색 팝업</button>
+                  <input type="text" class="input-text search" readonly>
+                </div>
+              </div>
+              <!-- //프로젝트 코드 case : 직접입력 선택 전 -->
+              <!-- 프로젝트 코드 case : 직접입력 선택 후 -->
+              <div class="case-box">
+                <div class="multi-field project-code">
+                  <span class="text-field-wrap">
+                    <input type="tel" class="input-text" maxlength="5" placeholder="12345" title="프로젝트 코드 앞 5자리">
+                    <button type="button" class="btn--del">삭제</button>
+                  </span>
+                  <span class="text-field-wrap">
+                    <input type="tel" class="input-text" maxlength="2" placeholder="12" title="프로젝트 코드 중간 2자리">
+                    <button type="button" class="btn--del">삭제</button>
+                  </span>
+                  <span class="text-field-wrap">
+                    <input type="tel" class="input-text" maxlength="3" placeholder="123" title="프로젝트 코드 마지막 3자리">
+                    <button type="button" class="btn--del">삭제</button>
+                  </span>
+                </div>
+              </div>
+              <!-- //프로젝트 코드 case : 직접입력 선택 후 -->
+              <!-- 프로젝트 코드 case : 직접입력 선택 후 유효성 검사 true -->
+              <div class="case-box">
+                <input type="text" class="input-text" readonly>
+              </div>
+              <!-- // 프로젝트 코드 case : 직접입력 선택 후 유효성 검사 true -->
+            </li>
+            <li class="input-field search-field--ckeck">
+              <h3 class="title-depth6">팀 코드</h3>
+              <span class="input-checkbox check-size-m text-label"><input type="checkbox" id="checkTeamCode"><label for="checkTeamCode">직접입력</label></span>
+              <!-- 팀 코드 case : 직접입력 선택 전 -->
+              <div class="case-box">
+                <div class="search-wrap__btn-type">
+                  <button aria-haspopup="dialog" data-popup-id="teamCodePop" class="btn--search">검색 팝업</button>
+                  <input type="text" class="input-text search" readonly>
+                </div>
+              </div>
+              <!-- //팀 코드 case : 직접입력 선택 전 -->
+              <!-- 팀 코드 case : 직접입력 선택 후 -->
+              <div class="case-box">
+                <span class="text-field-wrap">
+                  <input type="tel" class="input-text" maxlength="3" placeholder="코드 3자리">
+                  <button type="button" class="btn--del">삭제</button>
+                </span>
+              </div>
+              <!-- //팀 코드 case : 직접입력 선택 후 -->              
+              <!-- 팀 코드 case : 직접입력 선택 후 유효성 검사 true -->
+              <div class="case-box">
+                <input type="tel" class="input-text" readonly>
+              </div>
+              <!-- // 팀 코드 case : 직접입력 선택 후 유효성 검사 true -->
+            </li>
+            <li class="input-field">
+              <!-- 사용내역 case : 택시,버스/전철 -->
+              <div class="input-field field-adddel">
+                <h3 class="title-depth6">사용내역</h3>
+                <div class="row-field">
+                  <input type="date" class="input-text calendar" title="사용일자" data-placeholder="yyyy-mm-dd" required>
+                  <div class="text-unit-wrap unit-align--right">
+                    <input type="text" class="input-text " placeholder="사용금액" title="사용금액">
+                    <span class="unit">원</span>
+                  </div>
+                  <button type="button" class="btn--addel btn--add">add</button>
+                </div>
+                <!-- (dev) button.btn--add/.btn--del 선택 시 div.row-field 영역 생성/삭제 -->
+                <div class="row-field">
+                  <input type="date" class="input-text calendar" title="사용일자" data-placeholder="yyyy-mm-dd" required>
+                  <div class="text-unit-wrap unit-align--right">
+                    <input type="text" class="input-text" placeholder="사용금액" title="사용금액">
+                    <span class="unit">원</span>
+                  </div>
+                  <button type="button" class="btn--addel btn--del">delete</button>            
+                </div>
+              </div>
+              <!-- //사용내역 case : 택시,버스/전철 -->
+            </li>
+          </ul>
+        </div>
+		</div><!-- //content -->
+		<div class="floating-btn">
+			<div class="floating-btn__inner">
+        <div class="slideDown reverse">
+          <button type="button" class="slideDown-btn wide" aria-expanded="true"><span data-text='{"text":"open|close", "show":2}'>close</span></button>
+          <div class="slideDown-cont">
+            <div class="text-align--c">
+              <a href="#" class="btn--s-round add-type-v2">특근내역</a>
+              <a href="#" class="btn--s-round add-type-v2">교통비</a>
+              <a href="#" class="btn--s-round add-type-v2">무선전화</a>
+            </div>
+          </div>
+        </div>
+        <div class="floating-content content-type-1">
+          <h3 class="title-depth7 color-black">합계</h3>
+          <strong class="price"><em>1,000,000</em>원</strong>
+        </div>
+				<div class="btn-wrap">
+					<button type="button" class="btn">작성 완료</button>
+				</div>
+			</div>
+		</div><!-- //floating btn -->
+	</div><!-- //container -->
+</section><!-- //wrapper -->
+
+
+<!-- layer popup : full page -->
+
+<!-- //layer popup : full page -->
+
+<!-- layer popup : bottom sheet -->
+
+<!-- //layer popup : bottom sheet -->
+
+<!-- layer popup : alert -->
+
+<!-- //layer popup : alert -->
+
+<div class="dimmed"></div>
+
+<script type="text/javascript" src="../../resource/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../resource/dist/library.js"></script>
+<script type="text/javascript" src="../../resource/dist/commonJs.js"></script>
+
+</body>
+</html>

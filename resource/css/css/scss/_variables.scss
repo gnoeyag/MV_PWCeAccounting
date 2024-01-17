@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+//color
+$body-color: #fff;
+$default-color:#141414; 
+
+$color-black: #000;
+$color-white: #fff;
+$color-white-op: rgba(233, 233, 233, .6);
+
+$color-primary:#D93954; //digital rose
+$color-primary-light: #FFF4F6;
+$color-error: #C52A1A;
+	
+$color-g01: #F9F9F9;
+$color-g02: #F3F3F3;
+$color-g03: #E8E8E8;
+$color-g04: #DDDDDD;
+$color-g05: #AFAFAF;
+$color-g06: #7D7D7D;
+$color-g07: #464646;
+$color-g08: #BABABA;
+
+
+//font
+$font-body: 16px;
+$default-font: Pretendard, -apple-system,BlinkMacSystemFont,Open Sans,Neue,sans-serif;
+$weight400: 400;
+$weight500: 500;
+$weight700: 700;
+%font-size-s {
+	font-size: 14px;
+	line-height: 22px;
+}
+
+//url
+$img-url: "../images";
+
+//media query size
+$sizeS: 320px;
+$sizeM: 375px;
+$sizeL: 768px;
+
+//extend
+%hidden {
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px !important;
+	clip: rect(0 0 0 0);
+}
+%textHidden {
+	overflow: hidden;
+	text-indent: -9999px;
+}
+%pseudo-inab {
+	content: '';
+	display: inline-block;
+	position: absolute;
+}
+
+//mixin
+@mixin prefix($property, $value) {
+	-webkit-#{$property}: $value;
+	-moz-#{$property}: $value;
+	#{$property}: $value;
+}
+@mixin pseudo($width, $height) {
+	content: '';
+	display: block;
+	position: absolute;
+	width: $width;
+	height: $height;
+}
+@mixin pseudo-c($width, $height) {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: $width;
+	height: $height;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+}
+@mixin ellipsis($line, $height) {
+	@if ($line == 1) { 
+		overflow: hidden; 
+		text-overflow: ellipsis; 
+		white-space: nowrap; 
+	} @else { 
+		display: -webkit-box; 
+		overflow: hidden; 
+		text-overflow: ellipsis; 
+		-webkit-box-orient: vertical; 
+		-webkit-line-clamp: $line; 
+		height: $height;
+	} 
+}

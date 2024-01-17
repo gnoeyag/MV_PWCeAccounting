@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>탄소배출 상세입력(교통비) popup | PWC</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link href="../../guide/guide.css" rel="stylesheet" type="text/css"><!-- 가이드 영역 디자인용/페이지랑 관계없음 -->
+<link href="../../resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="../../resource/css/contents.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<p class="skip"><a href="#container">본문 바로가기</a></p>
+
+<section id="wrapper" class="wrapper">
+	<header>
+		<div class="header__inner">
+			<img src="../../resource/images/dummy/@header.gif" alt="">
+		</div>
+	</header>
+
+	<div id="container" class="container">
+		
+		<div class="guideContainer">
+			<ul class="text--dot" style="margin-bottom:30px">
+				<li><strong>[팝업 사용 시 참고]</strong></li>
+				<li>&lt;!-- layer popup : full page --&gt; 주석 내 팝업 소스 사용</li>
+				<li>팝업이 열리는 버튼의 data-popup-id 속성 값과, 팝업의 id값이 일치할 경우 팝업 열림</li>
+				<li>팝업 닫히는 class : popup-close / 상황에 따라 필요없는 기능일 경우 해당 class 삭제하여 사용</li>
+        <li>※ 팝업 닫기 기능 별도로 필요한 경우 mvJs.fn.popup.close() 해당 함수에 팝업 id값 넣어서 호출하여 사용</li>
+				<li>※ 팝업 열기 기능 별도로 필요한 경우 mvJs.fn.popup.open() 해당 함수에 팝업 id값 넣어서 호출하여 사용</li>
+			</ul>
+			<button aria-haspopup="dialog" data-popup-id="carbonTrafficPop" class="btn btn--outline">탄소배출 상세입력(교통비)</button>	
+		</div>
+		
+  </div><!-- //container -->
+</section><!-- //wrapper -->
+
+
+<!-- layer popup : full page -->
+
+<!-- 탄소배출 상세입력(교통비) -->
+<section id="carbonTrafficPop" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--full">
+	<h2 class="layer-title">탄소배출 상세입력(교통비)</h2>
+	<div class="popup-wrap">
+		<div class="layer-content padding-bottom--btn-wrap">
+      <div class="content-head">
+        <h2 class="hidden">상세내역 정보</h2>
+        <div class="use-info info-type-1">
+          <span class="use-info__date"><span class="hidden">교통 이용 날짜</span>2023-12-31</span>
+          <strong class="use-info__title"><span class="hidden">상호</span>카카오 택시 카카오T</strong>
+          <strong class="use-info__price"><span class="hidden">금액</span><em>9,999,999</em>원</strong>
+          <span class="use-info__item-num"><span class="hidden">관리항목 번호</span>202300000304250</span>
+        </div>
+      </div><!-- //content-head -->
+			<div class="content-body">
+        <ul class="radio-selector--wrap">
+          <li><span class="input-radio radio-selector"><input type="radio" id="carbonTrafficRad01" name="carbonTrafficRadGroup"><label for="carbonTrafficRad01">택시</label></span></li>
+          <li><span class="input-radio radio-selector"><input type="radio" id="carbonTrafficRad02" name="carbonTrafficRadGroup"><label for="carbonTrafficRad02">철도</label></span></li>
+          <li><span class="input-radio radio-selector"><input type="radio" id="carbonTrafficRad03" name="carbonTrafficRadGroup"><label for="carbonTrafficRad03">버스</label></span></li>
+          <li><span class="input-radio radio-selector"><input type="radio" id="carbonTrafficRad04" name="carbonTrafficRadGroup"><label for="carbonTrafficRad04">항공</label></span></li>
+          <li><span class="input-radio radio-selector"><input type="radio" id="carbonTrafficRad05" name="carbonTrafficRadGroup"><label for="carbonTrafficRad05">주유(렌터카)</label></span></li>
+          <li><span class="input-radio radio-selector"><input type="radio" id="carbonTrafficRad06" name="carbonTrafficRadGroup"><label for="carbonTrafficRad06">주차료 등</label></span></li>
+        </ul>
+      </div>
+      <div class="btn-wrap btn-wrap--bottom">
+				<button type="button" class="btn">확인</button><!-- (dev) 비활성화 시 .disabled class 추가 -->
+			</div>
+		</div><!-- //layer-content -->
+	</div><!-- //popup-wrap -->
+	<button type="button" class="btn--close popup-close">팝업 닫기</button>
+</section>
+<!-- // 탄소배출 상세입력(교통비) -->
+
+<!-- //layer popup : full page -->
+
+
+<div class="dimmed"></div>
+
+<script type="text/javascript" src="../../resource/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../resource/dist/library.js"></script>
+<script type="text/javascript" src="../../resource/dist/commonJs.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title> | PWC</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link rel="shortcut icon" href="../../resource/images/favicon/apple_touch_icon.ico">
+<link rel="apple-touch-icon" href="../../resource/images/favicon/apple_touch_icon.png">
+<link href="../../guide/guide.css" rel="stylesheet" type="text/css"><!-- 가이드 영역 디자인용/페이지랑 관계없음 -->
+<link href="../../resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="../../resource/css/contents.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<p class="skip"><a href="#container">본문 바로가기</a></p>
+
+<section id="wrapper" class="wrapper">
+	<header>
+		<div class="header__inner">
+			<img src="../../resource/images/dummy/@header.gif" alt="">
+		</div>
+	</header>
+
+	<div id="container" class="container">
+		<!--  해당 마크업을 개발단에서 div.container 영역의 첫번째 요소로 직접 그려줌 -->
+		<div class="loading-wrap">
+			<span class="loader"></span>
+			<span class="loader"></span>
+			<span class="loader"></span>
+    </div>
+		<div class="guideContainer">
+			<ul class="text--dot" style="margin-bottom:30px">
+				<li><strong>[Loading 화면 개발 참고]</strong></li>
+				<li>div.loading-wrap 영역 자체를 개발단에서 div.container 영역의 첫번째 요소로 직접 그려주고 데이터 로딩 시 .is-active class 추가/데이터 로딩 완료 시 .is-active class 삭제 하여 보여주는 방식으로 작업되어 있음.</li>
+				<li>css에서는 .is-active class 추가 시 display:block/ class 삭제 시 display:none 처리</li>
+				<li>html에서 화면 확인 시 개발자도구 통해서 div.loading-wrap 영역에 .is-active class 추가하여 확인</li>
+				<!-- <li>로딩 화면 여는 함수 mvJs.fn.common.loadingControl(true);</li>
+				<li>로딩 화면 닫는 함수 mvJs.fn.common.loadingControl(false);</li> -->
+			</ul>
+		</div>
+
+	</div><!-- //container -->
+
+</section><!-- //wrapper -->
+<div class="dimmed"></div>
+
+<script type="text/javascript" src="../../resource/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../resource/dist/library.js"></script>
+<script type="text/javascript" src="../../resource/dist/commonJs.js"></script>
+
+</body>
+</html>

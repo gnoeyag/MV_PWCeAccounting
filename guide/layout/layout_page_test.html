@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title> | PWC</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link rel="shortcut icon" href="../../resource/images/favicon/apple_touch_icon.ico">
+<link rel="apple-touch-icon" href="../../resource/images/favicon/apple_touch_icon.png">
+<link href="../../resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="../../resource/css/contents.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<p class="skip"><a href="#container">본문 바로가기</a></p>
+
+<section id="wrapper" class="wrapper">
+	<header>
+		<div class="header__inner">
+			<img src="../../resource/images/dummy/@header.gif" alt="">
+		</div>
+	</header>
+
+
+	<div id="container" class="container">
+		<div class="content">
+			<!-- 가이드 영역 -->
+			<div style="padding: 10px; margin-top: 20px;border: 1px solid #ddd">
+				<ul class="text--dot">
+					<li>상하단 구분되는 타입의 화면일 경우 content-head/content-body 로 구분</li>
+					<li>상하단 구분없는 화면은 content-head/body 사용하지 않고 각 페이지 디자인에 맞춰 마크업</li>
+					<li>content-body 영역에 default 로 border: 1px solid #D93954 들어가있는 상태</li>
+					<li>content-body 영역에 border 의 color : #dddddd 사용 시 .border-type-2 더블 class 사용</li>
+					<li>content-body 영역에 border 의 color : #D93954, weight : 2px 사용 시 .border-type-3 더블 class 사용</li>
+					<li>content-body 영역에 border 가 필요 없는 경우 .no-line 더블 class 사용</li>
+					<li>각 div 안에서 각 페이지 디자인에 맞춰 div.content 영역 마크업</li>
+				</ul>
+			</div>
+			<!-- //가이드 영역 -->
+
+
+			<div class="content-head">
+				상단영역
+			</div>
+			<div class="content-body">
+				하단영역
+				<button aria-haspopup="dialog" data-popup-id="aadd" class="btn btn--outline">바텀시트 팝업 오픈</button>
+        <div style="height:200px"></div>
+			</div>
+			<!-- 페이지 내 하단 버튼 존재할 경우 위치 div.content 내 하단 -->
+			<div class="btn-wrap btn-wrap--bottom">
+				<button type="button" class="btn">확인</button>
+			</div>
+		</div><!-- //content -->
+	</div><!-- //container -->
+</section><!-- //wrapper -->
+
+<!-- layer popup : full page -->
+
+<!-- //layer popup : full page -->
+
+
+<!-- layer popup : bottom sheet -->
+
+<!-- 팝업이름 -->
+<section id="aadd" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--bottom">
+	<div class="popup-wrap">
+		<h2 class="layer-title">레이어 타이틀 영역</h2>
+		<div class="layer-content">
+			<ul class="layer-select">
+				<li class="select-item"><input type="radio" id="radSelect01" name="selectGroup1" checked><label for="radSelect01" role="button"><span>전체</span></label></li>
+				<li class="select-item"><input type="radio" id="radSelect02" name="selectGroup1"><label for="radSelect02" role="button"><span>법인신용카드</span></label></li>
+				<li class="select-item"><input type="radio" id="radSelect03" name="selectGroup1"><label for="radSelect03" role="button"><span>시내교통비</span></label></li>
+				<li class="select-item"><input type="radio" id="radSelect04" name="selectGroup1"><label for="radSelect04" role="button"><span>단기출장비</span></label></li>
+				<li class="select-item"><input type="radio" id="radSelect05" name="selectGroup1"><label for="radSelect05" role="button"><span>법인신용카드</span></label></li>
+				<li class="select-item"><input type="radio" id="radSelect06" name="selectGroup1"><label for="radSelect06" role="button"><span>법인신용카드</span></label></li>
+				<li class="select-item"><input type="radio" id="radSelect07" name="selectGroup1"><label for="radSelect07" role="button"><span>법인신용카드</span></label></li>
+				<li class="select-item"><input type="radio" id="radSelect08" name="selectGroup1"><label for="radSelect08" role="button"><span>법인신용카드</span></label></li>
+			</ul>
+		</div><!-- //layer-content -->
+		<div class="btn-wrap">
+			<button type="button" class="btn" data-popup-id="ddvvvv">얼럿 팝업 오픈</button>
+		</div>
+		<button type="button" class="btn--close popup-close">팝업 닫기</button>
+	</div><!-- //popup-wrap-->
+</section>
+<!-- // 팝업이름 -->
+
+<!-- //layer popup : bottom sheet -->
+
+<!-- layer popup : alert -->
+
+<!-- 팝업이름 -->
+<section id="ddvvvv" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--alert">
+	<div class="popup-wrap">
+		<div class="layer-content">
+			<h2 class="layer-title">레이어 타이틀 영역</h2> <!-- 팝업 타이틀 없는 경우 기능에 맞는 타이틀 입력 후 .layer-title에 .hidden class 추가 (출력시에는 hidden 처리) -->
+			<p class="layer-text">현재 작성 중인 내역은 저장되지 않습니다.<br>신규 내역을 작성하시겠어요?</p>
+		</div><!-- //layer-content -->
+		<div class="btn-wrap">
+			<button type="button" class="btn btn--outline">취소</button>
+			<button type="button" class="btn popup-close">얼럿 팝업 닫기</button>
+		</div>
+	</div><!-- //popup-wrap -->
+</section>
+<!-- // 팝업이름 -->
+
+
+<div class="dimmed"></div>
+
+<script type="text/javascript" src="../../resource/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../resource/dist/library.js"></script>
+<script type="text/javascript" src="../../resource/dist/commonJs.js"></script>
+
+</body>
+</html>

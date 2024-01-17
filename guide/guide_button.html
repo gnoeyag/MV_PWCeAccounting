@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>페이지 하단 버튼 가이드 | PWC</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link rel="shortcut icon" href="../resource/images/favicon/apple_touch_icon.ico">
+<link rel="apple-touch-icon" href="../resource/images/favicon/apple_touch_icon.png">
+<link href="../resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="../resource/css/contents.css" rel="stylesheet" type="text/css">
+<link href="guide.css" rel="stylesheet" type="text/css"><!-- 가이드 영역 디자인용/페이지랑 관계없음 -->
+</head>
+
+<body>
+<p class="skip"><a href="#container">본문 바로가기</a></p>
+
+<section id="wrapper" class="wrapper">
+	<header>
+		<div class="header__inner">
+			<img src="../resource/images/dummy/@header.gif" alt="">
+		</div>
+	</header>
+
+
+	<div id="container" class="container">
+
+    <div class="guideContainer">
+      <h2 class="guideTitle"></h2>
+      <h3 class="guideTitle">case 1 : 플로팅 되지 않고 콘텐츠 하단에 존재하는 버튼</h3>
+      <ul class="guideList">
+        <li>※ jQuery로 콘텐츠 감싸는 영역 높이, 콘텐츠 내용 높이 비교하여 .non-fixed class 추가/제거 하는 방식으로 default position:fixed 상태에서 스크롤 될 경우 position:relative 상태로 변경</li>
+        <li>※ 개발 시 검색/탭 sorting 등 액션이 실행 될 때, 값을 뿌려준 뒤 버튼영역 위치 조절을 위하여 js 코드 호출 필요</li>
+        <li>해당 버튼 사용 할 경우 바닥페이지의 경우.content, 레이어팝업의 경우.layer-content 영역에 .padding-bottom--btn-wrap class 추가</li>
+        <li>최초 진입 시 콘텐츠 내용이 콘텐츠 감싸는 영역 높이 보다 작을 경우 디바이스 하단에 버튼 위치 (하단 position:fixed 상태)</li>
+        <li>최초 진입 시 콘텐츠 내용이 콘텐츠 감싸는 영역 높이 보다 클 경우 콘텐츠 스크롤 후 하단에 버튼 위치 (position:relative 상태로 변경)</li>
+        <li>조회,검색 등 무언가의 액션으로 콘텐츠 내용의 높이에 변화가 생길 경우 위의 내용과 같이 버튼 위치 변동</li>
+      </ul>
+      <h3 class="guideTitle">case 2 : 플로팅 버튼 layout_fixed.html에서 안내</h3>
+      <ul class="guideList">
+        <li>.floating-btn 영역에 더블 class로 버튼1개,2개 일 경우 여백값 구분</li>
+        <li>버튼 1개로 상하좌우 여백 있는 경우 : default 추가 class 없음</li>
+        <li>버튼 2개로 상하좌우 여백 없는 경우 : .radius-non-type</li>
+      </ul>
+
+      <div class="jsGuide">
+        <h2><strong>js 요청사항</strong></h2>
+        <h3>[case 1 플로팅 되지 않고 콘텐츠 하단에 존재하는 버튼 class 추가/제거]</h3>
+        <p>하단 플로팅 버튼이 콘텐츠 영역 스크롤 여부에 상관없이 하단에 위치해야 하므로 기본으로 fixed bottom 지정해놓은 상태</p>
+        <ul class="guideList">
+          <li>최초 진입 시, 페이지 내 클릭 등의 액션을 통하여 나온 결과값이 .content 영역의 height 값이 디바이스높이보다 클 경우 : .btn-wrap.btn-wrap--bottom 영역에 .non-fixed class 추가</li>
+          <li>최초 진입 시, 페이지 내 클릭 등의 액션을 통하여 나온 결과값이 .layer-content 영역의 height 값이 디바이스높이보다 클 경우 : .btn-wrap.btn-wrap--bottom 영역에 .non-fixed class 추가</li>
+          <li>반대로 최초 진입 시 아무것도 동작하지 않았으나 페이지 내 클릭 등의 액션을 통하여 나온 결과값이 디바이스 높이보다 작을 경우 추가 한 .non-fixed class 삭제</li>
+        </ul>
+        <h3>[case 2 플로팅 버튼]</h3>
+        <ul class="guideList">
+          <li>플로팅 버튼이 하단에 fixed 되어 하단 화면 가려지지 않게 height 값 계산 필요 : layout_fixed.html에서 안내</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="content padding-bottom--btn-wrap">
+      <div style="background:#ddd">
+				콘텐츠<br>
+				콘텐츠<br>콘텐츠<br>
+				콘텐츠<br>콘텐츠<br>
+				콘텐츠<br>콘텐츠<br>콘텐츠<br>
+				콘텐츠<br>콘텐츠<br>
+				콘텐츠<br>콘텐츠<br>
+				콘텐츠<br>콘텐츠<br>
+				콘텐츠<br>콘텐츠<br>
+				콘텐츠<br>콘텐츠<br>콘텐츠<br>
+				콘텐츠<br>콘텐츠<br>
+				콘텐츠<br>콘텐츠<br>
+				콘텐츠<br>콘텐츠<br>
+				콘텐츠<br>콘텐츠<br>
+				콘텐츠<br>콘텐츠<br>콘텐츠<br>
+				콘텐츠<br>콘텐츠<br>
+				콘텐츠<br>
+			</div>
+
+      <!-- case 1 : 플로팅 되지 않고 콘텐츠 하단에 존재하는 버튼 -->
+			<!-- (dev) 검색/탭 sorting 등 액션이 실행 될 때, 값을 뿌려준 뒤 버튼영역 위치 조절을 위하여 js 코드 호출 필요 -->
+			<div class="btn-wrap btn-wrap--bottom">
+				<button type="button" class="btn">확인</button>
+			</div>
+		</div><!-- //content -->
+
+    <!-- case 2 : 플로팅 버튼 -->
+    <div class="floating-btn">
+			<div class="floating-btn__inner">
+				<div class="btn-wrap">
+					<button type="button" class="btn">확인</button>
+				</div>
+			</div>
+		</div><!-- //floating-btn -->
+
+  </div><!-- //container -->
+	
+</section><!-- //wrapper -->
+<div class="dimmed"></div>
+
+
+<script type="text/javascript" src="../resource/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../resource/dist/library.js"></script>
+<script type="text/javascript" src="../resource/dist/commonJs.js"></script>
+
+</body>
+</html>

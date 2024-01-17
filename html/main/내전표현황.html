@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>내 전표 현황 | PWC</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link rel="shortcut icon" href="../../resource/images/favicon/apple_touch_icon.ico">
+<link rel="apple-touch-icon" href="../../resource/images/favicon/apple_touch_icon.png">
+<link href="../../resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="../../resource/css/contents.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<p class="skip"><a href="#container">본문 바로가기</a></p>
+
+<section id="wrapper" class="wrapper">
+	<header>
+		<div class="header__inner">
+			<button type="button" class="btn--page-prev">이전</button>
+			<h1 class="title-depth5">내 전표 현황</h1>
+			<button type="button" class="btn--menu">
+				<strong class="hidden">메뉴 보기</strong>
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<!-- 메뉴 -->
+			<nav>
+
+			</nav>
+		</div>
+	</header>
+
+	<div id="container" class="container">
+		<div class="content">
+			<div class="content-head">
+				<h2 class="hidden">사용기간 조회</h2>
+        <div class="select-wrap text-size--l">
+          <button aria-haspopup="dialog" data-popup-id="slipSelect" class="btn--select text-type"><span class="hidden">전표 종류 선택 팝업</span>전체</button>
+        </div>
+				<div class="period-box">
+					<div class="calendar-wrap--period box-type">
+						<div class="calendar-wrap">
+							<input type="date" class="input-text calendar" data-placeholder="yyyy-mm-dd" required>
+						</div>
+						<span class="dash">-</span>
+						<div class="calendar-wrap">
+							<input type="date" class="input-text calendar" data-placeholder="yyyy-mm-dd" required>
+						</div>
+					</div>
+					<button type="button" class="btn btn--size-s">조회</button>
+				</div>
+			</div><!-- //content-head -->
+			<div class="content-body border-type-2">
+				<h2 class="hidden">검색 결과</h2>
+				<div class="card-result">
+					<h3 class="hidden">전표 상태</h3>
+					<div class="scroll-menu">
+						<ul role="menu">
+							<li role="presentation" class="is-active"><a href="#" role="menuitem">전체</a></li>
+							<li role="presentation"><a href="#" role="menuitem">작성중</a></li><!-- 10.06 문구 수정 -->
+							<li role="presentation"><a href="#" role="menuitem">결재중</a></li>
+							<li role="presentation"><a href="#" role="menuitem">반려/반송</a></li>
+							<li role="presentation"><a href="#" role="menuitem">결재완료</a></li>
+						</ul>
+					</div>
+					<!-- case : 조회 결과 없는 경우 -->
+					<!-- <p class="no-data">조회된 정보가 없습니다.</p>10.13 문구수정 -->
+					<!-- case : 조회 결과 있는 경우 -->
+
+					<!-- 11.29 추가 : 작성중/ 반려.반송 탭 선택 시 아래 영역 노출 -->
+					<!-- case - 상태 별 안내문구 : 작성중 -->
+					<p class="guide-text-box align-type-2">미발의 : 입력하였으나, 전표생성을 하지 않은 항목<br>미상신 : 전표생성 하였으나, 승인요청을 하지 않은 항목</p>
+					<!-- case - 상태 별 안내문구 : 반려/반송 -->
+					<p class="guide-text-box align-type-2">반려 : 현업 승인 단계에서 되돌려진 항목<br>반송 : 재경 확인 단계에서 되돌려진 항목</p>
+					<!-- //11.29 추가 : 작성중/ 반려.반송 탭 선택 시 아래 영역 노출 -->
+
+					<ul class="use-detail">
+						<li class="use-detail__item">
+              <div class="detail-box sort-type-1"><!-- 11.20 수정 : div.detail-box 영역에 .sort-type-1 추가 -->
+                <span class="detail-box__date">
+									<span class="date">2023-08-03</span>
+									<span class="chit-num">99</span><!-- 11.15 추가 : 전표번호 영역 추가 span.chit-num -->
+									<em class="flag flag--color-3">미발의</em>
+								</span>
+								<!-- (dev) 전표 상태 별 flag
+                    미발의 : <em class="flag flag--color-3">미발의</em>
+                    미상신 : <em class="flag flag--color-4">미상신</em>
+                    상신 : <em class="flag flag--color-2">상신</em>
+                    현업 결재중 : <em class="flag flag--color-2">현업 결재중</em>
+                    재경 결재중 : <em class="flag flag--color-2">재경 결재중</em>
+                    반려 : <em class="flag flag--color-5">반려</em>
+                    회송 : <em class="flag flag--color-5">회송</em>
+                    결재완료 : <em class="flag flag--color-2">결재완료</em>
+                -->
+                <strong class="detail-box__title">시내교통비</strong>
+                <strong class="detail-box__price"><em>21,700</em>원</strong>
+                <a href="#" class="detail-box__link">상세 페이지 이동</a>
+              </div>
+						</li>
+						<li class="use-detail__item">
+              <div class="detail-box sort-type-1">
+								<span class="detail-box__date">
+									<span class="date">2023-08-03</span>
+									<span class="chit-num">99</span>
+									<em class="flag flag--color-4">미상신</em>
+								</span>
+								<strong class="detail-box__title">법인신용카드</strong>
+								<strong class="detail-box__price"><em>80,000</em>원</strong>
+                <a href="#" class="detail-box__link">상세 페이지 이동</a>
+							</div>
+						</li>
+						<li class="use-detail__item">
+              <div class="detail-box sort-type-1">
+								<span class="detail-box__date">
+									<span class="date">2023-08-03</span>
+									<span class="chit-num">99</span>
+									<em class="flag flag--color-2">상신</em>
+								</span>
+								<strong class="detail-box__title">법인신용카드</strong>
+								<strong class="detail-box__price"><em>80,000</em>원</strong>
+                <a href="#" class="detail-box__link">상세 페이지 이동</a>
+							</div>
+						</li>
+						<li class="use-detail__item">
+              <div class="detail-box sort-type-1">
+								<span class="detail-box__date">
+									<span class="date">2023-08-03</span>
+									<em class="flag flag--color-2">현업 결재중</em>
+								</span>
+								<strong class="detail-box__title">법인신용카드</strong>
+								<strong class="detail-box__price"><em>80,000</em>원</strong>
+                <a href="#" class="detail-box__link">상세 페이지 이동</a>
+							</div>
+						</li>
+						<li class="use-detail__item">
+              <div class="detail-box sort-type-1">
+								<span class="detail-box__date">
+									<span class="date">2023-08-03</span>
+									<em class="flag flag--color-2">재경 결재중</em>
+								</span>
+								<strong class="detail-box__title">법인신용카드</strong>
+								<strong class="detail-box__price"><em>80,000</em>원</strong>
+                <a href="#" class="detail-box__link">상세 페이지 이동</a>
+							</div>
+						</li>
+						<li class="use-detail__item">
+              <div class="detail-box sort-type-1">
+								<span class="detail-box__date">
+									<span class="date">2023-08-03</span>
+									<em class="flag flag--color-5">반려</em>
+								</span>
+								<strong class="detail-box__title">법인신용카드</strong>
+								<strong class="detail-box__price"><em>80,000</em>원</strong>
+                <a href="#" class="detail-box__link">상세 페이지 이동</a>
+							</div>
+						</li>
+						<li class="use-detail__item">
+              <div class="detail-box sort-type-1">
+								<span class="detail-box__date">
+									<span class="date">2023-08-03</span>
+									<em class="flag flag--color-5">회송</em>
+								</span>
+								<strong class="detail-box__title">법인신용카드</strong>
+								<strong class="detail-box__price"><em>80,000</em>원</strong>
+                <a href="#" class="detail-box__link">상세 페이지 이동</a>
+							</div>
+						</li>
+						<li class="use-detail__item">
+              <div class="detail-box sort-type-1">
+								<span class="detail-box__date">
+									<span class="date">2023-08-03</span>
+									<em class="flag flag--color-2">결재완료</em>
+								</span>
+								<strong class="detail-box__title">법인신용카드</strong>
+								<strong class="detail-box__price"><em>80,000</em>원</strong>
+                <a href="#" class="detail-box__link">상세 페이지 이동</a>
+							</div>
+						</li>
+						<li class="use-detail__item disabled"><!-- (dev) 해외출장비,소액스캔증비,일용직전표 PC에서만 조회가능 : .disabled class 추가 -->
+							<div class="detail-box sort-type-1">
+								<span class="detail-box__date">
+									<span class="date">2023-12-12</span>
+									<span class="chit-num">99</span>
+									<span class="text--guide">PC에서만 조회가능</span><!-- 11.20 수정 : 전표번호 뒤 해당 위치로 이동 후 p태그 span 태그로 변경 -->
+									<em class="flag flag--color-2">결재완료</em>
+								</span>
+								<strong class="detail-box__title">소액스캔증빙</strong>
+								<strong class="detail-box__price"><em>30,454</em>원</strong>
+                <!-- <p class="text--guide">PC에서만 조회가능</p> 11.20 위치 및 태그 변경 -->
+							</div>
+						</li>
+						<li class="use-detail__item disabled"><!-- (dev) 해외출장비,소액스캔증비,일용직전표 PC에서만 조회가능 : .disabled class 추가 -->
+							<div class="detail-box sort-type-1">
+								<span class="detail-box__date">
+									<span class="date">2023-12-12</span>
+									<span class="text--guide">PC에서만 조회가능</span>
+									<em class="flag flag--color-2">현업 결재중</em>
+								</span>
+								<strong class="detail-box__title">소액스캔증빙</strong>
+								<strong class="detail-box__price"><em>30,454</em>원</strong>
+                <!-- <p class="text--guide">PC에서만 조회가능</p> -->
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div><!-- //content-body -->
+		</div><!-- //content -->
+	</div><!-- //container -->
+</section><!-- //wrapper -->
+
+
+<!-- layer popup : bottom sheet -->
+
+<!-- //layer popup : bottom sheet -->
+
+
+<div class="dimmed"></div>
+
+<script type="text/javascript" src="../../resource/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../resource/dist/library.js"></script>
+<script type="text/javascript" src="../../resource/dist/commonJs.js"></script>
+
+</body>
+</html>

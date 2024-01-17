@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>디바이스 상하단 fixed 요소 가이드 | PWC</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="../resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="../resource/css/contents.css" rel="stylesheet" type="text/css">
+<link href="guide.css" rel="stylesheet" type="text/css"><!-- 가이드 영역 디자인용/페이지랑 관계없음 -->
+</head>
+
+<body>
+<p class="skip"><a href="#container">본문 바로가기</a></p>
+
+<section id="wrapper" class="wrapper">
+	<header>
+    <div class="header__inner">
+      <img src="../resource/images/dummy/@header.gif" alt="">
+    </div>
+	</header>
+
+
+	<div id="container" class="container">
+
+    <div class="guideContainer">
+      <h2 class="guideTitle"></h2>
+      <h3 class="guideTitle">상단 플로팅 : header, 특정 상단 영역</h3>
+      <ul class="guideList">
+        <li>header는 스크롤 시 항상 상단 fixed</li>
+        <li>특정 상단 fixed 영역은 마크업 시 div.fixed-top 로 감싸고 fixed 시킬 영역이 .fixed-top__inner class를 지정</li>			
+      </ul>
+      <h3 class="guideTitle">하단 플로팅 : 플로팅 되지 않고 콘텐츠 하단에 존재하는 버튼</h3>
+      <ul class="guideList">
+        <li>jQuery로 콘텐츠 감싸는 영역 높이, 콘텐츠 내용 높이 비교하여 .non-fixed class 추가/제거 하는 방식으로 default position:fixed 상태에서 스크롤 될 경우 position:relative 상태로 변경</li>
+        <li>최초 진입 시 콘텐츠 내용이 콘텐츠 감싸는 영역 높이 보다 작을 경우 디바이스 하단에 버튼 위치 (하단 position:fixed 상태)</li>
+        <li>최초 진입 시 콘텐츠 내용이 콘텐츠 감싸는 영역 높이 보다 클 경우 콘텐츠 스크롤 후 하단에 버튼 위치 (position:relative 상태로 변경)</li>
+        <li>조회,검색 등 무언가의 액션으로 콘텐츠 내용의 높이에 변화가 생길 경우 위의 내용과 같이 버튼 위치 변동</li>			
+      </ul>
+
+      <div class="jsGuide">
+        <h2>js 요청사항</h2>
+        <h3>[최상단에서 화면 스크롤 시 상단 fixed]</h3>
+        <ul class="guideList">
+          <li>1. header 안의 .header__inner 에 is-fixed class 추가 후 header 영역에 style="height:.header__inner 영역 height 값" 추가</li>
+          <li>페이지 내 .fixed-top 영역이 존재할 경우 해당 .fixed-top 안의 .fixed-top__inner 에 is-fixed class 추가 후 .fixed-top 영역에 style="height:(.fixed-top__inner 영역 height 값)" 추가</li>
+          <li>화면 최상단으로 이동 시 class 및 height 값 삭제</li>
+        </ul>
+        <h3>[디바이스 하단 fixed]</h3>
+        <p>최초 진입 상태에서 페이지 하단에 .floating-btn 이 존재할 경우</p>
+        <ul class="guideList">
+          <li>페이지 내 .floating-btn 영역이 존재할 경우 .floating-btn 영역에 style="height:(.floating-btn__inner 영역 height 값)" 추가</li>
+          <li>화면 최하단으로 이동하여도 값 유지</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="content">
+
+      <!-- 상단 fixed 영역 -->
+      <div class="fixed-top">
+        <div class="fixed-top__inner">
+          <div style="background:#d2d2d2">
+            fixed 될 영역<br>
+            fixed 될 영역<br>
+            fixed 될 영역<br>
+            fixed 될 영역<br>
+          </div>
+        </div>
+			</div>
+		</div><!-- //content -->
+
+    <!-- 하단 fixed 영역 -->
+		<div class="floating-btn radius-non-type">
+			<div class="floating-btn__inner">
+				<div class="btn-wrap">
+					<button type="button" class="btn btn--outline">확인</button>
+					<button type="button" class="btn">확인</button>
+				</div>
+			</div>
+		</div><!-- //floating btn -->
+      
+
+  </div><!-- //container -->
+	
+</section><!-- //wrapper -->
+<div class="dimmed"></div>
+
+
+<script type="text/javascript" src="../resource/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../resource/dist/library.js"></script>
+<script type="text/javascript" src="../resource/dist/commonJs.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>단기출장비 출장 정보 | PWC</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link rel="shortcut icon" href="../../resource/images/favicon/apple_touch_icon.ico">
+<link rel="apple-touch-icon" href="../../resource/images/favicon/apple_touch_icon.png">
+<link href="../../resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="../../resource/css/contents.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<p class="skip"><a href="#container">본문 바로가기</a></p>
+
+<section id="wrapper" class="wrapper">
+	<header>
+    <div class="header__inner">
+      <!-- <button type="button" class="btn--page-prev">이전</button> 11.23 삭제 -->
+      <h1 class="title-depth5">단기출장비</h1>
+      <button type="button" class="btn--page-close">닫기</button><!-- 11.23 추가 -->
+    </div>
+	</header>
+
+	<div id="container" class="container">
+		<div class="content">
+      <div class="content-head">
+        <h2 class="hidden">출장 상세정보</h2>
+        <div class="use-info info-type-2 margin-bottom--non">
+          <strong class="use-info__title">출장 정보를 입력해 주세요</strong>
+          <span class="use-info__date">기표일자 2023-12-31</span>
+        </div>
+      </div><!-- //content-head -->
+			<div class="content-body border-type-3">
+        <h2 class="hidden">출장 정보 입력</h2>
+        <div class="input-form-field">
+          <ul class="input-form-field__list">
+            <li class="input-field">
+              <h3 class="title-depth6">출장기간<em class="date">5일</em></h3>
+              <div class="calendar-wrap--period">
+                <input type="date" id="inpCal2" class="input-text calendar" title="시작일" data-placeholder="yyyy-mm-dd" required>
+                <span class="dash">-</span>
+                <input type="date" class="input-text calendar" title="종료일" data-placeholder="yyyy-mm-dd" required>
+              </div>
+            </li>
+            <li class="input-field">
+              <h3 class="title-depth6">지역</h3>
+              <div class="search-wrap__btn-type">
+                <button aria-haspopup="dialog" data-popup-id="routeTripPop" class="btn--search">지역 조회 팝업</button>
+                <input type="text" id="inpSch" class="input-text search" readonly>
+              </div>
+            </li>
+            <li class="input-field">
+              <h3 class="title-depth6">출장목적/방문장소</h3>
+              <span class="text-field-wrap">
+                <input type="text" class="input-text">
+                <button type="button" class="btn--del">삭제</button>
+              </span>
+            </li>
+            <li class="input-field">
+              <h3 class="title-depth6">숙박정보</h3>
+              <div class="search-wrap__btn-type">
+                <button aria-haspopup="dialog" data-popup-id="accommodationInfo" class="btn--search">숙박정보 팝업</button>
+                <input type="text" id="inpSch" class="input-text search" readonly>
+              </div>
+              <!-- case : 숙박정보 팝업에서 [기타] 선택할 경우 / 아래 숙박 정보 입력 필드 생성 -->
+              <span class="text-field-wrap margin-top--12">
+                <input type="text" class="input-text" placeholder="숙박 정보를 입력해주세요.">
+                <button type="button" class="btn--del">삭제</button>
+              </span>
+            </li>
+            <li class="input-field">
+              <h3 class="title-depth6">출장자</h3>
+              <div class="search-wrap__btn-type">
+                <button aria-haspopup="dialog" data-popup-id="employeeCodePop" class="btn--search">직원조회 팝업</button>
+                <input type="text" id="inpSch" class="input-text search" readonly>
+              </div>
+            </li>
+            <li class="input-field search-field--ckeck">
+              <label for="inpProCode">프로젝트 코드</label>
+              <span class="input-checkbox check-size-m text-label"><input type="checkbox" id="checkProCode"><label for="checkProCode">직접입력</label></span>
+              <!-- case : 직접입력 선택 전 -->
+              <div class="search-wrap__btn-type">
+                <button aria-haspopup="dialog" data-popup-id="projuctCodePop" class="btn--search">검색 팝업</button>
+                <input type="text" id="inpProCode" class="input-text search" readonly>
+              </div>
+              <!-- //case : 직접입력 선택 전 -->
+              <!-- case : 직접입력 선택 후 -->
+              <div class="multi-field project-code">
+                <span class="text-field-wrap">
+                  <input type="tel" id="inpProCode" class="input-text" maxlength="5" placeholder="12345" title="프로젝트 코드 앞 5자리">
+                  <button type="button" class="btn--del">삭제</button>
+                </span>
+                <span class="text-field-wrap">
+                  <input type="tel" class="input-text" maxlength="2" placeholder="12" title="프로젝트 코드 중간 2자리">
+                  <button type="button" class="btn--del">삭제</button>
+                </span>
+                <span class="text-field-wrap">
+                  <input type="tel" class="input-text" maxlength="3" placeholder="123" title="프로젝트 코드 마지막 3자리">
+                  <button type="button" class="btn--del">삭제</button>
+                </span>
+              </span>
+              </div>
+              <!-- //case : 직접입력 선택 후 -->
+              <!-- case : 직접입력 선택 후 유효성 검사 true -->
+              <input type="text" id="inpProCode" class="input-text" readonly>
+              <!-- // case : 직접입력 선택 후 유효성 검사 true -->
+            </li>
+            <li class="input-field search-field--ckeck">
+              <label for="inpTeamCode">팀 코드</label>
+              <span class="input-checkbox check-size-m text-label"><input type="checkbox" id="checkTeamCode"><label for="checkTeamCode">직접입력</label></span>
+              <!-- case : 직접입력 선택 전 -->
+              <div class="search-wrap__btn-type">
+                <button aria-haspopup="dialog" data-popup-id="teamCodePop" class="btn--search">검색 팝업</button>
+                <input type="text" id="inpTeamCode" class="input-text search" readonly>
+              </div>
+              <!-- //case : 직접입력 선택 전 -->
+              <!-- case : 직접입력 선택 후 -->
+              <span class="text-field-wrap">
+                <input type="tel" id="inpTeamCode" class="input-text" maxlength="3" placeholder="코드 3자리">
+                <button type="button" class="btn--del">삭제</button>
+              </span>
+              <!-- //case : 직접입력 선택 후 -->              
+              <!-- case : 직접입력 선택 후 유효성 검사 true -->
+              <input type="tel" id="inpTeamCode" class="input-text" readonly>
+              <!-- // case : 직접입력 선택 후 유효성 검사 true -->
+            </li>
+            <!-- case : 출장기간 외 식대 청구했을 경우 / 아래 청구사유 필드 생성 -->
+            <li class="input-field">
+              <label for="inpReason">출장기간 외 식대 청구 사유</label>
+               <span class="text-field-wrap">
+                <input type="text" id="inpReason" class="input-text">
+                <button type="button" class="btn--del">삭제</button>
+              </span>
+            </li>
+          </ul>
+        </div>
+			</div><!-- //content-body -->
+		</div><!-- //content -->
+		<div class="floating-btn radius-non-type">
+			<div class="floating-btn__inner">
+				<div class="btn-wrap">
+          <button type="button" class="btn btn--outline">취소</button>
+          <button type="button" class="btn">출장내역 작성</button>
+        </div>
+			</div>
+		</div><!-- //floating btn -->
+    
+	</div><!-- //container -->
+</section><!-- //wrapper -->
+
+<!-- layer popup : full popup -->
+
+<!-- //layer popup : full popup -->
+
+<!-- layer popup : bottom sheet -->
+
+<!-- //layer popup : bottom sheet -->
+
+<!-- layer popup : alert -->
+
+<!-- //layer popup : alert -->
+
+<div class="dimmed"></div>
+
+<script type="text/javascript" src="../../resource/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../resource/dist/library.js"></script>
+<script type="text/javascript" src="../../resource/dist/commonJs.js"></script>
+
+</body>
+</html>

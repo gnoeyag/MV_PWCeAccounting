@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+/* reset */
+html {-webkit-text-size-adjust:100%;scroll-behavior: smooth}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,
+b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,
+menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;vertical-align:baseline;font-size:inherit;font-family:AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;color:inherit;-webkit-box-sizing:border-box;box-sizing:border-box}
+dl,ul,ol,menu,li{list-style:none}
+fieldset,img{border:0 none}
+input,select,textarea,button{vertical-align:middle;margin:0;padding:0;font-family:inherit}
+button{border:0 none;background-color:transparent;cursor:pointer}
+address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
+input,textarea{max-width:100%}
+a,a:visited{text-decoration:none;background-color:transparent}
+a img{vertical-align:top}
+sup{font-size:x-small}
+sub{font-size:x-small}
+button,select{-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;appearance:none}
+select::-ms-expand{display:none}
+table{width:100%;padding:0;margin:0;border-collapse:collapse;table-layout:fixed;border-spacing:0}
+
+.guideWrap{line-height:1.4;}
+
+header{position:fixed;top:0;left:0;width:100%;padding:10px;background-color:#fff;z-index:100;}
+header h1{font-size:25px;}
+
+.guideMenu{margin-top:20px;}
+.guideMenu li{display:inline-block;margin-right:10px;}
+.guideMenu li a{font-size:16px;font-weight:700;}
+.guideMenu li a:hover,.guideMenu li a:focus{text-decoration: underline;}
+.guideMenu li.is-active a{font-weight:700;text-decoration:underline;}
+.guideCont{padding:0 10px 10px}
+
+.guideTit01{display:inline-block;padding:0 5px;font-size:20px;color:#fff;background-color: #000;}
+.guideTit02{margin:20px 0 10px;font-size:16px;}
+.guideTit03{margin-top:10px;font-size:14px;}
+
+.guideBox{margin-top:120px;padding:12px 15px;border:1px solid #000}
+.guideBox strong{position:relative;display:block;margin-bottom:10px;padding-left:18px;font-size:16px;color:#000}
+.guideBox strong:before{content:'※';position:absolute;top:0;left:0;display:inline-block}
+.guideList{margin-top:10px}
+.guideList .guideList{margin-top:5px}
+.guideList li, .guideDesc{position:relative;margin-bottom:5px;padding-left:8px;font-size:14px;color: #333;}
+.guideList li::before, .guideDesc:before{content:'';position:absolute;top:8px;left:0;display:inline-block;width:2px;height:2px;border-radius:50%;background-color:#333;}
+.guideList li li{color: #888;}
+.guideList li li::before{width:4px;height:1px;border-radius:0;background-color:#888;}
+
+.patternBox{padding-top:120px}
+.guideBtn{display: inline-block;padding:10px;font-size: 14px;border:1px solid #000;}
+.guideSwiper{width:700px}
+
+.code{overflow:auto;margin-top:10px;padding:10px;border:1px solid #aaa;background:#f5f5f5;color:#333;font-size:14px;font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;white-space:pre-wrap;word-break:break-all;word-wrap:break-word;}
+.code span {color:#c3002f;font-family:inherit;}
+.code i {color:#777;font-family:inherit;}

@@ -1,0 +1,549 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>es5js Template</title>
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+  <link href="/jsGuide/common.css" rel="stylesheet" type="text/css">
+  <link href="/jsGuide/guide.css" rel="stylesheet" type="text/css">
+  <script src="../dist/jquery.min.js"></script>
+  <script src="../dist/library.js"></script>
+  <script src="../dist/commonJs.js"></script>
+</head>
+<body>
+<div class="guideWrap">
+	<header id="guideHead">
+		<h1>es5js Template</h1>
+		<nav>
+			<ul class="guideMenu">
+				<li><a href="#accordion" class="on"># accordion</a></li>
+        <li><a href="#slideDown" class="on"># slideDown</a></li>
+				<li><a href="#layer-popup"># Layer Popup</a></li>
+				<li><a href="#tab"># Tab</a></li>
+				<li><a href="#tooltip"># Tooltip</a></li>
+				<li><a href="#top-button"># Top Button</a></li>
+				<li><a href="#scroll-menu"># Scroll Menu</a></li>
+				<li><a href="#select"># Select</a></li>
+				<li><a href="#swiper"># Swiper</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section class="guideCont">
+    <div class="guideBox">
+      <strong>공통사항</strong>
+      <ul class="guideList">
+        <li>js에서 텍스트 전환이 필요한 경우, 다국어 적용을 위해 태그에 data-text 속성 추가
+          <pre class="code">&lt;span data-text='{
+    &nbsp;&nbsp;"text":"열기|닫기", <i>//적용 텍스트 "|"로 구분</i>
+    &nbsp;&nbsp;"show":1 <i>//Default 텍스트 순서로 지정</i>
+    &nbsp;}'&gt;open&lt;/span&gt;</pre></li>
+        <li>위 기능이 필요한 경우 script 요청 필요 (적용 방식 .accordion-btn 참고)</li>
+      </ul>
+    </div>
+		<div class="patternBox" id="accordion">
+			<h2 class="guideTit01">Accordion</h2>
+      <ul class="guideList">
+				<li>Default가 닫힘일 경우 button.accordion__btn에 aria-expanded="false" button.accordion__btn>span close 텍스트 변경, div.accordion__panel에 aria-hidden="true" style="display:none" 적용</li>
+        <li>.accordion에 data-options 추가하여 accordion 응용
+          <pre class="code">data-options='{
+&nbsp;"id": "accordion-id", <i>//toggle 버튼과 panel에  id/aria 속성 js에서 생성을 위한 id 추가</i>
+&nbsp;"openType": "single", <i>//single .accordion-item 한개 오픈 / multi .accordion-item 다중 오픈</i>
+&nbsp;"animation": true, <i>//슬라이드 다운 모션</i>
+&nbsp;"animationSpeed":400 <i>//슬라이드 다운 스피드</i>
+&nbsp;}
+}'</pre>
+        </li>
+			</ul>
+			<h3 class="guideTit02">open type single</h3>
+      <div class="accordion" data-options='{
+        "animation": true,
+        "animationSpeed":400
+      }'>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            accordion Title1
+            <button type="button" class="accordion-btn" aria-expanded="true"><span data-text='{"text":"열기|닫기", "show":1}'>open</span></button>
+          </div>
+          <div class="accordion-panel" aria-hidden="false">
+            Etiam porta dapibus sapien non sagittis. Donec rhoncus, justo luctus luctus commodo, sem nisi laoreet sem, et lacinia nulla erat ac magna. In a leo id purus mattis sodales a ut lacus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque dui elit, placerat ut commodo sit amet, consequat vel libero. Duis eu egestas quam. Sed mi enim, placerat semper purus a, rhoncus molestie dui. Donec sit amet felis cursus, vestibulum odio at, consectetur odio. Donec tincidunt maximus orci at dignissim. Vestibulum lacus turpis, cursus quis ullamcorper nec, elementum at justo. Sed eu magna lobortis, faucibus justo ut, iaculis sem. Integer at eros non leo imperdiet fringilla nec quis urna. Nulla non dolor finibus, gravida nisl sit amet, ornare odio.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            accordion Title2
+            <button type="button" class="accordion-btn" aria-expanded="false"><span data-text='{"text":"open|close", "show":1}'>close</span></button>
+          </div>
+          <div class="accordion-panel" aria-hidden="true" style="display: none;">
+            Nam nibh nulla, dictum nec purus a, porttitor pretium leo. Donec ac nisl tincidunt, ornare lacus ut, suscipit dui. Donec et cursus ipsum. Integer cursus iaculis sapien congue scelerisque. Aliquam vitae metus ultricies, commodo sem a, efficitur nulla. Cras tristique magna in rutrum porta. Quisque sed arcu at lectus tempor rhoncus vitae vitae sapien. Mauris aliquam convallis commodo.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            accordion Title3
+            <button type="button" class="accordion-btn" aria-expanded="false"><span data-text='{"text":"open|close", "show":1}'>close</span></button>
+          </div>
+          <div class="accordion-panel" aria-hidden="true" style="display: none;">
+            <div class="accordion-cont">
+              Donec egestas enim ante, sed sagittis eros tempor quis. Vivamus feugiat, turpis ut mollis aliquet, nunc nunc blandit enim, in ornare magna metus eu mi. Aliquam mauris orci, volutpat ut sollicitudin ornare, elementum rhoncus dui. In hac habitasse platea dictumst. Integer condimentum eros at elit fermentum, id sollicitudin tortor molestie. Nulla viverra felis nec purus sagittis tempor. Morbi ut nisl et ex vehicula bibendum iaculis ut nulla.
+            </div>
+          </div>
+        </div>
+      </div>
+
+			<h3 class="guideTit02">open type multi</h3>
+      <div class="accordion" data-options='{
+        "id": "multi",
+        "openType": "multi"
+      }'>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            accordion Title1
+            <button type="button" class="accordion-btn" aria-expanded="true"><span data-text='{"text":"열기|닫기", "show":2}'>close</span></button>
+          </div>
+          <div class="accordion-panel" aria-hidden="false">
+            Etiam porta dapibus sapien non sagittis. Donec rhoncus, justo luctus luctus commodo, sem nisi laoreet sem, et lacinia nulla erat ac magna. In a leo id purus mattis sodales a ut lacus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque dui elit, placerat ut commodo sit amet, consequat vel libero. Duis eu egestas quam. Sed mi enim, placerat semper purus a, rhoncus molestie dui. Donec sit amet felis cursus, vestibulum odio at, consectetur odio. Donec tincidunt maximus orci at dignissim. Vestibulum lacus turpis, cursus quis ullamcorper nec, elementum at justo. Sed eu magna lobortis, faucibus justo ut, iaculis sem. Integer at eros non leo imperdiet fringilla nec quis urna. Nulla non dolor finibus, gravida nisl sit amet, ornare odio.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            accordion Title2
+            <button type="button" class="accordion-btn" aria-expanded="false"><span data-text='{"text":"open|close", "show":1}'>open</span></button>
+          </div>
+          <div class="accordion-panel" aria-hidden="true" style="display: none;">
+            Nam nibh nulla, dictum nec purus a, porttitor pretium leo. Donec ac nisl tincidunt, ornare lacus ut, suscipit dui. Donec et cursus ipsum. Integer cursus iaculis sapien congue scelerisque. Aliquam vitae metus ultricies, commodo sem a, efficitur nulla. Cras tristique magna in rutrum porta. Quisque sed arcu at lectus tempor rhoncus vitae vitae sapien. Mauris aliquam convallis commodo.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            accordion Title3
+            <button type="button" class="accordion-btn" aria-expanded="false"><span data-text='{"text":"open|close", "show":1}'>open</span></button>
+          </div>
+          <div class="accordion-panel" aria-hidden="true" style="display: none;">
+            <div class="accordion-cont">
+              Donec egestas enim ante, sed sagittis eros tempor quis. Vivamus feugiat, turpis ut mollis aliquet, nunc nunc blandit enim, in ornare magna metus eu mi. Aliquam mauris orci, volutpat ut sollicitudin ornare, elementum rhoncus dui. In hac habitasse platea dictumst. Integer condimentum eros at elit fermentum, id sollicitudin tortor molestie. Nulla viverra felis nec purus sagittis tempor. Morbi ut nisl et ex vehicula bibendum iaculis ut nulla.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+		<div class="patternBox" id="slideDown">
+			<h2 class="guideTit01">slideDown</h2>
+      <ul class="guideList">
+        <li>.slidedown-btn, .slidedown-cont 두 클래스는 반드시 필요함</li>
+        <li>.slidedown-btn  aria-expanded="true" 의경우는 오픈 상태 false 닫힌 상태</li>
+          <pre class="code">data-options='{
+&nbsp;"animation": true, <i>//슬라이드 다운 모션 default : true</i>
+&nbsp;"animationSpeed":400 <i>//슬라이드 다운 스피드 default : 0.4</i>
+&nbsp;}
+}'</pre>
+        </li>
+			</ul>
+			<h3 class="guideTit02">open type</h3>
+      <div class="slideDown" data-options='{
+        "animation": true,
+        "animationSpeed":300
+      }'>
+        <div class="slideDown-title">
+          slidedown Title1111
+          <button type="button" class="slideDown-btn" aria-expanded="true"><span data-text='{"text":"open|close", "show":1}'>open</span></button>
+        </div>
+        <div class="slideDown-cont" aria-hidden="true">
+          Etiam porta dapibus sapien non sagittis. Donec rhoncus, justo luctus luctus commodo, sem nisi laoreet sem, et lacinia nulla erat ac magna. In a leo id purus mattis sodales a ut lacus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque dui elit, placerat ut commodo sit amet, consequat vel libero. Duis eu egestas quam. Sed mi enim, placerat semper purus a, rhoncus molestie dui. Donec sit amet felis cursus, vestibulum odio at, consectetur odio. Donec tincidunt maximus orci at dignissim. Vestibulum lacus turpis, cursus quis ullamcorper nec, elementum at justo. Sed eu magna lobortis, faucibus justo ut, iaculis sem. Integer at eros non leo imperdiet fringilla nec quis urna. Nulla non dolor finibus, gravida nisl sit amet, ornare odio.
+        </div>
+      </div>
+
+      <h3 class="guideTit02">close type</h3>
+      <div class="slideDown" data-options='{
+        "animation": false
+      }'>
+        <div class="slideDown-title">
+          slidedown Title22
+          <button type="button" class="slideDown-btn" aria-expanded="false"><span data-text='{"text":"열기|닫기", "show":1}'>open</span></button>
+        </div>
+        <div class="slideDown-cont" aria-hidden="true">
+          Etiam porta dapibus sapien non sagittis. Donec rhoncus, justo luctus luctus commodo, sem nisi laoreet sem, et lacinia nulla erat ac magna. In a leo id purus mattis sodales a ut lacus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque dui elit, placerat ut commodo sit amet, consequat vel libero. Duis eu egestas quam. Sed mi enim, placerat semper purus a, rhoncus molestie dui. Donec sit amet felis cursus, vestibulum odio at, consectetur odio. Donec tincidunt maximus orci at dignissim. Vestibulum lacus turpis, cursus quis ullamcorper nec, elementum at justo. Sed eu magna lobortis, faucibus justo ut, iaculis sem. Integer at eros non leo imperdiet fringilla nec quis urna. Nulla non dolor finibus, gravida nisl sit amet, ornare odio.
+        </div>
+      </div>
+    </div>
+
+
+		<div class="patternBox" id="layer-popup">
+			<h2 class="guideTit01">Layer Popup</h2>
+      <ul class="guideList">
+				<li>Button의 data-popup-id와 .popup의 id 연결</li>
+        <li>닫기 Button에 .popup-close class 사용</li>
+			</ul>
+      <button type="button" class="guideBtn" data-popup-id="layer-id-popup" title="layer popup open">Popup</button>
+			<button type="button" class="guideBtn" onclick="mvJs.fn.popup.open('#layer-id-popup')" title="layer popup open">Popup</button>
+
+			<div class="popup" id="layer-id-popup" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="layer-id-title">
+				<div class="popup-wrap">
+					<div class="popup-inner">
+						<h2 class="popup-tit" id="layer-id-title">Layer popup</h2>
+						<div class="popup-cont">
+							Contents
+						</div>
+						<div class="popup-btn">
+							<button type="button" class="btn">확인</button>
+						</div>
+					</div>
+					<button class="popup-close"><span>Close</span></button>
+				</div>
+			</div>
+		</div>
+
+		<div class="patternBox" id="tab">
+			<h2 class="guideTit01">Tab</h2>
+      <ul class="guideList">
+        <li>.js-tab class가 있는 ui에 적용</li>
+			</ul>
+
+			<h3 class="guideTit02">div &gt; button</h3>
+      <div class="js-tab">
+        <div role="tablist">
+          <button class="is-active" role="tab" id="tab-id01" aria-controls="tabpanel-id01" aria-selected="true">Tab1</button>
+          <button role="tab" id="tab-id02" aria-controls="tabpanel-id02" aria-selected="false">Tab2</button>
+          <button role="tab" id="tab-id03" aria-controls="tabpanel-id03" aria-selected="false">Tab3</button>
+        </div>
+        <div role="tabpanel" id="tabpanel-id01" aria-labelledby="tab-id01" aria-hidden="false">
+          TabPanel1
+        </div>
+        <div role="tabpanel" id="tabpanel-id02" aria-labelledby="tab-id02" aria-hidden="true">
+          TabPanel2
+        </div>
+        <div role="tabpanel" id="tabpanel-id03" aria-labelledby="tab-id03" aria-hidden="true">
+          TabPanel3
+        </div>
+      </div>
+      <br>
+			<h3 class="guideTit02">ul &gt; li</h3>
+      <div class="js-tab">
+        <ul role="tablist">
+          <li role="presentation" class="is-active"><button role="tab" id="tab-id04" aria-controls="tabpanel-id04" aria-selected="true">Tab1</button></li>
+          <li role="presentation"><button role="tab" id="tab-id05" aria-controls="tabpanel-id05" aria-selected="false">Tab2</button></li>
+          <li role="presentation"><button role="tab" id="tab-id06" aria-controls="tabpanel-id06" aria-selected="false">Tab3</button></li>
+        </ul>
+        <div role="tabpanel" id="tabpanel-id04" aria-labelledby="tab-id04" aria-hidden="false">
+          TabPanel1
+        </div>
+        <div role="tabpanel" id="tabpanel-id05" aria-labelledby="tab-id05" aria-hidden="true">
+          TabPanel2
+        </div>
+        <div role="tabpanel" id="tabpanel-id06" aria-labelledby="tab-id06" aria-hidden="true">
+          TabPanel3
+        </div>
+      </div>
+    </div>
+
+		<div class="patternBox" id="tooltip">
+			<h2 class="guideTit01">Tooltip</h2>
+      <br>
+			<span class="tooltip">
+				<button type="button" class="tooltip-btn" aria-describedby="tooltip-id01">Tooltip</button>
+				<span class="tooltip-txt" id="tooltip-id01" role="tooltip">
+					hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello.
+				</span>
+			</span>
+			<br><br><br><br><br><br><br><br>
+			<span class="tooltip">
+				<button type="button" class="tooltip-btn" aria-describedby="tooltip-id02">Tooltip</button>
+				<span class="tooltip-txt" id="tooltip-id02" role="tooltip">
+					hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello. hello.
+					<button type="button" class="tooltip-close"><span>Close</span></button>
+				</span>
+			</span>
+		</div>
+
+		<div class="patternBox" id="top-button">
+			<h2 class="guideTit01">Top Button</h2>
+			<button type="button" class="btn-top" title="페이지 상단으로 이동">Top</button>
+		</div>
+
+		<div class="patternBox" id="scroll-menu">
+			<h2 class="guideTit01">Scroll Menu</h2>
+      <ul class="guideList">
+        <li>아래 스타일 필수 적용
+          <pre class="code">.scroll-menu ul {display:flex;overflow-x:auto;overflow-y:hidden;}
+.scroll-menu ul li {display:inline-flex;}
+.scroll-menu ::-webkit-scrollbar {display:none;}
+</pre></li>
+			</ul>
+      <div class="scroll-menu">
+        <ul role="menu">
+          <li role="presentation"><a href="#" role="menuitem">home</a></li>
+          <!-- Active : add class is-active -->
+          <li role="presentation" class="is-active"><a href="#" role="menuitem">brand</a></li>
+          <li role="presentation"><a href="#" role="menuitem">vr showroom</a></li>
+          <li role="presentation"><a href="#" role="menuitem">store</a></li>
+          <li role="presentation"><a href="#" role="menuitem">news</a></li>
+          <li role="presentation"><a href="#" role="menuitem">magazine</a></li>
+        </ul>
+      </div>
+		</div>
+
+		<div class="patternBox" id="select">
+			<h2 class="guideTit01">Select</h2>
+      <ul class="guideList">
+				<li>지원 브라우저 : IE9+ ~ , Chrome, firefox, safari</li>
+        <li>jquery 버전 : 1.7.2 ~ 3.4.1 적용 가능</li>
+        <li>window.ready 이후 .select-wrap &gt; select 가 존재하는 경우 디자인 셀렉트용 div가 생성되며 기본 셀렉트는 display:none로 변경됨</li>
+        <li>셀렉트에 이벤트를 바인딩 하는 경우는 select , change 두 가지로 바인딩 할 수 있도록 설정되어 있다</li>
+        <li>셀렉트의 option이 동적으로 생성이 되거나 상태 값이 백단에서 변경이 이루어져야 하는 경우 디폴트 셀렉를 변경 후 jQuery 실렉터및 메소드 호출<br>
+          예시 => mvJs.fn.selectmenu.update('#test1'); 셀렉트 커스텀 메소드를 호출하면 디자인 셀렉트도 반영이 된다.
+          header => script 에 간단하게 바인딩된 샘플이 있습니다.</li>
+          <li>select 태그 옵션 설정
+            <pre class="code">data-options='{
+  &nbsp;"maxHeight": "250", <i>// 셀렉트 메뉴 최대 높이 지정</i>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>// inherit 설정시 css로 높이값 커스텀 가능</i>
+  &nbsp;"direction": "down", <i>// 셀렉트 메뉴 열리는 방향 설정 up/down 디폴트값 down</i>
+  &nbsp;"msg": "Default select example" <i>// 셀렉트 메시지 설정</i>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>// 옵션이 선택되어 있어야 하는 경우에는 data-msg 옵션 사용하지 않고 select option에 selected 속성 추가</i>
+  &nbsp;"multiText": "|" <i>// select &gt; option 텍스트에 구분자를 지정, a &gt; span 태그 생성</i>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>// "구분 값"은 select &gt; option 텍스트에 사용하지 않는 특수 기호 사용</i>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>// span 태그에 class 추가 필요 시 select &gt; option 태그에 class="첫번째class 두번째class" 정의, option에 각각 class 적용됨</i>
+  }'</pre>
+			</ul>
+      <h3 class="guideTit02">default</h3>
+      <div class="select-wrap">
+        <select id="select-sample" data-options='{
+          "maxHeight":250,
+          "msg":"Default select example"
+        }'>
+          <option value="01" selected>One</option>
+          <option value="02">Two</option>
+          <option value="03">Three</option>
+        </select>
+      </div>
+      <h3 class="guideTit02">Multi Text</h3>
+      <div class="select-wrap">
+        <select id="select-sample-multi" data-options='{
+          "direction":"up",
+          "maxHeight":"inherit",
+          "multiText":"|"
+        }'>
+          <option value="01" selected class="sample-text sample-value">sample1|value</option>
+          <option value="02" class="sample-text sample-value">sample2|value</option>
+          <option value="03" class="sample-text sample-value">sample3|value</option>
+        </select>
+      </div>
+		</div>
+
+		<div class="patternBox" id="swiper">
+			<h2 class="guideTit01">Swiper</h2>
+      <ul class="guideList">
+        <li>.swiper &gt; .swiper-container &gt; .swiper-wrapper &gt; .swiper-silde 구조를 지켜야 swiper 플러그인 적용됨</li>
+        <li>.swiper-button-next, swiper-button-prev, swiper-pagination, swiper-autoplay 의 위치는 디자인에 따라서 변경해도 무방</li>
+        <li>.swiper-silde에 backface-visibility:hidden;transform:translate3d(0,0,0); 스타일 적용 필요(ie 깜박임 방지)</li>
+        <li>해당 플러그인은 <a href="https://swiperjs.com/swiper-api" target="_blank" style="text-decoration:underline;">https://swiperjs.com/swiper-api</a> , <a href="https://swiperjs.com/demos" target="_blank" style="text-decoration:underline;">https://swiperjs.com/demos</a> 참고</li>
+        <li>
+          .swiper에 data-options 추가하여 swiper 응용
+          <pre class="code">data-options='{
+&nbsp;"loop": false, <i>//slide 맨 처음 끝에서도 멈춤없이 이어서 동작 : true/false</i>
+&nbsp;"autoplay": "0", <i>//자동재생 속도 : 0(재생없음) 2000 등
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 0 외의 수치값 입력 시 &lt;div class="swiper-autoplay"&gt; 영역 js에서 생성</i>
+&nbsp;"pagination": "fraction", <i>//bullet:인디케이터 형태, fraction: 0/0 페이징처리, all:둘 다
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&lt;div class="swiper-pagination"&gt;&lt;/div&gt; 영역 필요</i>
+&nbsp;"mode": "pc", <i>//PC, MOBILE 모두 swiper 일 때 옵션 작성 안함
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//pc에만 swiper 기능 사용하는 경우 "pc", MOBILE에서만 swiper 기능 사용하는 경우 "mo"</i>
+&nbsp;"effect": "fade", <i>//slide 모션이 fade in out 형태</i>
+&nbsp;"lazy": true, <i>//true lazyload 적용
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//src 속성 적용 이미지 경로, data-src 속성 더미 이미지 경로</i>
+&nbsp;"breakpoints": {
+&nbsp;&nbsp;"1": {
+&nbsp;&nbsp;&nbsp;ex) "slidesPerView" : 2
+&nbsp;&nbsp;&nbsp;<i>//MOBILE에만 적용 할 경우</i>
+&nbsp;&nbsp;},
+&nbsp;&nbsp;"768": {
+&nbsp;&nbsp;&nbsp;ex) "slidesPerView" : 3
+&nbsp;&nbsp;&nbsp;<i>//PC에만 적용 할 경우</i>
+&nbsp;&nbsp;}
+&nbsp;}
+&nbsp;"autoDelete": false, <i>//기본 false : 슬라이드가 1개 있을 경우 스와이프가 생성이 되나 스와이프가 생성이 되지 않는 상태로 대기 개발에서 슬라이드 추가시 자동으로 작동, true : 슬라이드가 1개일시 스와이프가 생성 되지 않음</i>
+}'</pre>
+        </li>
+        <li>sample3 참고 : 긴 바 형태 추가하려면 &lt;div class="swiper-pagination-progressbar swiper-pagination-horizontal"&gt;&lt;span class="swiper-pagination-progressbar-fill"&gt;&lt;/span&gt;&lt;/div&gt; 영역 필요</li>
+      </ul>
+      <!-- Slider main container -->
+      <h4 class="guideTit02">sample 1</h4>
+      <div class="guideSwiper">
+        <div class="swiper" data-options='{
+            "loop": false,
+            "autoplay": "0",
+            "pagination": "fraction"
+          }' id="swiper1">
+          <button type="button" class="swiper-button-prev"><span>previous</span></button>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img src="http://via.placeholder.com/700x300/F5E05B/2B2B2B?text=Slide1"></div>
+              <div class="swiper-slide"><img src="http://via.placeholder.com/700x300/C6A3C5/2B2B2B?text=Slide2"></div>
+              <div class="swiper-slide"><img src="http://via.placeholder.com/700x300/75AE87/2B2B2B?text=Slide3"></div>
+            </div>
+          </div>
+          <button type="button" class="swiper-button-next"><span>next</span></button>
+          <!-- pagination 영역 / .swiper-pagination 안으로 생성  -->
+          <!-- 0/0 형태 paging 사용 시 해당 영역 필요 -->
+          <div class="swiper-pagination"></div>
+          <!-- progressbar 사용 시 해당 영역 필요 -->
+          <!-- <div class="swiper-pagination-progressbar swiper-pagination-horizontal">
+            <span class="swiper-pagination-progressbar-fill"></span>
+          </div> -->
+        </div>
+      </div>
+
+      <h4 class="guideTit02">sample 2</h4>
+      <div class="guideSwiper">
+        <div class="swiper" data-options='{
+            "loop": true,
+            "autoplay": "2000",
+            "pagination": "bullet"
+          }' id="swiper2">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img src="http://via.placeholder.com/700x300/F5E05B/2B2B2B?text=Slide1"></div>
+              <div class="swiper-slide"><img src="http://via.placeholder.com/700x300/C6A3C5/2B2B2B?text=Slide2"></div>
+              <div class="swiper-slide"><img src="http://via.placeholder.com/700x300/75AE87/2B2B2B?text=Slide3"></div>
+            </div>
+          </div>
+          <div class="swiper-btn-wrap">
+            <button type="button" class="swiper-button-prev"><span>previous</span></button>
+            <div class="swiper-pagination"></div>
+            <button type="button" class="swiper-button-next"><span>next</span></button>
+            <div class="swiper-autoplay">
+              <button type="button" class="swiper-button-autoplay--pause on"><span>pause</span></button>
+              <button type="button" class="swiper-button-autoplay--play"><span>play</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="guideTit02">sample 3</h4>
+      <div class="guideSwiper">
+        <div class="swiper" data-options='{
+            "loop": false,
+            "autoplay": "0",
+            "pagination": "bullet",
+            "effect": "fade"
+          }' id="swiper3">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img src="http://via.placeholder.com/700x300/F5E05B/2B2B2B?text=Slide1"></div>
+              <div class="swiper-slide"><img src="http://via.placeholder.com/700x300/C6A3C5/2B2B2B?text=Slide2"></div>
+              <div class="swiper-slide"><img src="http://via.placeholder.com/700x300/75AE87/2B2B2B?text=Slide3"></div>
+            </div>
+          </div>
+          <div class="swiper-btn-wrap">
+            <button type="button" class="swiper-button-prev"><span>previous</span></button>
+            <div class="swiper-pagination"></div>
+            <button type="button" class="swiper-button-next"><span>next</span></button>
+          </div>
+        </div>
+      </div>
+      <h4 class="guideTit02">sample 4</h4>
+      <div class="guideSwiper">
+        <div class="swiper" data-options='{
+            "loop": false,
+            "autoplay": "0",
+            "pagination": "fraction"
+          }' id="swiper4">
+          <button type="button" class="swiper-button-prev"><span>previous</span></button>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img src="http://via.placeholder.com/700x300/F5E05B/2B2B2B?text=Slide1"></div>
+              <div class="swiper-slide"><img src="http://via.placeholder.com/700x300/C6A3C5/2B2B2B?text=Slide2"></div>
+              <div class="swiper-slide"><img src="http://via.placeholder.com/700x300/75AE87/2B2B2B?text=Slide3"></div>
+            </div>
+          </div>
+          <button type="button" class="swiper-button-next"><span>next</span></button>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination-progressbar">
+            <span class="swiper-pagination-progressbar-fill"></span>
+          </div>
+        </div>
+      </div>
+      <!-- mode (pc/mo) 둘다 되는 경우는 기입 안함-->
+      <h4 class="guideTit02">sample 5</h4>
+      <div class="guideSwiper">
+        <div class="swiper" data-options='{
+            "loop": false,
+            "autoplay": "0",
+            "mode": "pc"
+          }' id="swiper5">
+          <button type="button" class="swiper-button-prev"><span>previous</span></button>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img src="http://via.placeholder.com/700x300/F5E05B/2B2B2B?text=Slide1"></div>
+              <div class="swiper-slide"><img src="http://via.placeholder.com/700x300/C6A3C5/2B2B2B?text=Slide2"></div>
+              <div class="swiper-slide"><img src="http://via.placeholder.com/700x300/75AE87/2B2B2B?text=Slide3"></div>
+            </div>
+          </div>
+          <button type="button" class="swiper-button-next"><span>next</span></button>
+        </div>
+      </div>
+      <!-- lazyload-->
+      <h4 class="guideTit02">sample 6</h4>
+      <div class="guideSwiper">
+        <div class="swiper" data-options='{
+            "lazy": true,
+            "autoplay": "0"
+          }' id="swiper6">
+          <button type="button" class="swiper-button-prev"><span>previous</span></button>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img class="swiper-lazy"  data-src="http://via.placeholder.com/700x300/F5E05B/2B2B2B?text=Slide1" src="http://via.placeholder.com/700x300/ffffff/2B2B2B?text=dummy"></div>
+              <div class="swiper-slide"><img class="swiper-lazy" data-src="http://via.placeholder.com/700x300/C6A3C5/2B2B2B?text=Slide2" src="http://via.placeholder.com/700x300/ffffff/2B2B2B?text=dummy"></div>
+              <div class="swiper-slide"><img class="swiper-lazy" data-src="http://via.placeholder.com/700x300/75AE87/2B2B2B?text=Slide3" src="http://via.placeholder.com/700x300/ffffff/2B2B2B?text=dummy"></div>
+            </div>
+          </div>
+          <button type="button" class="swiper-button-next"><span>next</span></button>
+        </div>
+      </div>
+
+      <h4 class="guideTit02">sample 7 : Vertical</h4>
+      <div class="guideSwiper">
+        <div class="swiper" data-options='{
+            "direction": "vertical",
+            "loop": false,
+            "autoplay": "0",
+            "pagination": "fraction"
+          }' id="swiper7">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img src="https://via.placeholder.com/700x300/F5E05B/2B2B2B?text=Slide1"></div>
+              <div class="swiper-slide"><img src="https://via.placeholder.com/700x300/C6A3C5/2B2B2B?text=Slide2"></div>
+              <div class="swiper-slide"><img src="https://via.placeholder.com/700x300/75AE87/2B2B2B?text=Slide3"></div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      
+      <h4 class="guideTit02">sample 8 : single slide autoDelete</h4>
+      <div class="guideSwiper">
+        <div class="swiper" data-options='{
+            "loop": false
+          }' id="swiper8">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img src="https://via.placeholder.com/700x300/F5E05B/2B2B2B?text=Slide1"></div>
+            </div>
+          </div>
+          <!-- <div class="swiper-pagination"></div> -->
+        </div>
+      </div>
+
+
+    </div>
+	</section>
+</div>
+</body>
+</html>

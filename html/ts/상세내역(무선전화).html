@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>상세내역(무선전화) | PWC</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link rel="shortcut icon" href="../../resource/images/favicon/apple_touch_icon.ico">
+<link rel="apple-touch-icon" href="../../resource/images/favicon/apple_touch_icon.png">
+<link href="../../resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="../../resource/css/contents.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<p class="skip"><a href="#container">본문 바로가기</a></p>
+
+<section id="wrapper" class="wrapper">
+	<header>
+		<div class="header__inner header-case--v2">
+			<h1 class="title-depth5">상세내역(무선전화)</h1>
+      <button type="button" class="btn--page-close">닫기</button>
+		</div>
+	</header>
+
+	<div id="container" class="container">
+		<div class="content">
+			<h2 class="hidden">내역 작성</h2>
+        <div class="input-form-field">
+          <ul class="input-form-field__list">
+            <li class="input-field">
+              <h3 class="title-depth6">구분</h3>
+               <!-- 구분 case : 무선전화 -->
+               <input type="text" class="input-text" value="무선전화" disabled>
+               <!-- //구분 case : 무선전화 -->
+            </li>
+            <!-- case 무선전화 : 사용월 -->
+            <li class="input-field field-calendar">
+              <h3 class="title-depth6">사용 월</h3>
+              <div class="calendar-wrap">
+                <input type="text" class="input-text calendar" readonly>
+                <button aria-haspopup="dialog" data-popup="monthSelect" class="btn--cal is-open--bottom-sheet">월 선택 팝업</button>
+              </div>
+            </li>
+            <!-- //case 무선전화 : 사용월 -->
+            <!-- case 무선전화 : 금액 -->
+            <li class="input-field">
+              <h3 class="title-depth6">금액</h3>
+              <span class="text-field-wrap">
+                <input type="text" class="input-text">
+                <button type="button" class="btn--del">삭제</button>
+              </span>
+            </li>
+            <!-- //case 무선전화 : 금액 -->
+            <!-- case 무선전화 : 첨부 파일 / 금액 필드의 금액이 30,000초과시에만 노출-->
+            <li class="input-field file-attach">
+              <h3 class="title-depth6">첨부 파일 <em class="sub-text">(30,000원 초과 시 제출 필수)</em></h3>
+              <div class="attach-wrap">
+                <input type="file">
+                <span class="btn--file">파일 선택</span>
+                <input type="text" class="input-text" readonly><!-- (dev) 선택한 파일 명 해당 영역 value값으로 노출 -->
+              </div>
+            </li>
+            <!-- //case 무선전화 : 첨부 파일 -->
+            <li class="input-field">
+              <h3 class="title-depth6">적요</h3>
+              <!-- 적요 case : 무선전화 -->
+              <span class="text-field-wrap">
+                <input type="text" class="input-text" value="(증빙포함) 2023년 08월"><!-- (dev) 첨부파일이 이미 첨부되어있는 경우는 value값에 (증빙포함) 추가 -->
+                <button type="button" class="btn--del">삭제</button>
+              </span>
+              <!-- //적요 case : 무선전화 -->
+            </li>
+            <li class="input-field search-field--ckeck">
+              <h3 class="title-depth6">프로젝트 코드</h3>
+              <span class="input-checkbox check-size-m text-label"><input type="checkbox" id="checkProCode"><label for="checkProCode">직접입력</label></span>
+              <!-- 프로젝트 코드 case : 직접입력 선택 전 -->
+              <div class="case-box">
+                <div class="search-wrap__btn-type">
+                  <button aria-haspopup="dialog" data-popup-id="projuctCodePop" class="btn--search">검색 팝업</button>
+                  <input type="text" class="input-text search" readonly>
+                </div>
+              </div>
+              <!-- //프로젝트 코드 case : 직접입력 선택 전 -->
+              <!-- 프로젝트 코드 case : 직접입력 선택 후 -->
+              <div class="case-box">
+                <div class="multi-field project-code">
+                  <span class="text-field-wrap">
+                    <input type="tel" class="input-text" maxlength="5" placeholder="12345" title="프로젝트 코드 앞 5자리">
+                    <button type="button" class="btn--del">삭제</button>
+                  </span>
+                  <span class="text-field-wrap">
+                    <input type="tel" class="input-text" maxlength="2" placeholder="12" title="프로젝트 코드 중간 2자리">
+                    <button type="button" class="btn--del">삭제</button>
+                  </span>
+                  <span class="text-field-wrap">
+                    <input type="tel" class="input-text" maxlength="3" placeholder="123" title="프로젝트 코드 마지막 3자리">
+                    <button type="button" class="btn--del">삭제</button>
+                  </span>
+                </div>
+              </div>
+              <!-- //프로젝트 코드 case : 직접입력 선택 후 -->
+              <!-- 프로젝트 코드 case : 직접입력 선택 후 유효성 검사 true -->
+              <div class="case-box">
+                <input type="text" class="input-text" readonly>
+              </div>
+              <!-- // 프로젝트 코드 case : 직접입력 선택 후 유효성 검사 true -->
+            </li>
+            <li class="input-field search-field--ckeck">
+              <h3 class="title-depth6">팀 코드</h3>
+              <span class="input-checkbox check-size-m text-label"><input type="checkbox" id="checkTeamCode"><label for="checkTeamCode">직접입력</label></span>
+              <!-- 팀 코드 case : 직접입력 선택 전 -->
+              <div class="case-box">
+                <div class="search-wrap__btn-type">
+                  <button aria-haspopup="dialog" data-popup-id="teamCodePop" class="btn--search">검색 팝업</button>
+                  <input type="text" class="input-text search" readonly>
+                </div>
+              </div>
+              <!-- //팀 코드 case : 직접입력 선택 전 -->
+              <!-- 팀 코드 case : 직접입력 선택 후 -->
+              <div class="case-box">
+                <span class="text-field-wrap">
+                  <input type="tel" class="input-text" maxlength="3" placeholder="코드 3자리">
+                  <button type="button" class="btn--del">삭제</button>
+                </span>
+              </div>
+              <!-- //팀 코드 case : 직접입력 선택 후 -->              
+              <!-- 팀 코드 case : 직접입력 선택 후 유효성 검사 true -->
+              <div class="case-box">
+                <input type="tel" class="input-text" readonly>
+              </div>
+              <!-- // 팀 코드 case : 직접입력 선택 후 유효성 검사 true -->
+            </li>
+          </ul>
+        </div>
+		</div><!-- //content -->
+		<div class="floating-btn">
+			<div class="floating-btn__inner">
+        <div class="slideDown reverse">
+          <button type="button" class="slideDown-btn wide" aria-expanded="true"><span data-text='{"text":"open|close", "show":2}'>close</span></button>
+          <div class="slideDown-cont">
+            <div class="text-align--c">
+              <a href="#" class="btn--s-round add-type-v2">특근내역</a>
+              <a href="#" class="btn--s-round add-type-v2">교통비</a>
+              <a href="#" class="btn--s-round add-type-v2">무선전화</a>
+            </div>
+          </div>
+        </div>
+        <!-- case 무선전화 -->
+        <div class="floating-content content-type-1">
+          <div class="use-price-wrap">
+            <h3 class="title">사용금액</h3>
+            <strong class="price"><em>0</em>원</strong>
+          </div>
+          <h3 class="title-depth7 color-black">지원합계</h3>
+          <strong class="price"><em>80,000</em>원</strong>
+        </div>
+        <div class="btn-wrap">
+          <button type="button" class="btn">저장</button>
+        </div>
+        <!-- //case 무선전화 -->
+			</div>
+		</div><!-- //floating btn -->
+	</div><!-- //container -->
+</section><!-- //wrapper -->
+
+
+<!-- layer popup : full page -->
+
+<!-- //layer popup : full page -->
+
+<!-- layer popup : bottom sheet -->
+
+<!-- //layer popup : bottom sheet -->
+
+<!-- layer popup : alert -->
+
+<!-- //layer popup : alert -->
+
+<div class="dimmed"></div>
+
+<script type="text/javascript" src="../../resource/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../resource/dist/library.js"></script>
+<script type="text/javascript" src="../../resource/dist/commonJs.js"></script>
+
+</body>
+</html>

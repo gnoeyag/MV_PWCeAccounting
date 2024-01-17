@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title> | PWC</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<!-- <link rel="shortcut icon" href="/resource/MO/images/favicon/apple_touch_icon.ico">
+<link rel="apple-touch-icon" href="/resource/MO/images/favicon/apple_touch_icon_144.ico"> -->
+<link href="/resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="/resource/css/contents.css" rel="stylesheet" type="text/css">
+
+<style>
+	.guideList li {list-style-type: disc;}
+</style>
+
+</head>
+
+<body>
+<p class="skip"><a href="#container">본문 바로가기</a></p>
+
+<section id="wrapper" class="wrapper">
+	<header>
+		<div class="header__inner">
+			<img src="/resource/images/dummy/@header.gif" alt="">
+		</div>
+	</header>
+
+	<div id="container" class="container">
+		<ul class="guideList">
+			<li>팝업 여는 button 태그에 aria-haspopup="dialog" 속성 추가</li>
+			<li>팝업 여는 button 태그에 data-popup="팝업 id"와 매칭</li>
+			<li>팝업 내 닫는 버튼에 .popup-close class 필수</li>
+		</ul>
+
+		<button aria-haspopup="dialog" data-popup="sample1" class="btn btn--outline">바텀시트 팝업 열기 버튼</button>
+  </div><!-- //container -->
+	
+</section><!-- //wrapper -->
+
+
+<!-- layer popup : full popup -->
+<!-- 팝업이름 팝업 -->
+<section id="sample1" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--full">
+	<h2 class="layer-title">레이어 타이틀 영역</h2>
+	<div class="popup-wrap">
+		<div class="layer-content">
+
+			<div style="height:300px">
+			</div>
+
+		</div><!-- //layer-content -->
+	</div><!-- //popup-wrap -->
+	<button type="button" class="btn--close popup-close">팝업 닫기</button>
+</section>
+<!-- // 팝업이름 팝업 -->
+
+
+<!-- layer popup : bottom sheet -->
+<!-- 팝업이름 팝업 -->
+<section id="sample2" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--bottom-sheet">
+	<div class="popup-wrap">
+		<h2 class="layer-title">레이어 타이틀 영역</h2>
+		<div class="layer-content">
+
+			<div style="height:300px">
+			</div>
+
+		</div><!-- //layer-content -->
+		<button type="button" class="btn--close popup-close">팝업 닫기</button>
+	</div><!-- //popup-wrap-->
+</section>
+<!-- // 팝업이름 팝업 -->
+
+<!-- layer popup : alert -->
+<!-- 팝업이름 팝업 -->
+<section id="sample3" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--alert">
+	<div class="popup-wrap">
+		<div class="layer-content">
+			<h2 class="layer-title hidden">레이어 타이틀 영역</h2> <!-- 팝업 타이틀 없는 경우 기능에 맞는 타이틀 입력 후 .layer-title에 .hidden class 추가 (출력시에는 hidden 처리) -->
+			<p class="layer-text">현재 작성 중인 내역은 저장되지 않습니다.<br>신규 내역을 작성하시겠어요?</p>
+		</div><!-- //layer-content -->
+		<div class="btn-wrap">
+			<button type="button" class="btn btn--outline">취소</button>
+			<button type="button" class="btn popup-close">확인</button>
+		</div>
+	</div><!-- //popup-wrap -->
+</section>
+<!-- // 팝업이름 팝업 -->
+
+
+<script type="text/javascript" src="/resource/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/resource/dist/library.js"></script>
+<script type="text/javascript" src="/resource/dist/commonJs.js"></script>
+
+</body>
+</html>

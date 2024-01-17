@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>단기출장비(교통비) popup | PWC</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link rel="shortcut icon" href="../../resource/images/favicon/apple_touch_icon.ico">
+<link rel="apple-touch-icon" href="../../resource/images/favicon/apple_touch_icon.png">
+<link href="../../guide/guide.css" rel="stylesheet" type="text/css"><!-- 가이드 영역 디자인용/페이지랑 관계없음 -->
+<link href="../../resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="../../resource/css/contents.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<p class="skip"><a href="#container">본문 바로가기</a></p>
+
+<section id="wrapper" class="wrapper">
+	<header>
+		<div class="header__inner">
+			<img src="../../resource/images/dummy/@header.gif" alt="">
+		</div>
+	</header>
+
+	<div id="container" class="container">
+		
+		<div class="guideContainer">
+			<ul class="text--dot" style="margin-bottom:30px">
+				<li><strong>[팝업 사용 시 참고]</strong></li>
+				<li>&lt;!-- layer popup : full page --&gt; 주석 내 팝업 소스 사용</li>
+				<li>팝업이 열리는 버튼의 data-popup-id 속성 값과, 팝업의 id값이 일치할 경우 팝업 열림</li>
+				<li>팝업 닫히는 class : popup-close / 상황에 따라 필요없는 기능일 경우 해당 class 삭제하여 사용</li>
+				<li>※ 팝업 닫기 기능 별도로 필요한 경우 mvJs.fn.popup.close() 해당 함수에 팝업 id값 넣어서 호출하여 사용</li>
+				<li>※ 팝업 열기 기능 별도로 필요한 경우 mvJs.fn.popup.open() 해당 함수에 팝업 id값 넣어서 호출하여 사용</li>
+			</ul>
+			<button aria-haspopup="dialog" data-popup-id="transportationExpenses" class="btn btn--outline">단기출장비(교통비)</button>	
+		</div>
+		
+  </div><!-- //container -->
+</section><!-- //wrapper -->
+
+
+<!-- layer popup : full page -->
+
+<!-- 팝업이름 -->
+<section id="transportationExpenses" role="dialog" aria-modal="true" aria-hidden="true" class="popup layer--full">
+	<h2 class="layer-title">단기출장비(교통비)</h2>
+	<div class="popup-wrap">
+		<div class="layer-content">
+      <div class="content-head in-slide">
+        <h2 class="hidden">출장 상세정보</h2>
+        <div class="use-info info-type-2">
+          <p class="use-info__trip"><span class="period">2023-08-01 ~ 2023-08-05 (10일)</span><span class="location">서울</span></p>
+          <span class="use-info__date">기표일자 2023-12-31</span>
+        </div>
+        <div class="slideDown">
+          <div class="slideDown-cont">
+            <ul class="period-info">
+              <li class="period-info__item">
+                <strong class="title">현금(정액)사용</strong>
+                <span class="data"><span>80,200</span> 원</span>
+              </li>
+              <li class="period-info__item">
+                <strong class="title">법인신용카드</strong>
+                <span class="data"><span>39,200</span> 원</span>
+              </li>
+              <li class="period-info__item">
+                <strong class="title">출장목적/방문장소</strong>
+                <span class="data">교육 출장</span>
+              </li>
+              <li class="period-info__item lodge">
+                <strong class="title">숙박정보</strong>
+                <span class="data">본인 법인카드 결제</span>
+              </li>
+              <li class="period-info__item">
+                <strong class="title">출장자</strong>
+                <span class="data">김삼일(A), 이삼일(SA), 박삼일(SA), 박삼일(SA)</span>
+              </li>
+              <li class="period-info__item">
+                <strong class="title">프로젝트(팀)</strong>
+                <span class="data">코칭 / Workday Coaching-김삼일</span>
+              </li>
+              <li class="period-info__item etc">
+                <strong class="title">출장기간 외 식대 청구</strong>
+                <span class="data">가나다라 마바사 아자차카타파하 가다나라 마바사</span>
+              </li>
+            </ul>
+          </div>
+          <button type="button" class="slideDown-btn" aria-expanded="false"><span data-text='{"text":"open|close", "show":1}'>open</span></button>
+        </div>
+      </div><!-- //content-head -->
+      <div class="content-body no-line padding-top--24">
+        <div class="input-form-field">
+          <ul class="input-form-field__list">
+            <!-- case : 택시, 버스/지하철 -->
+            <li class="input-field">
+              <h3 class="title-depth6">이동수단</h3>
+              <div class="select-wrap line-type">
+                <button aria-haspopup="dialog" data-popup-id="transportationSelPop" class="btn--select"><span class="hidden">교통수단 구분 팝업</span>택시</button><!-- (dev) {팝업선택값} 영역은 default는 비어있고 팝업에서 값 선택하는 경우 출력 -->
+              </div>
+            </li>
+            <!-- 11.22 삭제 : 출발,도착 필드 한 줄로 구성하기 위해 삭제
+            <li class="input-field">
+              <h3 class="title-depth6">출발지</h3>
+              <span class="text-field-wrap">
+                <input type="text" class="input-text">
+                <button type="button" class="btn--del">삭제</button>
+              </span>
+            </li>
+            <li class="input-field">
+              <h3 class="title-depth6">도착지</h3>
+              <span class="text-field-wrap">
+                <input type="text" class="input-text">
+                <button type="button" class="btn--del">삭제</button>
+              </span>
+            </li> -->
+            <!-- 11.22 추가 : 출발,도착 필드 한 줄로 구성 -->
+            <li class="input-field">
+              <h3 class="title-depth6">상세내용(출발/도착)</h3>
+              <div class="row-field route">
+                <span class="text-field-wrap">
+                  <input type="text" class="input-text" placeholder="출발지" title="출발지">
+                  <button type="button" class="btn--del">삭제</button>
+                </span>
+                <span class="text-field-wrap">
+                  <input type="text" class="input-text" placeholder="도착지" title="도착지">
+                  <button type="button" class="btn--del">삭제</button>
+                </span>
+              </div>
+            </li>
+            <!-- //11.22 추가 : 출발,도착 필드 한 줄로 구성 -->
+            <li class="input-field">
+              <h3 class="title-depth6">횟수</h3>
+              <span class="text-field-wrap">
+                <input type="text" class="input-text">
+                <button type="button" class="btn--del">삭제</button>
+              </span>
+            </li>
+            <li class="input-field">
+              <h3 class="title-depth6">금액</h3>
+              <span class="text-field-wrap">
+                <input type="text" class="input-text">
+                <button type="button" class="btn--del">삭제</button>
+              </span>
+            </li>
+            <!-- //case : 택시, 버스/지하철 -->
+            <!-- case : 자차 -->
+            <li class="input-field">
+              <h3 class="title-depth6">이동수단</h3>
+              <div class="select-wrap line-type">
+                <button aria-haspopup="dialog" data-popup-id="transportationSelPop" class="btn--select"><span class="hidden">교통수단 구분 팝업</span>자차</button><!-- (dev) {팝업선택값} 영역은 default는 비어있고 팝업에서 값 선택하는 경우 출력 -->
+              </div>
+            </li>
+            <li class="input-field">
+              <h3 class="title-depth6">마일리지</h3>
+              <span class="text-field-wrap">
+                <input type="text" class="input-text" placeholder="마일리지를 입력해 주세요.">
+                <button type="button" class="btn--del">삭제</button>
+              </span>
+            </li>
+            <li class="input-field">
+              <h3 class="title-depth6">금액</h3>
+              <input type="text" class="input-text" disabled>
+            </li>
+            <!-- //case : 자차 -->
+          </ul>
+        </div>
+      </div><!-- //content-body -->
+		</div><!-- //layer-content -->
+		<div class="floating-btn radius-non-type">
+			<div class="floating-btn__inner">
+				<div class="btn-wrap">
+					<button aria-haspopup="dialog" data-popup-id="btDetailAlertPop5" class="btn btn--outline">취소</button>
+					<button type="button" class="btn">작성완료</button>
+				</div>
+			</div>
+		</div><!-- //floating btn -->
+	</div><!-- //popup-wrap -->
+	<button type="button" class="btn--close popup-close">팝업 닫기</button>
+</section>
+<!-- // 팝업이름 -->
+
+<!-- //layer popup : full page -->
+
+<!-- layer popup : bottom sheet -->
+
+<!-- //layer popup : bottom sheet -->
+
+<!-- layer popup : alert -->
+
+<!-- //layer popup : alert -->
+
+<div class="dimmed"></div>
+
+<script type="text/javascript" src="../../resource/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../resource/dist/library.js"></script>
+<script type="text/javascript" src="../../resource/dist/commonJs.js"></script>
+
+</body>
+</html>

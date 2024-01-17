@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="ko">
+<head>
+
+<meta charset="utf-8">
+<title>PWC e-Accounting Mobile - HTML Pattern</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi">
+<link rel="shortcut icon" href="../resource/images/favicon/apple_touch_icon.ico">
+<link rel="apple-touch-icon" href="../resource/images/favicon/apple_touch_icon.png">
+<link href="../resource/css/common.css" rel="stylesheet" type="text/css">
+<link href="../resource/css/contents.css" rel="stylesheet" type="text/css">
+<link href="guide.css" rel="stylesheet" type="text/css">
+<script src="../resource/dist/jquery.min.js"></script>
+<script src="../resource/dist/library.js"></script>
+<script src="../resource/dist/commonJs.js"></script>
+
+</head>
+<body class="guideBody">
+  <div id="guideWrap" class="wrapper">
+		<section id="guideHead">
+			<strong class="pageTitle">PWC e-Accounting Mobile HTML Guide</strong>
+			<div class="guideGnb">
+				<a href="guide.html">Guide</a>
+				<a href="pattern.html" class="on">HTML Pattern</a>
+				<a href="filelist.html">Filelist</a>
+			</div>
+      <div class="guideGnb2">
+        <a href="#layout">layout/guide</a>
+				<a href="#title">title/text</a>
+				<a href="#list">list</a>
+        <a href="#button">button</a>
+        <a href="#tab">tab</a>
+        <a href="#form">form</a>   
+        <a href="#etc">etc</a>   
+			</div>
+		</section>
+		<section id="guideContents" style="padding-top:0">
+      <!-- layout -->
+      <div class="patternBox" id="layout">
+        <h2 class="patternTitle">layout/guide</h2>
+        <div class="scrollWrap">
+          <table cellpadding="0" cellspacing="0" class="guideTbl patternTbl">
+            <colgroup><col style="width:40%"/><col style="width:auto"></colgroup>
+            <thead>
+              <tr>
+                <th scope="col">구분</th>
+                <th scope="col">파일경로</th>
+              </tr>
+            </thead>
+            <tbody>            
+              <tr>
+                <th>바닥페이지 기본 layout</th>
+                <td><a href="layout/layout_page.html" target="_blank" class="guideLink">layout_page.html</a></td>
+              </tr>
+              <tr>
+                <th>사용내역 리스트 기본 layout</th>
+                <td><a href="layout/layout_사용내역리스트.html" target="_blank" class="guideLink">layout_사용내역리스트.html</a></td>
+              </tr>
+              <tr>
+                <th>상세내용 입력 기본 layout</th>
+                <td><a href="layout/layout_상세내용입력.html" target="_blank" class="guideLink">layout_상세내용입력.html</a></td>
+              </tr>
+              <tr>
+                <th>전표 리스트 기본 layout</th>
+                <td><a href="layout/layout_전표.html" target="_blank" class="guideLink">layout_전표.html</a></td>
+              </tr>
+              <tr>
+                <th>상하단 floating 사용 Guide</th>
+                <td><a href="layout/layout_fixed.html" target="_blank" class="guideLink">layout_fixed.html</a></td>
+              </tr>
+              <tr>
+                <th>하단 button 사용 Guide</th>
+                <td><a href="guide_button.html" target="_blank" class="guideLink">guide_button.html</a></td>
+              </tr>
+              <tr>
+                <th>popup 사용 Guide</th>
+                <td><a href="guide_popup.html" target="_blank" class="guideLink">guide_popup.html</a></td>
+              </tr>
+              <tr>
+                <th>└ alert layer popup layout</th>
+                <td><a href="layout/layout_alert_popup.html" target="_blank" class="guideLink">layout_alert_popup.html</a></td>
+              </tr>
+              <tr>
+                <th>└ bottom layer popup layout</th>
+                <td><a href="layout/layout_bottomsheet_popup.html" target="_blank" class="guideLink">layout_bottomsheet_popup.html</a></td>
+              </tr>
+              <tr>
+                <th>└ full layer popup layout</th>
+                <td><a href="layout/layout_full_popup.html" target="_blank" class="guideLink">layout_full_popup.html</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- title -->
+      <div class="patternBox" id="title">
+        <h2 class="patternTitle">Typography</h2>
+        <h3 class="patternTitle02">H1</h3>
+        <p class="title-depth1">Font-size 40px/ Bold / Line-height 42px / Letter-spacing -0.5px</p>
+        <h3 class="patternTitle02">H2-regular</h3>
+        <p class="title-depth2">Font-size 32px/ Regular / Line-height 42px / Letter-spacing -0.5px</p>
+        <h3 class="patternTitle02">H2-bold</h3>
+        <p class="title-depth2--b">Font-size 32px/ Bold / Line-height 42px / Letter-spacing -0.5px</p>
+        <h3 class="patternTitle02">H3</h3>
+        <p class="title-depth3">Font-size 24px/ Bold / Line-height 34px / Letter-spacing 0px</p>
+        <h3 class="patternTitle02">H4-medium</h3>
+        <p class="title-depth4">Font-size 20px/ Medium / Line-height 30px / Letter-spacing -0.5px</p>
+        <h3 class="patternTitle02">H4-bold</h3>
+        <p class="title-depth4--b">Font-size 20px/ Bold / Line-height 30px / Letter-spacing -0.5px</p>
+        <h3 class="patternTitle02">H5</h3>
+        <p class="title-depth5">Font-size 18px/ Bold / Line-height 28px / Letter-spacing -0.5px</p>
+        <h3 class="patternTitle02">Body text</h3>
+        <p>Font-size 16px/ Regular, Medium, Bold / Line-height 26px / Letter-spacing -0.5px</p>
+      </div>
+
+      <!-- list/text -->
+      <div class="patternBox" id="list">
+        <h2 class="patternTitle">List/text</h2>
+        <ul class="text--dot">
+          <li>테스트용 문구 입니다. 테스트용 문구 입니다. 테스트용 문구 입니다. </li>
+          <li>테스트용 문구 입니다. 테스트용 문구 입니다. 테스트용 문구 입니다. <br>두 줄 입니다. 두 줄 입니다. 두 줄 입니다.</li>
+        </ul>
+        <p class="text--dot">테스트용 문구 입니다. 테스트용 문구 입니다. 테스트용 문구 입니다 테스트용 문구 입니다. 테스트용 문구 입니다. 테스트용 문구 입니다</p>
+        <p class="text--guide">PC에서만 조회가능</p>
+        <p class="text--guide m-size-type">조회하신 성함은 동명이인입니다.</p>
+        <p class="no-data">조회된 정보가 없습니다.</p>        
+      </div>
+
+      <!-- Button -->
+      <div class="patternBox" id="button">
+        <h2 class="patternTitle">Button</h2>
+        <ul class="patternList">
+          <li>a / button 태그 목적에 맞게 변경하여 사용</li>
+          <li>a 태그로 사용할 경우 title="링크설명" 속성 추가</li>
+          <li>버튼 활성화 시 .is-active class 추가</li>
+          <li>버튼 비활성화 시 disabled 속성 추가</li>
+        </ul>
+
+        <h3 class="patternTitle02">페이지 하단 Type 기본/비활성화(disabled)</h3>
+        <button type="button" class="btn">확인</button>
+        <br>
+        <button type="button" class="btn" disabled>확인</button>
+        <br>
+        <button type="button" class="btn btn--outline">방금 쓴 내역 붙여넣기 [1/10]</button>
+        <br>
+        <button type="button" class="btn btn--outline" disabled>방금 쓴 내역 붙여넣기 [1/10]</button>
+        <br>
+        <h3 class="patternTitle02">페이지 하단 Type - group 하단 여백 없이 버튼이 바닥에 붙는 스타일 : 버튼 감싸는 div.floating-btn 영억에 .radius-non-type 더블 class 추가 와 같이 사용</h3>
+        <div class="btn-wrap">
+          <button type="button" class="btn btn--outline">이전</button>
+          <button type="button" class="btn">다음</button>
+        </div>
+        <h3 class="patternTitle02">페이지 하단 Type - group type2 : 하단 여백 있는 상태에서 버튼 2개 (50%:50%) 비율로 들어가는 스타일</h3>
+        <p class="patternTxt">btn-wrap 영역에 .row-group 더블class 추가</p>
+        <div class="btn-wrap row-group">
+          <button type="button" class="btn btn--outline">이전</button>
+          <button type="button" class="btn">다음</button>
+        </div>
+        <h3 class="patternTitle02">페이지 하단 Type - group type3 : 하단 여백 있는 상태에서 버튼 2개 (100px:100% - 100px) 비율로 들어가는 스타일 </h3>
+        <p class="patternTxt">btn-wrap 영역에 .row-group--v2 더블class 추가</p>
+        <div class="btn-wrap row-group--v2">
+          <button type="button" class="btn btn--outline" disabled>일괄 작성</button>
+          <button type="button" class="btn">건별 작성</button>
+        </div>
+
+        <h3 class="patternTitle02">목록 선택 Type 기본/활성화</h3>
+        <ul class="guideList">
+          <li>버튼은 .select-btn--wrap class를 가진 요소로 묶어두면 상하 여백 생성됨</li>
+          <li>한 줄에 버튼이 2개씩 들어갈 경우 .row-group 더블 class 사용</li>
+          <li>최종적으로 하나만 클릭 되어야 하는 경우 모든 버튼 묶음 최상위에 .select-btn--active class 지정 (해당 class로 버튼 활성화 제어) <a href="../html/cc/계정과목조회_p.html" class="guideLink" target="_blank">계정과목조회_p.html</a>참고</a></li>
+        </ul>
+        <br>
+        <div class="select-btn--wrap row-group select-btn--active">
+          <button type="button" class="btn btn--sel">교통비</button>
+          <button type="button" class="btn btn--sel">교통비</button>
+          <button type="button" class="btn btn--sel">교통비</button>
+        </div>
+        <br>
+        <div class="select-btn--wrap select-btn--active">
+          <button type="button" class="btn btn--sel is-active">확인</button> <!-- //선택 시 .is-active class 추가 -->
+          <button type="button" class="btn btn--sel btn--sel-left">이름/직급/팀/코드/사번</button>
+          <button type="button" class="btn btn--sel btn--size-m">확인</button>
+        </div>
+
+        <h3 class="patternTitle02">기타</h3>
+        <button type="button" class="btn btn--size-s">조회</button>
+        <button aria-haspopup="dialog" data-popup-id="팝업id" class="btn--ico btn--summary">상세내역 요약보기</button>
+        <button aria-haspopup="dialog" data-popup-id="팝업id" class="btn--ico btn--sort">정렬 필터</button>
+        <button aria-haspopup="dialog" data-popup-id="팝업id" class="btn--ico btn--sort-v2">최신 날짜순</button>
+        <a href="#" class="btn--s-round color-type" title="링크 목적 입력">추가작성</a>
+        <a href="#" class="btn--s-round" title="링크 목적 입력">추가작성</a>
+        <button type="button" class="btn--s-round add-type">button</button>
+        <button type="button" class="btn-top" title="페이지 상단으로 이동">Top</button>
+
+        <h3 class="patternTitle02">Chips</h3>
+        <div class="chips-wrap">
+          <span class="btn--chip">김삼일/123123<button type="button">삭제</button></span><!-- //button.btn--chip__close 선택 시 span.btn--chip 삭제 -->
+          <span class="btn--chip">김삼일/123123<button type="button">삭제</button></span>
+          <span class="btn--chip">김삼일/123123<button type="button">삭제</button></span>
+          <span class="btn--chip">김삼일/123123<button type="button">삭제</button></span>
+          <span class="btn--chip">김삼일/123123<button type="button">삭제</button></span>
+        </div>
+        
+        <ul class="approver-list">
+          <li class="approver-list__item">
+            <button type="button" class="btn--drag-list">순서 변경</button><!-- //선택 후 위아래 이동하면 li.approver-list__item 위치 변경 -->
+            <span>김삼일</span>
+            <button type="button" class="btn--drag-del">삭제</button><!-- //선택 시 li.approver-list__item 삭제 -->
+          </li>
+          <li class="approver-list__item">
+            <button type="button" class="btn--drag-list">순서 변경</button>
+            <span>이삼일</span>
+            <button type="button" class="btn--drag-del">삭제</button>
+          </li>
+          <li class="approver-list__item">
+            <button type="button" class="btn--drag-list">순서 변경</button>
+            <span>박삼일</span>
+            <button type="button" class="btn--drag-del">삭제</button>
+          </li>
+        </ul>
+        
+        <h3 class="patternTitle02">Steppers</h3>
+        <div class="steppers">
+          <button type="button" class="steppers__btn minus">minus</button>
+          <span class="num">01</span>
+          <button type="button" class="steppers__btn plus">plus</button>
+        </div>
+
+        <h3 class="patternTitle02">Add & Delete</h3>
+        <button type="button" class="btn--addel btn--add">add</button>
+        <button type="button" class="btn--addel btn--del">delete</button>
+      </div>
+      
+      <!-- Tab & Badge --> 
+      <div class="patternBox" id="tab">
+        <h2 class="patternTitle">Tab & Badge</h2>
+        <h3 class="patternTitle02">Tab</h3>
+        <h4 class="patternTitle03">JS Tab</h4>
+        <ul class="patternList">
+          <li>js로 tab와 tab panel 연결되어있는 타입 (탭 내용이 한 화면에 그려지는 타입)</li>
+          <li>tab의 id 속성 값과 .tab__panel의 aria-labelledby 속성 값 일치</li>
+          <li>tab의 aria-controls 속성 값과 .tab__panel의 id 속성 값 일치</li>
+        </ul>
+        <div class="tab-wrap js-tab">
+          <div class="tab__list" role="tablist">
+            <button class="is-active" role="tab" id="tab-id01" aria-controls="tabpanel-id01" aria-selected="true">Tab1</button>
+            <button role="tab" id="tab-id02" aria-controls="tabpanel-id02" aria-selected="false">Tab2</button>
+          </div>
+          <div class="tab__panel" role="tabpanel" id="tabpanel-id01" aria-labelledby="tab-id01" aria-hidden="false">
+            첫번째 탭 콘텐츠
+          </div>
+          <div class="tab__panel" role="tabpanel" id="tabpanel-id02" aria-labelledby="tab-id02" aria-hidden="true">
+            두번째 탭 콘텐츠
+          </div>
+        </div>
+
+        <h4 class="patternTitle03">small tab</h4>
+        <div class="tab-wrap js-tab">
+          <div class="tab__list tab__small" role="tablist">
+            <button class="is-active" role="tab" id="tab02-id01" aria-controls="tabpanel02-id01" aria-selected="true">Tab1</button>
+            <button role="tab" id="tab02-id02" aria-controls="tabpanel02-id02" aria-selected="false">Tab2</button>
+          </div>
+          <div class="tab__panel" role="tabpanel" id="tabpanel02-id01" aria-labelledby="tab02-id01" aria-hidden="false">
+            첫번째 탭 콘텐츠
+          </div>
+          <div class="tab__panel" role="tabpanel" id="tabpanel02-id02" aria-labelledby="tab02-id02" aria-hidden="true">
+            두번째 탭 콘텐츠
+          </div>
+        </div>
+
+        <h4 class="patternTitle03">button Tab</h4>
+        <ul class="patternList">
+          <li>연결 없이 화면이 새로 그려지는 일반 버튼형 tab</li>
+          <li>tab의 활성화 관련 js만 적용 된 상태</li>
+        </ul>
+        <div class="tab__list tab__small tab-default">
+          <button class="tab__btn is-active" role="tab">Tab1</button>
+          <button class="tab__btn" role="tab">Tab2</button>
+        </div>
+        <div class="tab__panel" role="tabpanel">
+          tab 내용
+        </div>
+
+        <h4 class="patternTitle03">scroll Tab</h4>
+        <p class="patternTxt">모바일 사이즈 화면에서 구현 확인 가능</p>
+        <div class="scroll-menu">
+          <ul role="menu">
+            <li role="presentation" class="is-active"><a href="#" role="menuitem">전체<strong>38</strong></a></li>
+            <li role="presentation"><a href="#" role="menuitem">F-Link<strong>38</strong></a></li>
+            <li role="presentation"><a href="#" role="menuitem">미발의<strong>0</strong></a></li>
+            <li role="presentation"><a href="#" role="menuitem">개인사용<strong>38</strong></a></li>
+            <li role="presentation"><a href="#" role="menuitem">작성완료<strong>38</strong></a></li>
+          </ul>
+        </div>
+
+        <h3 class="patternTitle02">Badge</h3>
+        <em class="badge badge--text-main">입금 예정 <span>1</span>건</em>
+        <em class="badge tip">TIP</em>
+        <em class="badge new">new</em>
+        <em class="badge badge--text bg-color-1">F-Link</em>
+        <em class="badge badge--text">개인사용</em>
+        <em class="badge badge--text bg-color-2">작성완료</em>
+
+        <h3 class="patternTitle02">flag</h3>
+        <em class="flag flag--color-1">text</em>
+        <em class="flag flag--color-2">입금완료</em>
+        <em class="flag flag--color-2">결재완료</em>
+        <em class="flag flag--color-3">미발의</em>
+        <em class="flag flag--color-4">미상신</em>
+        <em class="flag flag--color-5">반려</em>
+        <em class="flag flag--color-5">회송</em>
+
+        <h4 class="patternTitle03">Select Type</h4>
+        <ul class="patternList">
+          <li>select 태그 아닌 버튼형태로 겉 디자인만 select 클릭 시 바텀시트 팝업 열림</li>
+          <li>(dev) 바텀시트에서 값 선택 시 해당 값 버튼안에 출력</li>
+        </ul>
+        <div class="select-wrap">
+          <button aria-haspopup="dialog" data-popup-id="popupid와 매칭" class="btn--select"><span class="hidden">항목 선택 팝업</span>전체</button>
+        </div>
+        <div class="select-wrap line-type">
+          <button aria-haspopup="dialog" data-popup-id="popupid와 매칭" class="btn--select"><span class="hidden">항목 선택 팝업</span>전체</button>
+        </div>
+        <div class="select-wrap text-align--r">
+          <button aria-haspopup="dialog" data-popup-id="popupid와 매칭" class="btn--select text-type"><span class="hidden">정렬 방법 선택 팝업</span>최신 날짜순</button>
+        </div>
+        <div class="select-wrap text-size--l">
+          <button aria-haspopup="dialog" data-popup-id="popupid와 매칭" class="btn--select text-type"><span class="hidden">정렬 방법 선택 팝업</span>전체</button>
+        </div>
+
+        <h4 class="patternTitle03">Toggle</h4>
+        <span class="toggle-onoff">
+          <input type="checkbox" id="checkboxOnOff" name="checkboxOnOffGroup" class="toggle-onoff-checkbox">
+          <label for="checkboxOnOff"></label>
+        </span>
+      </div>
+
+      <!-- form --> 
+      <div class="patternBox" id="form">
+        <h2 class="patternTitle">Form</h2>
+        <h3 class="patternTitle02">input type="checkbox/radio"</h3>
+        <h4 class="patternTitle03">radio-default</h4>
+        <span class="input-radio"><input type="radio" id="radtxt01" name="radtxt01Group" checked><label for="radtxt01"></label></span>
+        <span class="input-radio"><input type="radio" id="radtxt01-02" name="radtxt01Group"><label for="radtxt01-02"></label></span>
+        <br>
+
+        <h4 class="patternTitle03">radio-selector</h4>
+        <ul class="radio-selector--wrap">
+          <li><span class="input-radio radio-selector"><input type="radio" id="radtxt02-01" name="radtxt02Group"><label for="radtxt02-01">text</label></span></li>
+          <li><span class="input-radio radio-selector"><input type="radio" id="radtxt02-02" name="radtxt02Group" checked><label for="radtxt02-02">text</label></span></li>
+          <li><span class="input-radio radio-selector"><input type="radio" id="radtxt02-03" name="radtxt02Group"><label for="radtxt02-03">text</label></span></li>
+        </ul>
+        <br>
+
+        <h4 class="patternTitle03">checkbox-default</h4>
+        <span class="input-checkbox"><input type="checkbox" id="check01" name="check01Group" checked><label for="check01"></label></span>
+        <span class="input-checkbox"><input type="checkbox" id="check01-02" name="check01Group"><label for="check01-02"></label></span>
+        <span class="input-checkbox"><input type="checkbox" id="check01-03" name="check01Group" disabled><label for="check01-03"></label></span>
+        <span class="input-checkbox text-label"><input type="checkbox" id="check01-04" name="check01Group"><label for="check01-04">전체선택</label></span>
+        <br>
+
+        <h4 class="patternTitle03">checkbox-default -- field title medium size</h4>
+        <span class="input-checkbox check-size-m text-label"><input type="checkbox" id="check01-m" name="check01-m-Group" checked><label for="check01-m">직접입력</label></span>
+        <span class="input-checkbox check-size-m text-label"><input type="checkbox" id="check01-02-m" name="check01-m-Group"><label for="check01-02-m">직접입력</label></span>
+        <span class="input-checkbox check-size-m text-label"><input type="checkbox" id="check01-03-m" name="check01-m-Group" disabled><label for="check01-03-m">직접입력</label></span>
+        <br>
+        
+        <h4 class="patternTitle03">checkbox-selector</h4>
+        <ul class="checkbox-selector--wrap">
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="check02-01" name="check02Group" checked><label for="check02-01">박삼일 / Senior Manager / DTI / 345345</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="check02-02" name="check02Group" checked><label for="check02-02">박삼일 / Senior Manager / DTI / 345345</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="check02-03" name="check02Group"><label for="check02-03">박삼일 / Senior Manager / DTI / 345345</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="check02-04" name="check02Group"><label for="check02-04">text</label></span></li>
+          <li><span class="input-checkbox checkbox-selector"><input type="checkbox" id="check02-05" name="check02Group"><label for="check02-05">text</label></span></li>
+        </ul>
+
+        <h3 class="patternTitle02">input type="text"</h3>
+        <p class="patternTxt">입력 시 삭제버튼 없는 가장 기본적인 텍스트 필드</p>
+        <input type="text" class="input-text" title="사용목적">
+        <br>
+        <input type="text" class="input-text" disabled title="사용목적">
+        <br>
+        <p class="patternTxt">입력 시 삭제버튼 포함</p>
+        <span class="text-field-wrap"><!-- (js) .text-field-wrap 영역 안에서 .input-text에 focus된 상태에서 input value값 있을 때 .btn--del 삭제버튼 출력/ 값이 있어도 focus out 되면 .btn--del 삭제버튼 삭제 -->
+          <input type="text" class="input-text">
+          <button type="button" class="btn--del">삭제</button>
+        </span>
+        <br>
+        <div class="input-field">
+          <h3 class="title-depth6">계정과목</h3>
+          <span class="text-field-wrap">
+            <input type="text" class="input-text">
+            <button type="button" class="btn--del">삭제</button>
+          </span>
+        </div>
+
+        <span class="text-field-wrap">
+          <input type="text" id="inpProCode" class="input-text text-align--r" placeholder="값 입력">
+          <button type="button" class="btn--del">삭제</button>
+        </span>
+
+        <div class="multi-field project-code">
+          <span class="text-field-wrap">
+            <input type="tel" id="inpProCode" class="input-text" maxlength="5" placeholder="12345" title="프로젝트 코드 앞 5자리">
+            <button type="button" class="btn--del">삭제</button>
+          </span>
+          <span class="text-field-wrap">
+            <input type="tel" class="input-text" maxlength="2" placeholder="12" title="프로젝트 코드 중간 2자리">
+            <button type="button" class="btn--del">삭제</button>
+          </span>
+          <span class="text-field-wrap">
+            <input type="tel" class="input-text" maxlength="3" placeholder="123" title="프로젝트 코드 마지막 3자리">
+            <button type="button" class="btn--del">삭제</button>
+          </span>
+        </div>
+
+        <div class="text-unit-wrap unit-align--right distance">
+          <input type="text" class="input-text" placeholder="거리">
+          <span class="unit">km</span>
+        </div>
+
+        <div class="input-field">
+          <div class="row-field">
+            <input type="text" class="input-text calendar" title="사용일자">
+            <div class="text-unit-wrap unit-align--right">
+              <input type="text" class="input-text " placeholder="사용금액" title="사용금액">
+              <span class="unit">원</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-field">
+          <div class="row-field route">
+            <span class="text-field-wrap">
+              <input type="text" class="input-text" placeholder="출발지" title="출발지">
+              <button type="button" class="btn--del">삭제</button>
+            </span>
+            <span class="text-field-wrap">
+              <input type="text" class="input-text" placeholder="도착지" title="도착지">
+              <button type="button" class="btn--del">삭제</button>
+            </span>
+          </div>
+        </div>
+
+        <h3 class="patternTitle02">input type="file"</h3>
+        
+        <div class="input-field file-attach">
+          <label for="inpFile">첨부 파일 <em class="sub-text">(30,000원 초과)</em></label>
+          <div class="attach-wrap">
+            <input type="file" id="inpFile">
+            <span class="btn--file">파일 선택</span>
+            <input type="text" class="input-text" placeholder="파일을 선택해 주세요" readonly><!-- (dev) 선택한 파일 명 해당 영역 value값으로 노출 -->
+          </div>
+        </div>
+        
+        <h3 class="patternTitle02">textarea</h3>       
+        <p class="patternTxt">height는 디자인에 맞춰 .textarea에 별도 지정</p>
+        <div class="textarea">
+          <textarea name="" id="" placeholder="50자 까지만 입력해주세요." title="사용목적"></textarea>          
+        </div>
+
+        <h3 class="patternTitle02">search</h3>
+        <h4 class="patternTitle03">검색어 입력 type</h4>
+        <ul class="patternList">
+          <li>검색어 입력 후 검색 버튼 클릭 하는 타입</li>
+          <li>영역 자체가 버튼이 되어 클릭 시 바텀시트 나오는 타입</li>
+          <li>같은 디자인에 두가지 타입이 존재하며 오른쪽에 sorting 버튼이나 기타 다른 버튼 여부에 따라 디자인이 2가지로 나뉨</li>
+        </ul>
+        <h4 class="patternTitle03">기본 검색 type - 검색어 입력 후 검색 버튼 클릭</h4>
+        <div class="search-wrap">
+          <span class="text-field-wrap">
+            <input type="text" class="input-text search" placeholder="검색값 입력" title="ㅇㅇ입력">
+            <button type="button" class="btn--del">삭제</button>
+          </span>
+          <button type="button" class="btn--search">검색</button>
+        </div>
+        <br>
+        <div class="search-wrap search-box">
+          <span class="text-field-wrap">
+            <input type="text" class="input-text search-box" placeholder="계정코드 또는 계정명을 입력해주세요." title="ㅇㅇ검색">
+            <button type="button" class="btn--del">삭제</button>
+          </span>
+          <button type="button" class="btn--search">검색</button>
+        </div>
+        <br><br>
+        <h4 class="patternTitle03">영역 전체 검색 버튼 type - 선택 시 연결된 바텀시트 생성</h4>
+        <div class="input-field search-field">
+          <label for="inpSch">계정과목</label>
+          <div class="search-wrap__btn-type">
+            <button aria-haspopup="dialog" data-popup-id="popupid와 매칭" class="btn--search">조회 팝업</button>
+            <input type="text" id="inpSch" class="input-text search" placeholder="기본값" readonly>
+          </div>
+        </div>
+        
+        <br>
+        <div class="input-field search-field">
+          <label for="inpSch2">계정과목</label>
+          <div class="search-wrap__btn-type disabled"><!-- 비활성화 시 disabled class 추가 -->
+            <button aria-haspopup="dialog" data-popup-id="popupid와 매칭" class="btn--search" disabled>조회 팝업</button><!-- 비활성화 시 disabled 속성 추가 -->
+            <input type="text" id="inpSch2" class="input-text search" placeholder="기본값" disabled><!-- 비활성화 시 disabled 속성 추가 -->
+          </div>
+        </div>
+        
+        <br>
+        <div class="search-wrap__btn-type">
+          <button aria-haspopup="dialog" data-popup-id="popupid와 매칭" class="btn--search">조회 팝업</button>
+          <input type="text" class="input-text search-box" placeholder="계정코드 또는 계정명을 입력해주세요." readonly>
+        </div>
+
+        <br>
+        <div class="search-wrap__btn-type disabled"><!-- 비활성화 시 disabled class 추가 -->
+          <button aria-haspopup="dialog" data-popup-id="popupid와 매칭" class="btn--search" disabled>조회 팝업</button><!-- 비활성화 시 disabled 속성 추가 -->
+          <input type="text" class="input-text search-box" placeholder="계정코드 또는 계정명을 입력해주세요." disabled><!-- 비활성화 시 disabled 속성 추가 -->
+        </div>
+
+        <br>
+        <div class="multi-field text-box-type">
+          <input type="text" class="input-text box-type" placeholder="기본값">
+          <input type="text" class="input-text box-type" placeholder="기본값">
+          <button type="button" class="btn btn--size-s">조회</button>
+        </div>
+
+        
+        <br><br>
+
+        <h3 class="patternTitle02">Date</h3>
+        <ul class="patternList">
+          <li>별도의 캘린더 레이어 없이 디바이스 기본 UI 사용 type</li>
+          <li>월 별도 선택 바텀시트 생성 type</li>
+        </ul>
+        <h4 class="patternTitle03">기본 날짜 선택 type</h4>
+        <input type="date" class="input-text calendar" data-placeholder="yyyy-mm" required>
+        <br>
+        <input type="date" class="input-text calendar" data-placeholder="yyyy-mm" disabled>
+        <br>
+
+        <div class="calendar-wrap--period box-type">
+          <div class="calendar-wrap">
+            <input type="date" class="input-text calendar" data-placeholder="yyyy-mm-dd" required>
+          </div>
+          <span class="dash">-</span>
+          <div class="calendar-wrap">
+            <input type="date" class="input-text calendar" data-placeholder="yyyy-mm-dd" required>
+          </div>
+        </div>
+        <br>
+        <div class="period-box">
+					<div class="calendar-wrap--period box-type">
+						<div class="calendar-wrap">
+							<input type="date" class="input-text calendar" data-placeholder="yyyy-mm-dd" required>
+						</div>
+						<span class="dash">-</span>
+						<div class="calendar-wrap">
+							<input type="date" class="input-text calendar" data-placeholder="yyyy-mm-dd" required>
+						</div>
+					</div>
+					<button type="button" class="btn btn--size-s">조회</button>
+				</div>
+        <br>
+        
+        <div class="input-field field-calendar">
+          <label for="inpCal2">출장기간</label>
+          <div class="calendar-wrap--period">
+            <input type="date" id="inpCal2" class="input-text calendar" title="시작일" data-placeholder="yyyy-mm-dd" required>
+            <span class="dash">-</span>
+            <input type="date" class="input-text calendar" title="종료일" data-placeholder="yyyy-mm-dd" required>
+          </div>
+        </div>
+        <br>
+
+        <div class="input-field field-adddel">
+          <label for="inpCal3">사용내역</label>
+          <div class="row-field">
+            <input type="date" id="inpCal3" class="input-text calendar" title="사용일자" data-placeholder="yyyy-mm-dd" required>
+            <div class="text-unit-wrap unit-align--right">
+              <input type="text" class="input-text " placeholder="사용금액" title="사용금액">
+              <span class="unit">원</span>
+            </div>
+          </div>
+          <div class="row-field">
+            <input type="date" id="inpCal3" class="input-text calendar" title="사용일자" data-placeholder="yyyy-mm-dd" required>
+            <div class="text-unit-wrap unit-align--right">
+              <input type="text" class="input-text " placeholder="사용금액" title="사용금액">
+              <span class="unit">원</span>
+            </div>
+          </div>
+          <div class="row-field">
+            <input type="date" id="inpCal3" class="input-text calendar" title="사용일자" data-placeholder="yyyy-mm-dd" required>
+            <div class="text-unit-wrap unit-align--right">
+              <input type="text" class="input-text" placeholder="사용금액" title="사용금액">
+              <span class="unit">원</span>
+            </div>
+            <button type="button" class="btn--addel btn--add">add</button>
+          </div>
+          <!-- (dev) button.btn--add/.btn--del 선택 시 div.row-field 영역 생성/삭제 -->
+          <div class="row-field">
+            <input type="date" class="input-text calendar" title="사용일자" data-placeholder="yyyy-mm-dd" required>
+            <div class="text-unit-wrap unit-align--right">
+              <input type="text" class="input-text" placeholder="사용금액" title="사용금액">
+              <span class="unit">원</span>
+            </div>
+            <button type="button" class="btn--addel btn--del">delete</button>            
+          </div>
+          <div class="row-field">
+            <input type="date" id="inpCal3" class="input-text calendar" title="사용일자" data-placeholder="yyyy-mm-dd" required>
+            <div class="text-unit-wrap unit-align--right">
+              <input type="text" class="input-text km" placeholder="거리" title="거리">
+              <span class="unit">km</span>
+            </div>
+            <button type="button" class="btn--addel btn--add">add</button>
+            <p class="input-sub-text"><span>24,000</span> 원 지원</p>
+          </div>
+        </div>
+
+        <h4 class="patternTitle03">바텀시트 생성 type</h4>
+        <div class="input-field field-calendar">
+          <label for="inpCal">사용 월</label>
+          <div class="calendar-wrap">
+            <input type="text" id="inpCal" class="input-text calendar" placeholder="yyyy-mm" readonly>
+            <button aria-haspopup="dialog" data-popup="popupid와 매칭" class="btn--cal is-open--bottom-sheet">월 선택 팝업</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- etc --> 
+      <div class="patternBox" id="etc">
+        <h2 class="patternTitle">etc</h2>
+        <h3 class="patternTitle02">Hide/Show slide box</h3>
+        <ul class="patternList">
+          <li>.slidedown-btn, .slidedown-cont 두 클래스는 반드시 필요함</li>
+          <li>.slidedown-btn aria-expanded="true" 의경우는 오픈 상태 false 닫힌 상태</li>
+          <li>slideDown-cont aria-hidden 속성 default 값 "true"</li>
+          <li>기능만 참고하여 스타일은 변형해서 사용</li>
+        </ul>
+
+        <div style="width:375px">
+          <!-- 사용영역 -->
+          <div class="slideDown" data-options='{
+            "animation": true, //슬라이드 다운 모션 default : true
+            "animationSpeed":300 //슬라이드 다운 스피드 default : 0.4
+          }'>
+            <div class="slideDown-title">
+              제목영역
+              <button type="button" class="slideDown-btn" aria-expanded="false"><span data-text='{"text":"open|close", "show":1}'>open</span></button>
+            </div>
+            <div class="slideDown-cont" aria-hidden="true">
+              감춰지는 영역입니다.<br>
+              감춰지는 영역입니다.<br>
+              감춰지는 영역입니다.<br>
+              감춰지는 영역입니다.<br>
+              감춰지는 영역입니다.<br>
+              감춰지는 영역입니다.<br>
+              감춰지는 영역입니다.<br>
+            </div>
+          </div>
+          <!-- //사용영역 -->
+        </div>
+
+        <h3 class="patternTitle02">tooltip</h3>
+        <ul class="patternList">
+          <li>화살표 위치에 따라 3가지 타입</li>
+          <li>버튼 아래서 뜨는 경우 : default</li>
+          <li>버튼 위에서 뜨는 경우 : posi-top</li>
+          <li>버튼 오른쪽에서 뜨는 경우 : posi-right</li>
+          <li>텍스트 두 줄 기준으로 style 적용되어있으므로 버튼위,오른쪽은 줄 수가 변경 될 경우 style 추가 필요</li>   
+          <li>아이콘 회색인 경우 span.tooltip 에 .color-g 추가</li>
+        </ul>
+        <div style="display:block;height:60px;width:375px;padding:20px;background:#D93954">
+
+          <span class="tooltip">
+            <button type="button" class="tooltip-btn" aria-describedby="tooltip-id02">Tooltip</button>
+            <span class="tooltip-txt" id="tooltip-id02" role="tooltip">
+              법인카드 사용일 후 1개월 내에<br>전표를 작성해 주세요.
+              <button type="button" class="tooltip-close">Close</button>
+            </span>
+          </span>
+
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <span class="tooltip color-g">
+            <button type="button" class="tooltip-btn" aria-describedby="tooltip-id02">Tooltip</button>
+            <span class="tooltip-txt" id="tooltip-id02" role="tooltip">
+              법인카드 사용일 후 1개월 내에<br>전표를 작성해 주세요.
+              <button type="button" class="tooltip-close">Close</button>
+            </span>
+          </span>
+
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <span class="tooltip posi-top">
+            <button type="button" class="tooltip-btn" aria-describedby="tooltip-id02">Tooltip</button>
+            <span class="tooltip-txt" id="tooltip-id02" role="tooltip">
+              법인카드 사용일 후 1개월 내에<br>전표를 작성해 주세요.
+              <button type="button" class="tooltip-close">Close</button>
+            </span>
+          </span>
+
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <span class="tooltip posi-right">
+            <button type="button" class="tooltip-btn" aria-describedby="tooltip-id02">Tooltip</button>
+            <span class="tooltip-txt" id="tooltip-id02" role="tooltip">
+              결재 완료된 전표의 입금내역을<br>확인할 수 있습니다.
+              <button type="button" class="tooltip-close">Close</button>
+            </span>
+          </span>
+
+        </div>
+
+        <h3 class="patternTitle02">인피니티 스크롤</h3>
+        <ul class="patternList">
+          <li>인피니티 스크롤 : 특정 갯수 노출 된 후 끝에서 다시 스크롤 내리면 특정 갯수만큼 이어서 데이터 노출. 해당 동작 무한 반복</li>
+          <li>개발 시 jquery에서 생성한 <b>mvJs.fn.completedScroll();</b> 함수 호출</li>
+        </ul>
+        <h4 class="patternTitle03">html : 팝업 내 기능이 필요한 경우</h4>
+        <ul class="patternList">
+          <li><a href="guide_popup.html" class="guideLink" target="_blank">guide_popup.html</a> 참고</li>
+          <li>&lt;section class="popup"&gt; 영역에 <strong>data-infiniteScroll</strong> 속성 추가 필수</li>
+          <li>html 내에서 기능 확인이 필요한 경우
+            <div style="padding:10px;background:#f2f2f2;color:black;font-size:14px;">
+        <pre style="margin:0">&lt;script&gt;
+  /* 스크롤이 하단으로 이동하였을 때 호출되는 함수 */
+    function addList() {
+    console.log('touch end');
+  }
+&lt;/script&gt;</pre>
+              </div>
+            해당 스크립트를 &lt;head&gt;영역 안에 추가하여 console창 확인
+          </li>
+        </ul>
+
+        <h4 class="patternTitle03">html : 팝업 아닌 일반 페이지 내 기능이 필요한 경우</h4>
+        <ul class="patternList">
+          <li><a href="../html/main/공지사항.html" class="guideLink" target="_blank">공지사항.html</a> 참고</li>
+          <li>※ 현재는 board-list 요소에만 적용되어있는 상태. 확장을 위해서는 js 수정 필요<br>
+            데이터 불러와질 요소를 감싸는 요소가 board-list class를 가짐<br>
+            해당 요소에 <b>id="infiniteScroll"</b> 및 <b>data-infiniteScroll</b> 속성 추가</li>
+        </ul>
+
+        <h4 class="patternTitle03">개발 : 팝업 / 일반 페이지 공통</h4>
+        <p class="patternTxt">스크롤이 하단으로 이동했을 때 새로 데이터가 추가된 이후<br>
+          <b>mvJs.fn.completedScroll();</b> 해당 함수에 reset 해야 하는 팝업 id 또는 공지사항 영역 id 넣고 호출하여 사용<br>
+          ex) 참석자선택 > mvJs.fn.completeScroll('#selectAttendeesPop');<br>
+    공지사항 > mvJs.fn.completeScroll('#infiniteScroll');
+        </p>
+      </div>
+
+    </section>
+    <!-- dimmed -->
+    <div class="dimmed"></div>
+
+
+
+  </div>
+</body>
+</html>
